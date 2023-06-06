@@ -1,6 +1,5 @@
 import React, {useEffect}from 'react'
 import { ProductBox } from './ProductsStyle';
-import SlideComponent from '../../../components/slide/SlideComponent';
 import { ProductsList } from '../../../utils/Config';
 
 const ProductsSection = () => {

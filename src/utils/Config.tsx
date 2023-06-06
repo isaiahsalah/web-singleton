@@ -15,7 +15,7 @@ import {
 export const Color = {
   primary: '#475A71',
   secondary: '#1F1F1F',
-  active: '#5D9BE8',
+  active: '#2B7DE2',
   alternative: '#ffffff',
   warning: '#E8A074',
 

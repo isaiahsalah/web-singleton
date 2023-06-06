@@ -35,13 +35,15 @@ body::-webkit-scrollbar{
     a {
   text-decoration: inherit;
   color: ${Color.alternative};
-  opacity: 0.4;
+  opacity: 0.75;
+  transition: 0.15s;
   //color: #8491A0;
  
 }
 a:hover {
   opacity: 1;
       filter: drop-shadow(0 0 1.5em ${Color.alternative});
+      transform: scale(1.02);
     }
 
 body {
@@ -52,19 +54,20 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+
+
 
 button {
-  border-radius: 5px;
-  border: 1px solid  ${Color.alternative};
-  padding: 0.4em 1.2em;
+  display: flex;
+  align-items: center;
+  gap:10px;
+  border-radius: 100px;
+  border: 1px solid  ${Color.active};
+  padding: 12px 24px;
   font-size: .9em;
   font-weight: 500;
   font-family: inherit;
-  background-color: transparent;
+  background-color: ${Color.active};
   color: ${Color.alternative};
 
   cursor: pointer;
@@ -104,9 +107,10 @@ button:focus-visible {
 img{
   border-radius: 3px;
 }
-h1, h2, h3, h4, h5, p{
+h1, h2, h3, h4, h5,h6 , p{
   margin: 0;
   padding:0;
+  font-weight: normal;
 }
 
   .line-short,
@@ -154,22 +158,22 @@ h1, h2, h3, h4, h5, p{
   @media screen and (max-width: 600px) {
   
 h1 {
-  font-size: 70px;
-}
-h2 {
   font-size: 60px;
 }
-h3 {
+h2 {
   font-size: 50px;
 }
-h4 {
+h3 {
   font-size: 40px;
 }
-h5 {
+h4 {
   font-size: 30px;
 }
+h5 {
+  font-size: 25px;
+}
 h6 {
-  font-size: 20px;
+  font-size: 16px;
 }
 p{
   font-size: 12px;
@@ -181,19 +185,19 @@ p{
   font-size: 80px;
 }
 h2 {
-  font-size: 70px;
+  font-size: 65px;
 }
 h3 {
-  font-size: 60px;
-}
-h4 {
   font-size: 50px;
 }
-h5 {
+h4 {
   font-size: 40px;
 }
+h5 {
+  font-size: 30px;
+}
 h6 {
-  font-size: 25px;
+  font-size: 18px;
 }
 p{
   font-size: 13px;
@@ -208,16 +212,16 @@ h2 {
   font-size: 80px;
 }
 h3 {
-  font-size: 70px;
+  font-size: 65px;
 }
 h4 {
-  font-size: 60px;
+  font-size: 50px;
 }
 h5 {
-  font-size: 45px;
+  font-size: 35px;
 }
 h6 {
-  font-size: 30px;
+  font-size: 20px;
 }
 p{
   font-size: 14px;

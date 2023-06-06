@@ -46,50 +46,67 @@ const NavegatorComponent = () => {
             <header id='header-nav'>
                 <nav id='nav-container' className='nav-container'>
                     <div className='logo-container'>
-                        <img className='logo-img' src={singletonLogo} alt="" />
-                        <div className='logo-title'>
-                            Singleton
+                        <div className='logo-img-container'>
+                            <img className='logo-img' src={singletonLogo} alt="" />
+
                         </div>
+                        <div className='logo-text'>
+                            <h6 className='logo-title'>
+                                Singleton
+                            </h6>
+                            <p className='logo-subtitle'>
+                                Tech Solutions
+                            </p>
+                        </div>
+
                     </div>
                     <div className="hamburger" onClick={openMenuMovil}>
-                        <GiHamburgerMenu className="icon-movil" />
+                        <div className="icon-movil-container" >
+                            <h5>
+                                <GiHamburgerMenu className="icon-movil" />
+                            </h5>
+                        </div>
                     </div>
-                    <ul className='nav-menu' onClick={closeMenuMovil}>
-                        <li className='nav-item'><Link className='nav-link' to="#home">Home</Link></li>
-                        <li className='nav-item'><a className='nav-link' href="#product">Product</a></li>
-                        <li className='nav-item'><Link className='nav-link' to="#services">Services</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#about">About</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#blog">Blog</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#contact">Contact</Link></li>
-                        <li>
-                            <Link to="/" className='country-container'>
-                                <div className='country bolivia'>
-                                    <span className='B'>
-                                        B
-                                    </span >
-                                    <span className='O'>
-                                        O
-                                    </span >
-                                    <span className='L'>
-                                        L
-                                    </span>
-                                </div>
-                                <div className='country paraguay'>
-                                    <span className='P'>
-                                        P
-                                    </span >
-                                    <span className='A'>
-                                        A
-                                    </span >
-                                    <span className='R'>
-                                        R
-                                    </span>
-                                </div>
-                            </Link>
-                        </li>
+                    <div className='nav-menu-container'>
+                        <ul className='nav-menu' onClick={closeMenuMovil}>
+                            <li className='nav-item'><Link className='nav-link' to="#home">Home</Link></li>
+                            <li className='nav-item'><a className='nav-link' href="#product">Product</a></li>
+                            <li className='nav-item'><Link className='nav-link' to="#services">Services</Link></li>
+                            <li className='nav-item'><Link className='nav-link' to="#about">About</Link></li>
+                            <li className='nav-item'><Link className='nav-link' to="#blog">Blog</Link></li>
+                            <li className='nav-item'><Link className='nav-link' to="#contact">Contact</Link></li>
+                            <li>
+                                <Link to="/" className='country-container'>
+                                    <div className='country bolivia'>
+                                        <span className='B'>
+                                            B
+                                        </span >
+                                        <span className='O'>
+                                            O
+                                        </span >
+                                        <span className='L'>
+                                            L
+                                        </span>
+                                    </div>
+                                    <div className='country paraguay'>
+                                        <span className='P'>
+                                            P
+                                        </span >
+                                        <span className='A'>
+                                            A
+                                        </span >
+                                        <span className='R'>
+                                            R
+                                        </span>
+                                    </div>
+                                </Link>
+                            </li>
 
-                    </ul>
-
+                        </ul>
+                        <button className='nav-item-cotizar'>
+                            Cotizar
+                        </button>
+                    </div>
                 </nav>
             </header>
 

@@ -1,24 +1,30 @@
 import { useEffect, useState } from 'react'
 
-import img3 from '../../../assets/images/imagen3.jpg'
+import img3 from '../../../assets/images/fondo.jpg'
 import { PresentationBox } from './PresentationStyle';
-import BannerComponent from '../../../components/banner/BannerComponent';
 import { PresentationItems } from '../../../utils/Config';
-import SlideModernComponent from '../../../components/banner copy/SlideModernComponent';
-import { SlideTestBox } from '../../../components/prueba/SlideTestStyle';
-import SlideTestComponent from '../../../components/prueba/SlideTestComponent';
 
 
 const PresentationSection = () => {
-    
+
     return (
         <PresentationBox>
-            {/*<SlideModernComponent items={PresentationItems}/>
-            <SlideTestComponent items={PresentationItems}/>
-            */}
-            <BannerComponent items={PresentationItems}/>
-            
-    
+            <div className=''></div>
+            <img className='presentation-backimage' src={img3}>
+            </img>
+            <div className='presentation-contend'>
+                <div className='presentation-text'>
+                <h2 className='presentation-title'>Haz realidad tus sueños 3D</h2>
+                <h6>Soluciones profesionales 3D en un sitio</h6>
+                <div className='presentation-button-container'>
+                <button>Cotizar</button>
+                <button>Ver Productos</button>
+                </div>
+                </div>
+                
+
+            </div>
+
         </PresentationBox>
     )
 }

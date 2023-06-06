@@ -109,9 +109,7 @@ const AboutSection = () => {
                         </button>
                     </div>
                     <div className='technologies-container'>
-                        <p className='technologies-title'>
-                            Tecnologias con las que trabajamos
-                        </p>
+                        
                         <div className='line-horizontal-long' />
                         <div className='technologies'>
                             
@@ -126,7 +124,9 @@ const AboutSection = () => {
                             })}
                         </div>
                         <div className='line-horizontal-long' />
-
+                        <p className='technologies-title'>
+                            Tecnologias con las que trabajamos
+                        </p>
                     </div>
                     
                 </div>

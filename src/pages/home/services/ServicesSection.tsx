@@ -1,6 +1,5 @@
 import React from 'react'
 import { ServicesBox } from './ServicesStyle'
-import SlideDinamicComponent from '../../../components/slideDinamic/SlideDinamicComponent'
 import { ServicesList } from '../../../utils/Config'
 
 const ServicesSection = () => {
@@ -14,7 +13,6 @@ const ServicesSection = () => {
         </h5>
         <div className='line-horizontal-short' />
       </div>
-      < SlideDinamicComponent items={ServicesList} />
     </ServicesBox>
   )
 }

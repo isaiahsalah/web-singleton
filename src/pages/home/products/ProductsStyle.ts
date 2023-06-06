@@ -75,8 +75,9 @@ export const ProductBox = styled.div`
     width: 100%;
   }
   .product-module-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40px, 90px));
+   display: none;
+    //display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 60px));
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -145,7 +146,8 @@ transform: scale(1.1);
       justify-content: center;
     }
     .product-module-list {
-      display: flex;
+      //display: flex;
+      display: none;
       overflow-x: auto;
       align-items: center;
       justify-content: center;

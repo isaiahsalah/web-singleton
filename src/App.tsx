@@ -73,34 +73,22 @@ function App() {
 */
   useEffect(() => {
 
-    const socialMedia = document.querySelector("#social-media-container") as HTMLElement;
-    const contact = document.querySelector("#contact-container") as HTMLElement;
     const navBar = document.querySelector("#header-nav") as HTMLElement;
     let prevScrollPos = window.pageYOffset;
-    if (navBar && socialMedia && contact) {
+    if (navBar ) {
 
       window.onscroll = () => {
 
-        if (socialMedia.style.left === "") {
-          socialMedia.style.left = "0px";
-          contact.style.right = "0px";
+        if (navBar.style.left === "") {
           navBar.style.top = "0px";
         }
 
         const currentScrollPos = window.pageYOffset;
         if (prevScrollPos > currentScrollPos) {
-          socialMedia.style.left = "0px";
-          contact.style.right = "0px";
           navBar.style.top = "0px";
-          socialMedia.style.opacity = "1";
-          contact.style.opacity = "1";
           navBar.style.opacity = "1";
         } else {
-          socialMedia.style.left = "-5%";
-          contact.style.right = "-5%";
           navBar.style.top = "-15%";
-          socialMedia.style.opacity = "0";
-          contact.style.opacity = "0";
           navBar.style.opacity = "0";
         }
         prevScrollPos = currentScrollPos;
