@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { NavegatorBox } from './NavegatorStyle'
 import singletonLogo from '../../assets/svgs/logo.svg'
 import { GiHamburgerMenu } from "react-icons/gi"
+import SVGLogoComponent from '../../assets/svgs/logo'
 
 const NavegatorComponent = () => {
 
@@ -27,6 +28,7 @@ const NavegatorComponent = () => {
     }, [])
 
 
+
     const openMenuMovil = () => {
         const menu = document.querySelector(".nav-menu") as HTMLElement;
         if (menu && menu.style.display === "none" || menu.style.display === "") {
@@ -47,8 +49,8 @@ const NavegatorComponent = () => {
                 <nav id='nav-container' className='nav-container'>
                     <div className='logo-container'>
                         <div className='logo-img-container'>
-                            <img className='logo-img' src={singletonLogo} alt="" />
-
+                            {/*<img className='logo-img' src={singletonLogo} alt="" />*/}
+                            <div className='logo-img'> <SVGLogoComponent  color='#ca3939' /></div>
                         </div>
                         <div className='logo-text'>
                             <h6 className='logo-title'>

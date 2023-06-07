@@ -2,21 +2,23 @@ import { Color } from "../../../utils/Config";
 import styled from 'styled-components'
 
 export const ContactBox = styled.div`
-width: 100vw;
-height: 100vh;
-flex-direction: column;
-display: flex;
-justify-content: center;
-align-items: center;
+min-width: 100vw;
+min-height: 95vh;
+display: grid;
+justify-items: center;
+align-content: space-between;
 text-align: center;
 position: relative;
+
 .contact-section-container{
+    
     width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    gap: 20px;
+
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
 
 }
 .contact-title {
@@ -25,6 +27,10 @@ position: relative;
 }
 .contact-message {
     font-size: .8em;
+}
+.contact-button-container{
+    display: flex;
+    justify-content: center;
 }
 .contact-button{
     margin: 15px 0px;

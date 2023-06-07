@@ -9,6 +9,7 @@ position: relative;
   align-content: center;
   min-height: 100vh;
   width: 100vw;
+  padding-top: 60px;
 
   .icon-navigate {
     font-size: 2.5em;

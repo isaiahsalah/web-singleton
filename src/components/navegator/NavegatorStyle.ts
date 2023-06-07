@@ -82,7 +82,9 @@ export const NavegatorBox = styled.nav`
       filter: drop-shadow(0 0 1.5em ${Color.alternative});
       background-color: ${Color.alternative};
 
-      opacity: 1;
+      .logo-img {
+        mix-blend-mode:difference
+      }
     }
   }
 
@@ -160,21 +162,22 @@ export const NavegatorBox = styled.nav`
   .hamburger {
     display: flex;
     cursor: pointer;
-    
   }
   .icon-movil-container {
     display: flex;
     height: 100%;
-background-color: ${Color.active};
-border-radius: 50%;
-padding: 12px;
+    background-color: ${Color.active};
+    border-radius: 50%;
+    padding: 12px;
     transition: 0.25s;
 
     &:hover {
-      filter: drop-shadow(0 0 1.5em ${Color.alternative});
+      filter: drop-shadow(0 0 1em ${Color.alternative}80);
+      background-color: ${Color.alternative};
+      color: ${Color.secondary};
     }
   }
-  .icon-movil{
+  .icon-movil {
     display: flex;
     //height: 100%;
     //width: 1.2em;
@@ -184,7 +187,7 @@ padding: 12px;
     .hamburger {
       display: flex;
       width: 100%;
-      justify-content:right
+      justify-content: right;
     }
     .nav-item-cotizar {
       display: none;
@@ -208,6 +211,7 @@ padding: 12px;
       right: 0;
       top: 0;
       text-align: center;
+      z-index: 20;
     }
   }
 
@@ -218,7 +222,7 @@ padding: 12px;
     .hamburger {
       display: flex;
       width: 100%;
-      justify-content:right;
+      justify-content: right;
     }
     .nav-menu {
       list-style: none;
@@ -246,7 +250,7 @@ padding: 12px;
       list-style: none;
       font-size: 0.9em;
       display: flex;
-      gap: 15px;
+      gap: 20px;
 
       //font-family: "Roboto Mono";
       //font-family: "Bebas Neue";

@@ -8,14 +8,40 @@ export const PresentationBox = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
-  .presentation-backimage {
-    position: absolute;
-    z-index: -1;
+/*
+  background-image: radial-gradient(
+      circle at 90% 90%,
+      ${Color.primary},
+      ${Color.secondary}
+    );*/
+
+    .presentation-back-image-container {
+    position: relative;
     min-width: 100vw;
     min-height: 100vh;
+    background-color: blue;
+    opacity: 0.5;
+    overflow: hidden;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  }
+
+  .presentation-back-image {
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    opacity: 0.5;
+    overflow: hidden;
+
+
   }
   .presentation-contend {
+
+    z-index: 0;
     padding: 5%;
 
     display: grid;
@@ -36,6 +62,7 @@ export const PresentationBox = styled.div`
     gap: 20px;
   }
   .presentation-title {
+
   }
   .presentation-description {
   }

@@ -13,8 +13,28 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 
 function App() {
+  /*
+  useEffect(() => {
+    window.addEventListener('scroll', function(event) {
+      const topDistance = window.pageYOffset;
+      const layer = document.querySelector("presentation-backimage")   as HTMLElement;
+    
+ 
+        //const depth = layer.getAttribute('data-depth');
+        const movement = -(topDistance * 5);
+        const translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+        /*layer.style['-webkit-transform'] = translate3d;
+        layer.style['-moz-transform'] = translate3d;
+        layer.style['-ms-transform'] = translate3d;
+        layer.style['-o-transform'] = translate3d;
+        layer.style.transform = translate3d;
+      
+      return;
+    });
+  })
+  
 
-/*
+
   useEffect(() => {
     const textElements = document.querySelectorAll('.title-section-back');
   
@@ -70,14 +90,74 @@ function App() {
       //textElement.style.transform = 'translateX(' + textOffset + 'px)';
     });
   }, [])
+
+
+
+
+
+
+
+
+  var topDistance = window.pageYOffset;
+  var layers = document.querySelectorAll("[data-type='parallax']");
+
+  for (var i = 0; i < layers.length; i++) {
+    var layer = layers[i];
+    var depth = layer.getAttribute('data-depth');
+    var movement = -(topDistance * depth);
+    var translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+    layer.style['-webkit-transform'] = translate3d;
+    layer.style['-moz-transform'] = translate3d;
+    layer.style['-ms-transform'] = translate3d;
+    layer.style['-o-transform'] = translate3d;
+    layer.style.transform = translate3d;
+  }
+  return;
+
+
+
+
+
+
 */
   useEffect(() => {
 
     const navBar = document.querySelector("#header-nav") as HTMLElement;
     let prevScrollPos = window.pageYOffset;
-    if (navBar ) {
+    if (navBar) {
 
       window.onscroll = () => {
+        const layers = document.querySelectorAll("[data-type='parallax']");
+        const servicesBackImage = document.querySelector("#services-back-image") as HTMLImageElement;
+        const topDistance = window.pageYOffset;
+
+       // const presentationBackImage = document.querySelector(".presentation-back-image")   as HTMLElement;
+        //const productBackImage = document.querySelector(".product-back-video")   as HTMLElement;
+          const movement = -(topDistance * 0.1);
+          const translate3d = 'translate3d(' + movement + 'px, 0,0)';
+          servicesBackImage.style.transform = translate3d;
+
+
+
+        for (let i = 0; i < layers.length; i++) {
+          const layer = layers[i] as HTMLElement;
+          const depthString = layer.getAttribute('data-depth');
+          if (depthString) {
+            const depth = parseFloat(depthString);
+            const movement = -(topDistance * depth);
+            const translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+            /*layer.style['-webkit-transform'] = translate3d;
+            layer.style['-moz-transform'] = translate3d;
+            layer.style['-ms-transform'] = translate3d;
+            layer.style['-o-transform'] = translate3d;*/
+            layer.style.transform = translate3d;
+          }
+
+        }
+
+
+
+
 
         if (navBar.style.left === "") {
           navBar.style.top = "0px";
@@ -105,7 +185,7 @@ function App() {
 
 
   return (
-  
+
     <BrowserRouter>
       <Routes>
         <Route path="/*" element={<HomePage />} />

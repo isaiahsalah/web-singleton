@@ -26,7 +26,7 @@ const HomePage = () => {
       <ProductsSection />
       <ServicesSection />
       <AboutSection />
-      <BlogSection />
+      {/*<BlogSection />*/}
       <FaqSection/>
       <ContactSection />
       <FooterComponent />

@@ -5,7 +5,8 @@ export const GlobalStyle = createGlobalStyle`
 
 :root {
 
-  font-family:Rubik;
+  //font-family:Rubik;
+  font-family:Lato;
   line-height: 1.5;
   font-weight: 400;
 
@@ -77,10 +78,12 @@ button:hover {
   background-color: ${Color.alternative};
   color: ${Color.secondary};
   border-color: ${Color.alternative};
+  filter: drop-shadow(0 0 1em ${Color.alternative}80);
+
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  //outline: 4px auto -webkit-focus-ring-color;
 }
 
 .title-section-back{
@@ -141,21 +144,34 @@ h1, h2, h3, h4, h5,h6 , p{
    }
 
    .title-section-container{
-      padding: 50px 0;
+    /*transform: translate(-50%, 0%);    
+    left: 50%;
+    top: 0;*/
+    max-width: 1200px;
+    width: 100%;
       display:flex;
-      width: 100%;
-      align-items: center;
-      gap: 20px;
-      
+      padding-inline: 20px;
+      box-sizing: border-box;
    }
    .section-title{
+    font-weight: normal;
       line-height:1;
       white-space: nowrap;
+      padding: 12px 24px;
+      //background-color: ${Color.alternative};
+      border-radius:0 0 10px 10px;
+      border: 1px solid ${Color.alternative};
+      border-top: 0;
+      color: ${Color.alternative};
    }
 
 
   
   @media screen and (max-width: 600px) {
+    .title-section-container{
+      justify-content: center;
+
+    }
   
 h1 {
   font-size: 60px;
@@ -176,7 +192,7 @@ h6 {
   font-size: 16px;
 }
 p{
-  font-size: 12px;
+  font-size: 14px;
 }
   }
 
@@ -200,7 +216,7 @@ h6 {
   font-size: 18px;
 }
 p{
-  font-size: 13px;
+  font-size: 15px;
 }
   }
 
@@ -224,7 +240,7 @@ h6 {
   font-size: 20px;
 }
 p{
-  font-size: 14px;
+  font-size: 16px;
 }
   }
 /*

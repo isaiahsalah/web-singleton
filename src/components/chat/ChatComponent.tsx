@@ -14,7 +14,7 @@ import {
 interface Props {
   SocialMedia: any[];
 }
-
+ 
 const ChatComponent = (props: Props) => {
   return (
     <ChatComponentBox>
@@ -23,7 +23,7 @@ const ChatComponent = (props: Props) => {
           <button className="chat-button"  >
             <h6><RiWhatsappFill className="chat-icon"/></h6>
 
-            <p>Hablá con nosotros</p>
+            <p className="chat-text">Hablá con nosotros</p>
           </button>
         </div>
       </div>

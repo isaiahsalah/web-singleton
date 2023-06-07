@@ -2,37 +2,33 @@ import { Color } from "../../../utils/Config";
 import styled from "styled-components";
 
 export const AboutBox = styled.div`
-  width: 100vw;
-  max-width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  align-content: center;
+  align-content: space-between;
   justify-content: center;
   position: relative;
+  gap: 60px;
 
-
-
-.title{
+  .title {
     font-family: "Abril Fatface";
-}
+  }
 
   .about-section {
     display: flex;
-    flex-wrap: wrap;
-    width: 60%;
+    width: 100%;
+    max-width: 1200px;
   }
   .about-contend {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
   }
   .title-section {
     width: 100%;
-    padding: 20px 0;
   }
   .line-container {
     display: flex;
@@ -48,15 +44,15 @@ export const AboutBox = styled.div`
   }
 
   .text {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    gap: 10px;
+    gap: 20px;
   }
   .technologies-container {
-    width: 30%;
+    width: 50%;
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -65,19 +61,20 @@ export const AboutBox = styled.div`
   }
 
   .text-experience {
-    width: 100%;
+    width: 80%;
     display: flex;
-    
-    align-items: top;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
   }
   .experience-year {
     width: 50%;
     font-family: "Abril Fatface";
     text-align: right;
-    font-size:10em;
+    font-size: 10em;
+    line-height: 1;
   }
-  .experience-about {
+  .experience-year-about {
     width: 50%;
     font-family: "Bebas Neue";
     font-size: 1.5em;
@@ -108,10 +105,36 @@ export const AboutBox = styled.div`
   .technologies {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
   }
-/*
+  .about-data-list-container {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    background-color: ${Color.active};
+  }
+  .about-data-list {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .about-data-line {
+    width: 3px;
+    height: 100%;
+    background-color: ${Color.alternative};
+  }
+  .about-data-item {
+    display: grid;
+    gap: 10px;
+  }
+  .about-data-title {
+    line-height: 1;
+  }
+  /*
   .team-container {
     display: flex;
     flex-wrap: wrap;
@@ -181,26 +204,37 @@ padding: 10px 10px 10px 20%;
     top: -20%;
 
     }*/
-    @media screen and (max-width: 600px) {
-      .about-section {
-    width: 100%;
+  @media screen and (max-width: 600px) {
+    .about-section {
+      width: 100%;
+    }
+    .about-contend {
+      flex-wrap: wrap;
+    }
+    .text {
+      width: 90%;
+    }
+    .technologies-container {
+      width: 90%;
+    }
+    .text-experience {
+      width: 100%;
+    }
+    .about-data-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-data-line {
+      display: none;
+    }
   }
-  .text{
-    width: 90%;
 
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    .about-section {
+      width: 100%;
+    }
   }
-  .technologies-container{
-    width: 90%;
 
+  @media screen and (min-width: 1201px) {
   }
-    }
-  
-    @media screen and (min-width: 601px) and (max-width: 1200px) {
-      .about-section {
-    width: 100%;
-  }
-    }
-  
-    @media screen and (min-width: 1201px) {
-    }
 `;

@@ -5,9 +5,23 @@ export const ProductBox = styled.div`
   min-height: 100vh;
   width: 100vw;
   display: grid;
-  align-items: center;
+  align-content: space-between;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+  background-color: ${Color.secondary};
+  z-index: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  .product-back-video {
+    top: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: -2;
+    opacity: 0.2;
+  }
 
   .title-section-back {
     //transition:  0.25s;
@@ -26,7 +40,7 @@ export const ProductBox = styled.div`
     display: grid;
     gap: 20px;
 
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -39,11 +53,6 @@ export const ProductBox = styled.div`
     display: flex;
     width: 40%;
     transition: 0.25s opacity ease-in-out;
-    background-image: radial-gradient(
-      circle at 20% 30%,
-      ${Color.warning},
-      ${Color.secondary}
-    );
     border-radius: 10px;
     position: relative;
     border-radius: 3px;
@@ -53,29 +62,27 @@ export const ProductBox = styled.div`
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: 0.4;
     border-radius: 3px;
   }
   .product-info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
-    text-align: right;
+    justify-content: left;
+    align-content: center;
+    text-align: left;
     width: 60%;
     padding: 20px;
     box-sizing: border-box;
-
     gap: 20px;
   }
   .product-title {
     width: 100%;
-    font-family: "Abril Fatface";
   }
   .product-description {
     width: 100%;
   }
   .product-module-list {
-   display: none;
+    display: none;
     //display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40px, 60px));
     align-items: center;
@@ -99,7 +106,7 @@ export const ProductBox = styled.div`
       .product-module-title {
         opacity: 1;
         &:hover {
-transform: scale(1.1);
+          transform: scale(1.1);
         }
       }
       .product-module-icon {
@@ -108,7 +115,7 @@ transform: scale(1.1);
     }
   }
   .product-module-title {
-   transition: 0.25s;
+    transition: 0.25s;
     position: absolute;
     opacity: 0;
   }

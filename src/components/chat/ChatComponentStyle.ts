@@ -4,9 +4,9 @@ import styled from "styled-components";
 export const ChatComponentBox = styled.nav`
   #chat-container {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 20;
+    right: 5vh;
+    bottom: 5vh;
+    z-index: 10;
     transition: right 0.25s ease-out 0.2s, opacity 0.25s ease-out 0.2s;
 
   }
@@ -28,13 +28,20 @@ export const ChatComponentBox = styled.nav`
   .chat-icon{
     display: flex;
   }
-  .chat-text:hover {
-    transform: scale(1.05);
-  }
 
   @media screen and (max-width: 600px) {
     .contact {
     display: none;
+  }
+  .chat-text{
+    display: none;
+  }
+  .chat-icon{
+    font-size: 30px;
+
+  }
+  .chat-button{
+    padding: 10px
   }
   }
 

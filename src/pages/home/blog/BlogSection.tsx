@@ -68,13 +68,10 @@ const BlogSection = () => {
 
 
             <div className='blog-list-container'>
-                <h1 className='title-section-back'>Blog</h1>
                 <div className='title-section-container'>
-                    <div className='line-horizontal-long' />
-                    <h5 className='section-title abril'>
+                    <h6 className='section-title'>
                         Últimas noticias
-                    </h5>
-                    <div className='line-horizontal-short' />
+                    </h6>
                 </div>
                 <Card sx={{ maxWidth: 345 }}>
                     <CardHeader
@@ -150,28 +147,7 @@ const BlogSection = () => {
                         </CardContent>
                     </Collapse>
                 </Card>
-                <div className='blog-list'>
-                    {
-                        Blog.map((blog, index) => {
-                            return (
-                                <div key={index} className={`blog-item`}>
-                                    <div className={`blog-item-text blog-item-text-${index % 2 ? "top" : "bottom"}`}>
-                                        <h5 className='blog-title'>{blog.title}</h5>
-                                        <p className='blog-content'>{blog.content}</p>
-                                        <div className='blog-button-container'>
-                                            <button className='blog-button'>Leer más 👀</button>
-
-                                        </div>
-                                    </div>
-                                    <div className='blog-image-container'>
-
-                                        <img className='blog-image' src={blog.image} />
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+               
             </div>
 
 
