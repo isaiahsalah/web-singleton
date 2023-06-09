@@ -21,6 +21,8 @@ export const ProductBox = styled.div`
     position: fixed;
     z-index: -2;
     opacity: 0.2;
+    transition: .25s;
+
   }
 
   .title-section-back {
@@ -53,13 +55,11 @@ export const ProductBox = styled.div`
     display: flex;
     width: 40%;
     transition: 0.25s opacity ease-in-out;
-    border-radius: 10px;
     position: relative;
-    border-radius: 3px;
   }
   .product-image {
     display: flex;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
     border-radius: 3px;

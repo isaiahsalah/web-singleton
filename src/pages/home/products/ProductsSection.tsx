@@ -1,11 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ProductBox } from './ProductsStyle';
 import { ProductsList } from '../../../utils/Config';
-import videoWork from '../../../assets/video/video-work.mp4'
+import videoWork from '../../../assets/video/work-video.mp4'
 
 const ProductsSection = () => {
+  const [selectedItem, setSelectedItem] = useState(ProductsList[0])
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      selectedNewItem(selectedIndex, ProductsList)
+    }, 4500)
+    return () => {
+      clearInterval(interval)
+    }
+  })
 
+  const selectedNewItem = (index: number, items: any, next = true) => {
+    setLoaded(false)
+    setTimeout(() => {
+      const condition = next ? selectedIndex < items.length - 1 : selectedIndex > 0;
+      const nextIndex = next ? (condition ? selectedIndex + 1 : 0) : (condition ? selectedIndex - 1 : items.length - 1)
+      setSelectedItem(items[nextIndex])
+      setSelectedIndex(nextIndex)
+    }, 1000)
+  }
+
+  const next = () => {
+    selectedNewItem(selectedIndex, ProductsList)
+  }
+  const previus = () => {
+    selectedNewItem(selectedIndex, ProductsList, false)
+  }
   return (
     <ProductBox id='product'>
       <video loop autoPlay className='product-back-video' data-type="parallax" data-depth="0.10" src={videoWork}>
@@ -19,14 +46,11 @@ const ProductsSection = () => {
 
       <div className='product-list'>
         <div className='product-item' >
-
-
-
           <div className='product-info'>
-            <div className='product-class'>{ProductsList[0].item}</div>
-            <h1 className='product-title'>{ProductsList[0].title}</h1>
-            <p className='product-description'>{ProductsList[0].description}</p>
-            <div className='product-module-list'>
+            <div className={`product-class ${loaded ? "loaded" : ""}`}>{ProductsList[0].item}</div>
+            <h1 className={`product-title ${loaded ? "loaded" : ""}`}>{ProductsList[0].title}</h1>
+            <p className={`product-description ${loaded ? "loaded" : ""}`}>{ProductsList[0].description}</p>
+            <div className={`product-module-list ${loaded ? "loaded" : ""}`}>
               {ProductsList[0].modules.map((module, index) => {
                 return <div
                   className='product-module'
@@ -36,7 +60,7 @@ const ProductsSection = () => {
                 </div>
               })}
             </div>
-            <div className='product-button-container' >
+            <div className={`product-button-container ${loaded ? "loaded" : ""}`}>
               <button className='product-button'>Ver Info</button>
             </div>
 

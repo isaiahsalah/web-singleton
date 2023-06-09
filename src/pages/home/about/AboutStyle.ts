@@ -112,7 +112,7 @@ export const AboutBox = styled.div`
     display: grid;
     justify-content: center;
     width: 100%;
-    background-color: ${Color.active};
+    background-color: ${Color.primary};
   }
   .about-data-list {
     display: flex;

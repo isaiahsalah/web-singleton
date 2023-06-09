@@ -18,35 +18,25 @@ export const PresentationBox = styled.div`
       ${Color.secondary}
     );*/
 
-    .presentation-back-image-container {
-    position: relative;
-    min-width: 100vw;
-    min-height: 100vh;
-    background-color: blue;
-    opacity: 0.5;
-    overflow: hidden;
-    
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
-  }
 
-  .presentation-back-image {
-    position: fixed;
-    min-width: 100vw;
-    min-height: 100vh;
-    opacity: 0.5;
-    overflow: hidden;
+  #presentation-back-image {
+    position: absolute;
+    opacity: 0.4;
+    z-index: -1;
+    transition: .25s;
 
 
   }
   .presentation-contend {
 
     z-index: 0;
-    padding: 5%;
 
     display: grid;
     justify-content: left;
     width: 100%;
+    max-width: 1200px;
+    padding: 20px;
     min-height: 100vh;
   }
   .presentation-text {
@@ -55,18 +45,27 @@ export const PresentationBox = styled.div`
     justify-content: center;
     align-content: center;
     width: 60%;
-    line-height: 1;
+    
   }
   .presentation-button-container {
     display: flex;
     gap: 20px;
   }
   .presentation-title {
-
+    line-height: 1;
   }
   .presentation-description {
   }
 
+
+
+
+
+
+
+
+
+  
   @media screen and (max-width: 600px) {
 
     .presentation-text {

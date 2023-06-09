@@ -82,9 +82,7 @@ export const NavegatorBox = styled.nav`
       filter: drop-shadow(0 0 1.5em ${Color.alternative});
       background-color: ${Color.alternative};
 
-      .logo-img {
-        mix-blend-mode:difference
-      }
+
     }
   }
 
@@ -174,7 +172,7 @@ export const NavegatorBox = styled.nav`
     &:hover {
       filter: drop-shadow(0 0 1em ${Color.alternative}80);
       background-color: ${Color.alternative};
-      color: ${Color.secondary};
+      color: ${Color.active};
     }
   }
   .icon-movil {

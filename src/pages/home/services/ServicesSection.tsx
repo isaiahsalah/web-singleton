@@ -5,7 +5,7 @@ import servicesImage from '../../../assets/images/services-image.jpg'
 
 const ServicesSection = () => {
   return (
-    <ServicesBox>
+    <ServicesBox id='service'>
       <img id='services-back-image' src={servicesImage}>
         
       </img>

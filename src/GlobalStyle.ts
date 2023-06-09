@@ -76,9 +76,9 @@ button {
 }
 button:hover {
   background-color: ${Color.alternative};
-  color: ${Color.secondary};
+  color: ${Color.active};
   border-color: ${Color.alternative};
-  filter: drop-shadow(0 0 1em ${Color.alternative}80);
+  filter: drop-shadow(0 0 1.5em ${Color.alternative}4d);
 
 }
 button:focus,
@@ -152,19 +152,25 @@ h1, h2, h3, h4, h5,h6 , p{
       display:flex;
       padding-inline: 20px;
       box-sizing: border-box;
+      z-index: 5;
    }
    .section-title{
     font-weight: normal;
       line-height:1;
       white-space: nowrap;
       padding: 12px 24px;
-      //background-color: ${Color.alternative};
+      background-color: ${Color.alternative}1a;
       border-radius:0 0 10px 10px;
       border: 1px solid ${Color.alternative};
       border-top: 0;
       color: ${Color.alternative};
    }
 
+   ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
 
   
   @media screen and (max-width: 600px) {
@@ -174,10 +180,10 @@ h1, h2, h3, h4, h5,h6 , p{
     }
   
 h1 {
-  font-size: 60px;
+  font-size: 70px;
 }
 h2 {
-  font-size: 50px;
+  font-size: 55px;
 }
 h3 {
   font-size: 40px;
@@ -192,7 +198,7 @@ h6 {
   font-size: 16px;
 }
 p{
-  font-size: 14px;
+  font-size: 13px;
 }
   }
 
@@ -210,6 +216,30 @@ h4 {
   font-size: 40px;
 }
 h5 {
+  font-size: 28px;
+}
+h6 {
+  font-size: 17px;
+}
+p{
+  font-size: 14px;
+}
+  }
+
+  @media screen and (min-width: 1201px) {
+    h1 {
+  font-size: 90px;
+}
+h2 {
+  font-size: 75px;
+}
+h3 {
+  font-size: 60px;
+}
+h4 {
+  font-size: 45px;
+}
+h5 {
   font-size: 30px;
 }
 h6 {
@@ -217,30 +247,6 @@ h6 {
 }
 p{
   font-size: 15px;
-}
-  }
-
-  @media screen and (min-width: 1201px) {
-    h1 {
-  font-size: 100px;
-}
-h2 {
-  font-size: 80px;
-}
-h3 {
-  font-size: 65px;
-}
-h4 {
-  font-size: 50px;
-}
-h5 {
-  font-size: 35px;
-}
-h6 {
-  font-size: 20px;
-}
-p{
-  font-size: 16px;
 }
   }
 /*

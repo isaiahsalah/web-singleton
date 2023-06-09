@@ -5,10 +5,21 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //import './App.css'
 import HomePage from './pages/home/HomePage'
+import AboutPage from './pages/about/AboutPage'
+
+
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { Color } from './utils/Config'
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: { main: Color.active },
+    background:{default: Color.secondary}
+  },
+});
 
 
 
@@ -128,7 +139,11 @@ function App() {
 
       window.onscroll = () => {
         const layers = document.querySelectorAll("[data-type='parallax']");
+        //const layersX = document.querySelectorAll("[data-type='parallaxX']");
+
         const servicesBackImage = document.querySelector("#services-back-image") as HTMLImageElement;
+        const FaqBackImage = document.querySelector("#presentation-back-image") as HTMLImageElement;
+
         const topDistance = window.pageYOffset;
 
        // const presentationBackImage = document.querySelector(".presentation-back-image")   as HTMLElement;
@@ -136,6 +151,8 @@ function App() {
           const movement = -(topDistance * 0.1);
           const translate3d = 'translate3d(' + movement + 'px, 0,0)';
           servicesBackImage.style.transform = translate3d;
+          FaqBackImage.style.transform = translate3d;
+
 
 
 
@@ -186,11 +203,19 @@ function App() {
 
   return (
 
-    <BrowserRouter>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <BrowserRouter>
       <Routes>
+      <Route path="/home" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/*" element={<HomePage />} />
+
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
+
+    
   )
 }
 

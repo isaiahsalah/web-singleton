@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
+
 import { NavegatorBox } from './NavegatorStyle'
 import singletonLogo from '../../assets/svgs/logo.svg'
 import { GiHamburgerMenu } from "react-icons/gi"
 import SVGLogoComponent from '../../assets/svgs/logo'
+import { Color } from '../../utils/Config'
+import LogoComponent from '../logo/LogoComponent'
 
 const NavegatorComponent = () => {
 
@@ -47,21 +51,7 @@ const NavegatorComponent = () => {
         <NavegatorBox>
             <header id='header-nav'>
                 <nav id='nav-container' className='nav-container'>
-                    <div className='logo-container'>
-                        <div className='logo-img-container'>
-                            {/*<img className='logo-img' src={singletonLogo} alt="" />*/}
-                            <div className='logo-img'> <SVGLogoComponent  color='#ca3939' /></div>
-                        </div>
-                        <div className='logo-text'>
-                            <h6 className='logo-title'>
-                                Singleton
-                            </h6>
-                            <p className='logo-subtitle'>
-                                Tech Solutions
-                            </p>
-                        </div>
-
-                    </div>
+                    <LogoComponent/>
                     <div className="hamburger" onClick={openMenuMovil}>
                         <div className="icon-movil-container" >
                             <h5>
@@ -71,12 +61,12 @@ const NavegatorComponent = () => {
                     </div>
                     <div className='nav-menu-container'>
                         <ul className='nav-menu' onClick={closeMenuMovil}>
-                            <li className='nav-item'><Link className='nav-link' to="#home">Home</Link></li>
-                            <li className='nav-item'><a className='nav-link' href="#product">Product</a></li>
-                            <li className='nav-item'><Link className='nav-link' to="#services">Services</Link></li>
-                            <li className='nav-item'><Link className='nav-link' to="#about">About</Link></li>
-                            <li className='nav-item'><Link className='nav-link' to="#blog">Blog</Link></li>
-                            <li className='nav-item'><Link className='nav-link' to="#contact">Contact</Link></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#home' }}>Home</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#product' }}>Productos</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#service' }}>Servicioss</HashLink></li>
+                            <li className='nav-item'><Link className='nav-link' to='/about'>Nosotros</Link></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#faq' }}>Faq</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#contact' }}>Contacto</HashLink></li>
                             <li>
                                 <Link to="/" className='country-container'>
                                     <div className='country bolivia'>

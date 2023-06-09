@@ -15,7 +15,7 @@ interface Props {
   SocialMedia: any[];
 }
  
-const ChatComponent = (props: Props) => {
+const ChatComponent = () => {
   return (
     <ChatComponentBox>
       <div id="chat-container">

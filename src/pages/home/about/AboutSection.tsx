@@ -9,7 +9,7 @@ import { AboutData, TeamList, Technologies } from "../../../utils/Config";
 const AboutSection = () => {
     const navigate = useNavigate();
     return (
-        <AboutBox>
+        <AboutBox id="about">
             <div className="title-section-container">
                     <h6 className="section-title">Uno poco sobre nosotros</h6>
                 </div>

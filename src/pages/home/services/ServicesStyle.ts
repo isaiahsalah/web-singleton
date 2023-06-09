@@ -14,7 +14,7 @@ export const ServicesBox = styled.div`
     ${Color.primary},
     ${Color.secondary}
   );*/
-  z-index: -1;
+  z-index: 1;
 
   #services-back-image {
     opacity: 1;

@@ -1,22 +1,27 @@
 import { useEffect, useState } from 'react'
 
-import img3 from '../../../assets/images/fondo.jpg'
 import { PresentationBox } from './PresentationStyle';
 import { PresentationItems } from '../../../utils/Config';
+import { Button } from '@mui/material';
 
+import faqImage from '../../../assets/images/teclado.jpg'
 
 const PresentationSection = () => {
 
-    return (
-        <PresentationBox>
+    
 
-            <img className='presentation-back-image' data-type="parallax" data-depth="0.20" src={img3}/>
+    return (
+        <PresentationBox id='home'>
+            <img id='presentation-back-image' src={faqImage} />
+
             <div className='presentation-contend'>
                 <div className='presentation-text'>
                     <h2 className='presentation-title'>
-                        Haz realidad tus sueños 3D
+                        Potencia tu negocio con nosotros
                     </h2>
-                    <h6>Soluciones profesionales 3D en un sitio</h6>
+                    <p>
+                        Transforma tu enfoque de negocio y potencia tus relaciones con los clientes con nuestro software CRM de vanguardia, impulsando el crecimiento y la excelencia en cada interacción
+                    </p>
                     <div className='presentation-button-container'>
                         <button>Cotizar</button>
                         <button>Ver Productos</button>

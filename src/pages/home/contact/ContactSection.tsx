@@ -1,11 +1,14 @@
 import React from 'react'
 import { ContactBox } from './ContactStyle'
 import { ContactMessage } from '../../../utils/Config'
-import FooterComponent from '../../../components/footer/FooterComponent'
+import videoContact from '../../../assets/video/mano-escribiendo-fonto-blanco.mp4'
+
 
 const ContactSection = () => {
     return (
-        <ContactBox>
+        <ContactBox id='contact'>
+            <video loop autoPlay className='contact-back-video' data-type="parallax" data-depth="0.10" src={videoContact}>
+      </video>
             <div className='title-section-container'>
                 <h6 className='section-title'>
                     Contactanos

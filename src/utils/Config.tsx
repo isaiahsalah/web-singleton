@@ -1,7 +1,7 @@
 import { GiTBrick } from 'react-icons/gi'
-import img1 from '../assets/images/img-01.jpg'
-import img2 from '../assets/images/img-02.jpg'
-import img3 from '../assets/images/img-03.jpg'
+import img1 from '../assets/images/teclado.jpg'
+import img2 from '../assets/images/teclado.jpg'
+import img3 from '../assets/images/teclado.jpg'
 import techSvg from '../assets/svgs/tech.svg'
 
 import {
@@ -10,6 +10,8 @@ import {
   RiGithubFill,
   RiInstagramFill,
   RiLinkedinFill,
+  RiMapFill,
+  RiMapPinFill,
   RiTwitterFill,
   RiWhatsappFill,
   RiYoutubeFill
@@ -41,7 +43,7 @@ import { GrJava } from 'react-icons/gr'
 export const Color = {
   primary: '#475A71',
   secondary: '#1F1F1F',
-  active: '#2B7DE2',
+  active: '#2985d1',
   alternative: '#ffffff',
   warning: '#E8A074',
 
@@ -106,6 +108,11 @@ export const SocialMedia = [
     title: "Youtube",
     link: "https://codepen.io/",
     icon: RiYoutubeFill
+  },
+  {
+    title: "Map",
+    link: "https://codepen.io/",
+    icon: RiMapPinFill
   }
 ]
 
@@ -383,6 +390,111 @@ export const AboutData = [
   }
 ]
 
+export const FaqList = [
+  {
+    title:"ola",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+    ]
+  },
+  {
+    title:"fara",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+
+    ]
+  },
+  {
+    title:"nexus",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+    ]
+  },
+  {
+    title:"ramses",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+    ]
+  },
+  
+
+]
 
 export const Technologies = [
   {
