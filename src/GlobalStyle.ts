@@ -22,6 +22,9 @@ export const GlobalStyle = createGlobalStyle`
 
   overflow-x: hidden;
 }
+.app{
+        visibility:hidden; 
+    }
 body::-webkit-scrollbar{
         width: 0px;
     }

@@ -21,7 +21,7 @@ export const PresentationBox = styled.div`
 
 
   #presentation-back-image {
-    position: absolute;
+    position: fixed;
     opacity: 0.4;
     z-index: -1;
     transition: .25s;

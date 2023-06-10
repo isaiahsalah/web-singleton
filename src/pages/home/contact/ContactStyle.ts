@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ContactBox = styled.div`
   min-width: 100vw;
-  min-height: 95vh;
+  min-height: 100vh;
   display: grid;
   justify-items: center;
   align-content: space-between;

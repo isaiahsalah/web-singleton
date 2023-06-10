@@ -1,7 +1,7 @@
 import { GiTBrick } from 'react-icons/gi'
 import img1 from '../assets/images/teclado.jpg'
-import img2 from '../assets/images/teclado.jpg'
-import img3 from '../assets/images/teclado.jpg'
+import img2 from '../assets/images/pc.jpg'
+import img3 from '../assets/images/server.jpg'
 import techSvg from '../assets/svgs/tech.svg'
 
 import {
@@ -283,6 +283,209 @@ export const ServicesList = [
   },
 ]
 
+
+
+export const AboutData = [
+  {
+    title: "45",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  },
+  {
+    title: "4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  }, {
+    title: "112",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  }
+  ,
+  {
+    title: "10",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  },
+  {
+    title: "25",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  }
+]
+
+export const FaqList = [
+  {
+    title: "ola",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+    ]
+  },
+  {
+    title: "fara",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+
+    ]
+  },
+  {
+    title: "nexus",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+    ]
+  },
+  {
+    title: "ramses",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+    ]
+  },
+
+
+]
+
+export const Technologies = [
+  {
+    name: "React",
+    icon: <SiReact />,
+  },
+  {
+    name: "Redux",
+    icon: <SiAmazon />,
+  },
+  {
+    name: "Redux",
+    icon: <SiTypescript />,
+  },
+  {
+    name: "Redux",
+    icon: <SiAngular />,
+  },
+  {
+    name: "Redux",
+    icon: <SiPython />,
+  },
+  {
+    name: "Redux",
+    icon: <SiPostgresql />,
+  },
+  {
+    name: "Redux",
+    icon: <SiFirebase />,
+  },
+  {
+    name: "Redux",
+    icon: <SiMongodb />,
+  },
+  {
+    name: "Redux",
+    icon: <SiMysql />,
+  },
+  {
+    name: "Redux",
+    icon: <SiNetapp />,
+  },
+  {
+    name: "Redux",
+    icon: <SiJavascript />,
+  },
+  {
+    name: "Redux",
+    icon: <SiCsharp />,
+  },
+  {
+    name: "Redux",
+    icon: <SiNetapp />,
+  },
+  {
+    name: "Redux",
+    icon: <SiSwift />,
+  },
+  {
+    name: "Redux",
+    icon: <SiDart />,
+  },
+  {
+    name: "Redux",
+    icon: <SiFlutter />,
+  },
+];
+
 export const TeamList = [
   {
     Id: 1,
@@ -361,204 +564,3 @@ export const TeamList = [
     ]
   }
 ]
-
-export const AboutData = [
-  {
-    title: "45",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-
-  },
-  {
-    title: "4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-
-  }, {
-    title: "112",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-
-  }
-  ,
-  {
-    title: "10",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-
-  },
-  {
-    title: "25",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-
-  }
-]
-
-export const FaqList = [
-  {
-    title:"ola",
-    questions: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      }
-    ]
-  },
-  {
-    title:"fara",
-    questions: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      }
-
-    ]
-  },
-  {
-    title:"nexus",
-    questions: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-    ]
-  },
-  {
-    title:"ramses",
-    questions: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-      }
-    ]
-  },
-  
-
-]
-
-export const Technologies = [
-  {
-    name: "React",
-    icon: <SiReact />,
-  },
-  {
-    name: "Redux",
-    icon: <SiAmazon />,
-  },
-  {
-    name: "Redux",
-    icon: <SiTypescript />,
-  },
-  {
-    name: "Redux",
-    icon: <SiAngular />,
-  },
-  {
-    name: "Redux",
-    icon: <SiPython />,
-  },
-  {
-    name: "Redux",
-    icon: <SiPostgresql />,
-  },
-  {
-    name: "Redux",
-    icon: <SiFirebase />,
-  },
-  {
-    name: "Redux",
-    icon: <SiMongodb />,
-  },
-  {
-    name: "Redux",
-    icon: <SiMysql />,
-  },
-  {
-    name: "Redux",
-    icon: <SiNetapp />,
-  },
-  {
-    name: "Redux",
-    icon: <SiJavascript />,
-  },
-  {
-    name: "Redux",
-    icon: <SiCsharp />,
-  },
-  {
-    name: "Redux",
-    icon: <SiNetapp />,
-  },
-  {
-    name: "Redux",
-    icon: <SiSwift />,
-  },
-  {
-    name: "Redux",
-    icon: <SiDart />,
-  },
-  {
-    name: "Redux",
-    icon: <SiFlutter />,
-  },
-];

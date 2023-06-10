@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { PresentationBox } from './PresentationStyle';
 import { PresentationItems } from '../../../utils/Config';
@@ -8,18 +8,19 @@ import faqImage from '../../../assets/images/teclado.jpg'
 
 const PresentationSection = () => {
 
-    
+
 
     return (
-        <PresentationBox id='home'>
-            <img id='presentation-back-image' src={faqImage} />
+        <PresentationBox id='home' >
+
+            <img id='presentation-back-image' data-type="parallax" data-depth="0.20" src={faqImage} />
 
             <div className='presentation-contend'>
                 <div className='presentation-text'>
                     <h2 className='presentation-title'>
                         Potencia tu negocio con nosotros
                     </h2>
-                    <p>
+                    <p className='presentation-description'>
                         Transforma tu enfoque de negocio y potencia tus relaciones con los clientes con nuestro software CRM de vanguardia, impulsando el crecimiento y la excelencia en cada interacción
                     </p>
                     <div className='presentation-button-container'>

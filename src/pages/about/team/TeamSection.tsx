@@ -48,14 +48,11 @@ const TeamSection = () => {
 
     return (
         <TeamSectionBox>
-            <h1 className='title-section-back'>Equipo</h1>
-            <div className='title-section-container'>
-                <div className='line-horizontal-long' />
-                <h5 className='section-title abril'>
-                    Nuestro Equipo
-                </h5>
-                <div className='line-horizontal-short' />
+            
+            <div className="title-section-container">
+                <h6 className="section-title">Nuestra Equipo</h6>
             </div>
+
             <div className="team-list">
                 {TeamList.map((item, index) =>
                 

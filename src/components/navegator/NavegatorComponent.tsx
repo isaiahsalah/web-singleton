@@ -51,7 +51,7 @@ const NavegatorComponent = () => {
         <NavegatorBox>
             <header id='header-nav'>
                 <nav id='nav-container' className='nav-container'>
-                    <LogoComponent/>
+                    <LogoComponent />
                     <div className="hamburger" onClick={openMenuMovil}>
                         <div className="icon-movil-container" >
                             <h5>
@@ -67,37 +67,40 @@ const NavegatorComponent = () => {
                             <li className='nav-item'><Link className='nav-link' to='/about'>Nosotros</Link></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#faq' }}>Faq</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#contact' }}>Contacto</HashLink></li>
-                            <li>
-                                <Link to="/" className='country-container'>
-                                    <div className='country bolivia'>
-                                        <span className='B'>
-                                            B
-                                        </span >
-                                        <span className='O'>
-                                            O
-                                        </span >
-                                        <span className='L'>
-                                            L
-                                        </span>
-                                    </div>
-                                    <div className='country paraguay'>
-                                        <span className='P'>
-                                            P
-                                        </span >
-                                        <span className='A'>
-                                            A
-                                        </span >
-                                        <span className='R'>
-                                            R
-                                        </span>
-                                    </div>
+                            <div>
+                                <Link to="/" className='country-container bolivia'>
+                                    <span className='B'>
+                                        B
+                                    </span >
+                                    <span className='O'>
+                                        O
+                                    </span >
+                                    <span className='L'>
+                                        L
+                                    </span>
                                 </Link>
-                            </li>
+                            </div>
+                            <div>
+                                <Link to="/" className='country-container paraguay'>
+                                    <span className='P'>
+                                        P
+                                    </span >
+                                    <span className='A'>
+                                        A
+                                    </span >
+                                    <span className='R'>
+                                        R
+                                    </span>
+                                </Link>
+                            </div>
 
                         </ul>
-                        <button className='nav-item-cotizar'>
-                            Cotizar
-                        </button>
+                        <div className='nav-button-cotizar'>
+                            <button className='nav-item-cotizar'>
+                                Cotizar
+                            </button>
+                        </div>
+
                     </div>
                 </nav>
             </header>

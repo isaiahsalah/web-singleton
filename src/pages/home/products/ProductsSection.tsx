@@ -2,20 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { ProductBox } from './ProductsStyle';
 import { ProductsList } from '../../../utils/Config';
 import videoWork from '../../../assets/video/work-video.mp4'
+import Slider from "react-slick";
 
 const ProductsSection = () => {
   const [selectedItem, setSelectedItem] = useState(ProductsList[0])
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [loaded, setLoaded] = useState(false);
-
+/*
   useEffect(() => {
     const interval = setInterval(() => {
       selectedNewItem(selectedIndex, ProductsList)
-    }, 4500)
+    }, 8000)
     return () => {
       clearInterval(interval)
     }
-  })
+  })*/
 
   const selectedNewItem = (index: number, items: any, next = true) => {
     setLoaded(false)
@@ -47,29 +48,46 @@ const ProductsSection = () => {
       <div className='product-list'>
         <div className='product-item' >
           <div className='product-info'>
-            <div className={`product-class ${loaded ? "loaded" : ""}`}>{ProductsList[0].item}</div>
-            <h1 className={`product-title ${loaded ? "loaded" : ""}`}>{ProductsList[0].title}</h1>
-            <p className={`product-description ${loaded ? "loaded" : ""}`}>{ProductsList[0].description}</p>
+            <p className={`product-class ${loaded ? "loaded" : ""}`} >{selectedItem.item}</p>
+            <h1 className={`product-title ${loaded ? "loaded" : ""}`}>{selectedItem.title}</h1>
+            <p className={`product-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</p>
             <div className={`product-module-list ${loaded ? "loaded" : ""}`}>
-              {ProductsList[0].modules.map((module, index) => {
-                return <div
+              {selectedItem.modules.map((module, index) =>
+                <div
                   className='product-module'
                   key={index}>
                   <module.icon className='product-module-icon' />
                   <p className='product-module-title'>{module.title}</p>
                 </div>
-              })}
+              )}
             </div>
             <div className={`product-button-container ${loaded ? "loaded" : ""}`}>
               <button className='product-button'>Ver Info</button>
             </div>
 
           </div>
-          <div className='product-image-container'>
-            <img className='product-image' src={ProductsList[0].image} alt={ProductsList[0].title} />
+          <div className={`product-image-container ${loaded ? "loaded" : ""}`}>
+            <img
+              className='product-image'
+              src={selectedItem.image}
+              alt={selectedItem.title}
+              onLoad={() => setLoaded(true)} />
           </div>
 
 
+        </div>
+        <div id="pagination">
+          {
+            ProductsList.map((item, index) =>
+              <button
+                key={index}
+                onClick={() => selectedNewItem(index, ProductsList)}
+                className={`product-button ${index === selectedIndex ? "active" : ""}`}
+                data-slide={index}
+              >
+              </button>
+            )
+          }
         </div>
       </div>
 

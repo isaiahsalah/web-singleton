@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavegatorComponent from '../../components/navegator/NavegatorComponent'
 
 import { HomeBox } from './HomeStyle'
@@ -17,8 +17,20 @@ import FaqSection from './faq/FaqSection'
 
 
 const HomePage = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      const app = document.querySelector(".app") as HTMLElement;
+      if (app) {
+
+        app.style.visibility = 'visible';
+      }
+
+    }, 0);
+
+  }, [])
+
   return (
-    <HomeBox>
+    <HomeBox className="app">
 
       <ChatComponent />
       <NavegatorComponent />
@@ -27,7 +39,7 @@ const HomePage = () => {
       <ServicesSection />
       <AboutSection />
       {/*<BlogSection />*/}
-      <FaqSection/>
+      <FaqSection />
       <ContactSection />
       <FooterComponent />
     </HomeBox>

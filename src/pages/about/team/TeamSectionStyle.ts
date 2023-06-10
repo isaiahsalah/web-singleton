@@ -2,8 +2,15 @@ import { Color } from "../../../utils/Config";
 import styled from 'styled-components'
 
 export const TeamSectionBox = styled.div`
-width: 100vw;
-min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-content: space-between;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+  overflow: hidden;
 
 .team-list{
   display: flex;

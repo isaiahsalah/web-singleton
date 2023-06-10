@@ -81,8 +81,6 @@ export const NavegatorBox = styled.nav`
     &:hover {
       filter: drop-shadow(0 0 1.5em ${Color.alternative});
       background-color: ${Color.alternative};
-
-
     }
   }
 
@@ -118,23 +116,18 @@ export const NavegatorBox = styled.nav`
   }
   .country-container {
     font-weight: bold;
-    transition: 0.5s;
-    &:hover {
-      .bolivia {
-        display: none;
-      }
-
-      .paraguay {
-        display: block;
-      }
-    }
-  }
-
-  .country {
-    cursor: pointer;
+    transition: 0.25s;
   }
   .paraguay {
-    display: none;
+    &:hover{
+      opacity: 1;
+      filter: drop-shadow(0 0 1em ${Color.alternative});
+
+    }
+  }
+  .bolivia {
+    opacity: 1;
+    filter: drop-shadow(0 0 1em ${Color.alternative});
   }
 
   .B {
@@ -224,17 +217,18 @@ export const NavegatorBox = styled.nav`
     }
     .nav-menu {
       list-style: none;
-
       display: none;
       position: fixed;
       align-content: center;
       justify-content: center;
       background-color: ${Color.secondary};
+      border-radius: 0;
       bottom: 0;
       left: 0;
       right: 0;
       top: 0;
       text-align: center;
+      z-index: 20;
     }
     .nav-container {
       width: 100%;

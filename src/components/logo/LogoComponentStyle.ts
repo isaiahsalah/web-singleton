@@ -6,7 +6,7 @@ export const LogoComponentBox = styled.div`
     display: flex;
     height: 100%;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
   
   .logo-img-container {
     background-color: ${Color.primary};
@@ -34,6 +34,7 @@ export const LogoComponentBox = styled.div`
   }
   .logo-title,
   .logo-subtitle {
+    white-space: nowrap;
     &:hover {
       filter: drop-shadow(0 0 1.5em ${Color.alternative});
       opacity: 1;

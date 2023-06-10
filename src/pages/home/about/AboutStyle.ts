@@ -11,6 +11,7 @@ export const AboutBox = styled.div`
   justify-content: center;
   position: relative;
   gap: 60px;
+  overflow: hidden;
 
   .title {
     font-family: "Abril Fatface";
@@ -109,6 +110,7 @@ export const AboutBox = styled.div`
     gap: 20px;
   }
   .about-data-list-container {
+    overflow: hidden;
     display: grid;
     justify-content: center;
     width: 100%;
@@ -123,9 +125,13 @@ export const AboutBox = styled.div`
     box-sizing: border-box;
   }
   .about-data-line {
+    border-radius: 5px;
     width: 3px;
     height: 100%;
     background-color: ${Color.alternative};
+  }
+  .about-data-item-container{
+    display: flex;
   }
   .about-data-item {
     display: grid;

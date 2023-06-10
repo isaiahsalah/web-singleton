@@ -18,8 +18,7 @@ const ServicesSection = () => {
         <div className='services-list-container'>
           <div className='services-list'>
             {
-              ServicesList.map((item, index) => {
-                return (
+              ServicesList.map((item, index) => 
                   <div key={index} className='services-list-item'>
                     <div className='services-list-item-icon'>
                       <item.icon />
@@ -31,7 +30,6 @@ const ServicesSection = () => {
                     <p className='services-list-item-description'>{item.description}</p>
                   </div>
                 )
-              })
             }
 
           </div>

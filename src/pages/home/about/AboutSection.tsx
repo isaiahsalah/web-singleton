@@ -29,18 +29,16 @@ const AboutSection = () => {
                             enim ad minim veniam, quis nostrud exercitation ullamco laboris
                             nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <button onClick={() => navigate("/about")}>Ver más</button>
+                        <button className="about-button-link" onClick={() => navigate("/about")}>Ver más</button>
                     </div>
                     <div className="technologies-container">
                         <div className="line-horizontal-long" />
                         <div className="technologies">
-                            {Technologies.map((item, index) => {
-                                return (
+                            {Technologies.map((item, index) => 
                                     <div className="technologies-item" key={index}>
                                         <div className="technologies-icon">{item.icon}</div>
                                     </div>
-                                );
-                            })}
+                            )}
                         </div>
                         <div className="line-horizontal-long" />
                         <p className="technologies-title">
@@ -53,16 +51,14 @@ const AboutSection = () => {
             <div className="about-data-list-container">
                 <div className="about-data-list">
                     {AboutData.map((item, index) => (
-                        <>
+                        <div className="about-data-item-container" key={index}>
                             <div className="about-data-item" key={index}>
                                 <h2 className="about-data-title">{item.title}</h2>
                                 <p className="about-data-description">{item.description}</p>
                             </div>
-                            {
-                                //console.log((index+1)+"-"+AboutData.length)
-                                (index + 1) === AboutData.length ? null : <div className="about-data-line" />
+                            {(index + 1) === AboutData.length ? null : <div className="about-data-line" />
                             }
-                        </>
+                        </div>
 
                     ))}
                 </div>

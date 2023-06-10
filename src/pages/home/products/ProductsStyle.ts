@@ -21,8 +21,7 @@ export const ProductBox = styled.div`
     position: fixed;
     z-index: -2;
     opacity: 0.2;
-    transition: .25s;
-
+    transition: 0.25s;
   }
 
   .title-section-back {
@@ -56,6 +55,13 @@ export const ProductBox = styled.div`
     width: 40%;
     transition: 0.25s opacity ease-in-out;
     position: relative;
+    opacity: 0;
+    translate: 100% 0;
+    transition: opacity 0.5s, translate 0.5s;
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
   }
   .product-image {
     display: flex;
@@ -75,11 +81,45 @@ export const ProductBox = styled.div`
     box-sizing: border-box;
     gap: 20px;
   }
+  .product-class {
+    opacity: 0;
+    translate: -100% 0;
+    transition: opacity 0.5s, translate 0.5s;
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
   .product-title {
     width: 100%;
+    opacity: 0;
+    translate: -100% 0;
+    transition: opacity 0.5s 0.1s, translate 0.5s 0.1s;
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
   }
   .product-description {
     width: 100%;
+    opacity: 0;
+    translate: -100% 0;
+    transition: opacity 0.5s 0.2s, translate 0.5s 0.2s;
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
+  .product-button-container {
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    translate: -100% 0;
+    transition: opacity 0.5s 0.2s, translate 0.5s 0.2s;
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
   }
   .product-module-list {
     display: none;
@@ -121,6 +161,61 @@ export const ProductBox = styled.div`
   }
   .product-module:hover {
   }
+
+  #pagination {
+    display: flex;
+    gap:30px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 20px;
+    z-index: 6;
+  }
+  #pagination button {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    padding: 0;
+    margin: 30px 0;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.2;
+    transition: opacity 0.2s ease-in-out;
+    outline: none;
+  }
+  #pagination button:hover {
+    opacity: 0.5;
+  }
+  #pagination button.active {
+    opacity: 1;
+  }
+  #pagination button.active:before {
+    width: 300%;
+    height: 300%;
+    opacity: 1;
+  }
+  #pagination button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, width 0.4s ease-in-out,
+      height 0.4s ease-in-out;
+  }
+
   @media screen and (max-width: 600px) {
     .section-title {
     }
@@ -163,6 +258,9 @@ export const ProductBox = styled.div`
     }
     .product-module {
       width: 10px;
+    }
+    .product-button-container{
+      justify-content: center;
     }
   }
 

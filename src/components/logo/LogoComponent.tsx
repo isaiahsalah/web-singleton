@@ -19,7 +19,8 @@ const LogoComponent = () => {
         }
     }, [])
     return (
-        <LogoComponentBox>
+        <LogoComponentBox id='logo-container'>
+            
             <div className='logo-img-container'>
                 {/*<img className='logo-img' src={singletonLogo} alt="" />*/}
                 <div className='logo-img'> <SVGLogoComponent color={ColorLogo} /></div>

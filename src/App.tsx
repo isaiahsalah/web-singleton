@@ -2,135 +2,115 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 //import './App.css'
 import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
-
-
-
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Color } from './utils/Config'
+import MyScrollReveal from './components/myScrollReveal/MyScrollReveal'
+import { GlobalStyle } from './GlobalStyle.ts'
+
+
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: { main: Color.active },
-    background:{default: Color.secondary}
+    background: { default: Color.secondary }
   },
 });
 
 
 
 function App() {
-  /*
-  useEffect(() => {
-    window.addEventListener('scroll', function(event) {
-      const topDistance = window.pageYOffset;
-      const layer = document.querySelector("presentation-backimage")   as HTMLElement;
-    
- 
-        //const depth = layer.getAttribute('data-depth');
-        const movement = -(topDistance * 5);
-        const translate3d = 'translate3d(0, ' + movement + 'px, 0)';
-        /*layer.style['-webkit-transform'] = translate3d;
-        layer.style['-moz-transform'] = translate3d;
-        layer.style['-ms-transform'] = translate3d;
-        layer.style['-o-transform'] = translate3d;
-        layer.style.transform = translate3d;
-      
-      return;
-    });
-  })
-  
 
 
   useEffect(() => {
-    const textElements = document.querySelectorAll('.title-section-back');
-  
-    const handleIntersection = (entries: any[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log("se ve")
-          const textElement = entry.target as HTMLDivElement;
-          const scrollPosition = window.scrollY;
-          const textOffset = scrollPosition * 0.5; // Ajusta la velocidad de desplazamiento
-  
-          textElement.style.transform = 'translateX(' + textOffset + 'px)';
-        }
-      });
-    };
-  
-    const options = {
-      threshold: 0 // Ajusta el valor según tus necesidades
-    };
-  
-    const observer = new IntersectionObserver(handleIntersection, options);
-  
-    textElements.forEach(element => {
-      observer.observe(element);
-    });
-  
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+
+    const config0 = {
+      distance: '200%',
+      duration: 800,
+      delay: 0,
+      opacity: 0,
+      easing: 'ease',
+    }
+    const config1 = {
+      distance: '200%',
+      duration: 800,
+      delay: 250,
+      opacity: 0,
+      easing: 'ease',
+    }
+    const config2 = {
+      distance: '200%',
+      duration: 800,
+      delay: 500,
+      opacity: 0,
+      easing: 'ease',
+    }
+    const config3 = {
+      distance: '200%',
+      duration: 800,
+      delay: 750,
+      opacity: 0,
+      easing: 'ease',
+    }
+
+    MyScrollReveal.reveal(".title-section-container", {origin: 'top',...config3});
+
+    MyScrollReveal.reveal("#chat-container", {origin: 'bottom',...config2});
+
+    MyScrollReveal.reveal("#logo-container", {origin: 'top',...config0});
+    MyScrollReveal.reveal(".nav-menu", {origin: 'top',...config1});
+    MyScrollReveal.reveal(".nav-button-cotizar", {origin: 'top',...config2});
+    MyScrollReveal.reveal(".hamburger", {origin: 'top',...config1});
 
 
-/*
-  useEffect(() => {
-    const textElements = document.querySelectorAll('.title-section-back') ;
+    MyScrollReveal.reveal(".presentation-title", {origin: 'left',...config0});
+    MyScrollReveal.reveal(".presentation-description", {origin: 'left',...config1});
+    MyScrollReveal.reveal(".presentation-button-container", {origin: 'left',...config2});
 
-    window.addEventListener('scroll', function() {
+    MyScrollReveal.reveal(".product-image-container", {origin: 'rigth',...config2});
+    MyScrollReveal.reveal(".product-class", {origin: 'left',...config0});
+    MyScrollReveal.reveal(".product-title", {origin: 'left',...config1});
+    MyScrollReveal.reveal(".product-description", {origin: 'left',...config2});
+    MyScrollReveal.reveal(".product-button-container", {origin: 'left',...config3});
 
-      const scrollPosition = window.scrollY;
+    MyScrollReveal.reveal(".services-list-container", {origin: 'left',...config2});
 
-  for (let i = 0; i < textElements.length; i++) {
-    const textElement = textElements[i] as HTMLDivElement;
+    MyScrollReveal.reveal(".text-experience", {origin: 'left',...config0});
+    MyScrollReveal.reveal(".text-description", {origin: 'left',...config1});
+    MyScrollReveal.reveal(".about-button-link", {origin: 'left',...config2});
+    MyScrollReveal.reveal(".technologies", {origin: 'rigth',...config1});
+    MyScrollReveal.reveal(".line-horizontal-long", {origin: 'rigth',...config2});
+    MyScrollReveal.reveal(".technologies-title", {origin: 'rigth',...config3});
+    MyScrollReveal.reveal(".about-data-title", {origin: 'bottom',...config0});
+    MyScrollReveal.reveal(".about-data-description", {origin: 'bottom',...config1});
+    MyScrollReveal.reveal(".about-data-line", {origin: 'bottom',...config2});
 
-    const textOffset = scrollPosition * 0.5; // Ajusta la velocidad de desplazamiento
+    MyScrollReveal.reveal(".faq-list", {origin: 'left',...config1});
 
-    textElement.style.transform = 'translateX(' + textOffset + 'px)';
-  }
+    MyScrollReveal.reveal(".contact-title", {origin: 'left',...config1});
+    MyScrollReveal.reveal(".contact-message", {origin: 'left',...config1});
+    MyScrollReveal.reveal(".contact-button-container", {origin: 'left',...config1});
+
+    MyScrollReveal.reveal(".footer-slogan-text", {origin: 'bottom',...config0});
+    MyScrollReveal.reveal(".footer-social-list", {origin: 'bottom',...config1});
+
+    MyScrollReveal.reveal(".footer-derechos", {origin: 'bottom',...config2});
 
 
+    /*MyScrollReveal.reveal("#chat-container", configBottom);
+    MyScrollReveal.reveal("#home", configTop);
+    MyScrollReveal.reveal("#product", configRight);
+    MyScrollReveal.reveal("#service", configLeft);
+    MyScrollReveal.reveal("#about", configLeft);
+    MyScrollReveal.reveal("#faq", configLeft);
+    MyScrollReveal.reveal("#contact", configLeft);
+    MyScrollReveal.reveal("#footer", configBottom);*/
 
-      //const textOffset = scrollPosition * 0.5; // Ajusta la velocidad de desplazamiento
-    
-      //textElement.style.transform = 'translateX(' + textOffset + 'px)';
-    });
   }, [])
-
-
-
-
-
-
-
-
-  var topDistance = window.pageYOffset;
-  var layers = document.querySelectorAll("[data-type='parallax']");
-
-  for (var i = 0; i < layers.length; i++) {
-    var layer = layers[i];
-    var depth = layer.getAttribute('data-depth');
-    var movement = -(topDistance * depth);
-    var translate3d = 'translate3d(0, ' + movement + 'px, 0)';
-    layer.style['-webkit-transform'] = translate3d;
-    layer.style['-moz-transform'] = translate3d;
-    layer.style['-ms-transform'] = translate3d;
-    layer.style['-o-transform'] = translate3d;
-    layer.style.transform = translate3d;
-  }
-  return;
-
-
-
-
-
-
-*/
   useEffect(() => {
 
     const navBar = document.querySelector("#header-nav") as HTMLElement;
@@ -139,22 +119,16 @@ function App() {
 
       window.onscroll = () => {
         const layers = document.querySelectorAll("[data-type='parallax']");
-        //const layersX = document.querySelectorAll("[data-type='parallaxX']");
 
         const servicesBackImage = document.querySelector("#services-back-image") as HTMLImageElement;
         const FaqBackImage = document.querySelector("#presentation-back-image") as HTMLImageElement;
 
         const topDistance = window.pageYOffset;
 
-       // const presentationBackImage = document.querySelector(".presentation-back-image")   as HTMLElement;
-        //const productBackImage = document.querySelector(".product-back-video")   as HTMLElement;
-          const movement = -(topDistance * 0.1);
-          const translate3d = 'translate3d(' + movement + 'px, 0,0)';
-          servicesBackImage.style.transform = translate3d;
-          FaqBackImage.style.transform = translate3d;
-
-
-
+        const movement = -(topDistance * 0.1);
+        const translate3d = 'translate3d(' + movement + 'px, 0,0)';
+        servicesBackImage.style.transform = translate3d;
+        FaqBackImage.style.transform = translate3d;
 
         for (let i = 0; i < layers.length; i++) {
           const layer = layers[i] as HTMLElement;
@@ -204,18 +178,19 @@ function App() {
   return (
 
     <ThemeProvider theme={darkTheme}>
+      <GlobalStyle />
       <CssBaseline />
       <BrowserRouter>
-      <Routes>
-      <Route path="/home" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/*" element={<HomePage />} />
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/*" element={<HomePage />} />
 
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
 
-    
+
   )
 }
 
