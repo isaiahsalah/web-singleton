@@ -1,4 +1,3 @@
-import React from 'react'
 import { FooterBox } from './FooterStyle'
 import { SocialMedia } from '../../utils/Config'
 import LogoComponent from '../logo/LogoComponent'

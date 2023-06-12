@@ -1,10 +1,7 @@
-import React from 'react'
 import { ServicesBox } from './ServicesStyle'
-import { Services, ServicesList } from '../../../utils/Config'
+import { Services } from '../../../utils/Config'
 import servicesImage from '../../../assets/images/service.jpg'
 
-import { IconContext } from 'react-icons';
-import { SiAndroid } from 'react-icons/si'
 
 interface ServicesProps {
   services: Services[],

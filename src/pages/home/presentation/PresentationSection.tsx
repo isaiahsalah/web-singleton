@@ -1,9 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
-
 import { PresentationBox } from './PresentationStyle';
-import { PresentationItems } from '../../../utils/Config';
-import { Button } from '@mui/material';
-
 import faqImage from '../../../assets/images/teclado.jpg'
 
 const PresentationSection = () => {

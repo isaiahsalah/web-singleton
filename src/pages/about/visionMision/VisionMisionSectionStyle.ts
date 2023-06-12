@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Color } from "../../../utils/Config";
 
 export const VisionMisionSectionBox = styled.div`
   min-width: 100vw;

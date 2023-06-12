@@ -1,4 +1,3 @@
-import React from 'react'
 import { VisionMisionSectionBox } from './VisionMisionSectionStyle'
 import faqImage from '../../../assets/images/team.jpg'
 

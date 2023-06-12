@@ -50,13 +50,13 @@ const FaqSection = () => {
 
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-
+/*
   const handleChangeIndex = (index: number) => {
     setValue(index);
-  };
+  };*/
   return (
     <FacSectionBox id="faq">
       <img className='faq-back-image' data-type="parallax" data-depth="0.03" src={PresentationImage} />

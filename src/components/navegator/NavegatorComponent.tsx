@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 
 import { NavegatorBox } from './NavegatorStyle'
-import singletonLogo from '../../assets/svgs/logo.svg'
 import { GiHamburgerMenu } from "react-icons/gi"
-import SVGLogoComponent from '../../assets/svgs/logo'
-import { Color } from '../../utils/Config'
 import LogoComponent from '../logo/LogoComponent'
 
 const NavegatorComponent = () => {

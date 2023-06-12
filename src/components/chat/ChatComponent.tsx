@@ -1,19 +1,8 @@
-import React from "react";
 import { ChatComponentBox } from "./ChatComponentStyle";
 import { 
-  RiCodepenFill, 
-  RiFacebookBoxFill, 
-  RiGithubFill, 
-  RiInstagramFill, 
-  RiLinkedinFill, 
-  RiTwitterFill, 
   RiWhatsappFill, 
-  RiYoutubeFill
 } from "react-icons/ri"
 
-interface Props {
-  SocialMedia: any[];
-}
  
 const ChatComponent = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import ChatComponent from '../../components/chat/ChatComponent'
 import NavegatorComponent from '../../components/navegator/NavegatorComponent'
 import FooterComponent from '../../components/footer/FooterComponent'

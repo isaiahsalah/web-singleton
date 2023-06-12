@@ -1,8 +1,5 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-//import './App.css'
 import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -110,16 +107,6 @@ function App() {
     MyScrollReveal.reveal(".footer-social-list", {origin: 'bottom',...config1});
 
     MyScrollReveal.reveal(".footer-derechos", {origin: 'bottom',...config2});
-
-
-    /*MyScrollReveal.reveal("#chat-container", configBottom);
-    MyScrollReveal.reveal("#home", configTop);
-    MyScrollReveal.reveal("#product", configRight);
-    MyScrollReveal.reveal("#service", configLeft);
-    MyScrollReveal.reveal("#about", configLeft);
-    MyScrollReveal.reveal("#faq", configLeft);
-    MyScrollReveal.reveal("#contact", configLeft);
-    MyScrollReveal.reveal("#footer", configBottom);*/
 
   }, [])
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import NavegatorComponent from '../../components/navegator/NavegatorComponent'
 
 import { HomeBox } from './HomeStyle'
@@ -6,13 +6,11 @@ import PresentationSection from './presentation/PresentationSection'
 import ProductsSection from './products/ProductsSection'
 import ServicesSection from './services/ServicesSection'
 import AboutSection from './about/AboutSection'
-import BlogSection from './blog/BlogSection'
 import ContactSection from './contact/ContactSection'
 import FooterComponent from '../../components/footer/FooterComponent'
 import ChatComponent from '../../components/chat/ChatComponent'
 import FaqSection from './faq/FaqSection'
-import axios from 'axios';
-import { AboutData, DataBussiness, Product, ProductsList, Services, ServicesList } from '../../utils/Config'
+import { AboutData, ProductsList, ServicesList } from '../../utils/Config'
 
 const HomePage = () => {
   /*const [products, setProducts] = useState<Product[]>([]);

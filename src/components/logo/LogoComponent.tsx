@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LogoComponentBox } from './LogoComponentStyle'
 import SVGLogoComponent from '../../assets/svgs/logo'
 import { Color } from '../../utils/Config'

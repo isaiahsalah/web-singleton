@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import  { useState } from 'react'
 import { ProductBox } from './ProductsStyle';
 import { Product } from '../../../utils/Config';
 import videoWork from '../../../assets/video/work-video.mp4'
-import Slider from "react-slick";
-
-
 
 interface ProductsProps {
   products: Product[],
@@ -25,7 +22,7 @@ const ProductsSection = (props:ProductsProps) => {
     }
   })*/
 
-  const selectedNewItem = (index: number, items: any, next = true) => {
+  const selectedNewItem = (index: number, items: Product[]) => {
     setLoaded(false)
     setTimeout(() => {
       /*const condition = next ? selectedIndex < items.length - 1 : selectedIndex > 0;
@@ -35,12 +32,7 @@ const ProductsSection = (props:ProductsProps) => {
     }, 1000)
   }
 
-  const next = () => {
-    selectedNewItem(selectedIndex, props.products)
-  }
-  const previus = () => {
-    selectedNewItem(selectedIndex, props.products, false)
-  }
+  
   return (
     <ProductBox id='product'>
       <video loop autoPlay className='product-back-video' data-type="parallax" data-depth="0.10" src={videoWork}>
@@ -78,10 +70,11 @@ const ProductsSection = (props:ProductsProps) => {
           {
             props.products.map((item, index) =>
               <button
-                key={index}
+                key={item.title}
                 onClick={() => selectedNewItem(index, props.products)}
                 className={`product-button ${index === selectedIndex ? "active" : ""}`}
                 data-slide={index}
+                
               >
               </button>
             )

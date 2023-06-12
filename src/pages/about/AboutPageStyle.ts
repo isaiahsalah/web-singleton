@@ -1,4 +1,3 @@
-import { Color } from "../../utils/Config";
 import styled from 'styled-components'
 
 export const AboutPageBox = styled.div`

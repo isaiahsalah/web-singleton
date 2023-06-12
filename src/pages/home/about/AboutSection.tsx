@@ -1,4 +1,3 @@
-import React from "react";
 import { AboutBox } from "./AboutStyle";
 
 import { useNavigate } from "react-router-dom";

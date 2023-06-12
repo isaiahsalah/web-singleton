@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import { TeamSectionBox } from './TeamSectionStyle'
 import { ListTeam } from '../../../utils/Config'
 import 'react-awesome-slider/dist/styles.css';
@@ -26,7 +25,7 @@ const TeamSection = () => {
             }}>
                 {
                     ListTeam.map((team, index) =>
-                        <Grid display='grid' gap='20px' textAlign='left'>
+                        <Grid key={index} display='grid' gap='20px' textAlign='left'>
                             <Grid>
                                 <Typography component="h2" variant="h5">
                                     {team.title}
@@ -36,7 +35,7 @@ const TeamSection = () => {
 
                             <Grid container spacing={2} >
                                 {team.members.map((member, index) => (
-                                    <Grid key={member.name} item xs={12} md={6} >
+                                    <Grid key={index} item xs={12} md={6} >
                                         <Paper variant="elevation" elevation={4} >
                                             <Grid
                                                 container

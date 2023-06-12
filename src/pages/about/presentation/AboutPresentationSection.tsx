@@ -1,7 +1,5 @@
-import React from 'react'
 import { AboutPresentationSectionBox } from './AboutPresentationSectionStyle'
 import aboutImage from "../../../assets/images/server.jpg"
-import Button from '@mui/material/Button';
 
 const AboutPresentationSection = () => {
     return (

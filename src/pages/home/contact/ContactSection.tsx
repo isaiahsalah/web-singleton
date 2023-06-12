@@ -1,4 +1,3 @@
-import React from 'react'
 import { ContactBox } from './ContactStyle'
 import { ContactMessage } from '../../../utils/Config'
 import videoContact from '../../../assets/video/mano-escribiendo-fonto-blanco.mp4'

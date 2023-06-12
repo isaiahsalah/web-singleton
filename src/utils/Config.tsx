@@ -1,16 +1,11 @@
 import { GiTBrick } from 'react-icons/gi'
-import img1 from '../assets/images/teclado.jpg'
 import img2 from '../assets/images/pc.jpg'
 import img3 from '../assets/images/server.jpg'
 import techSvg from '../assets/svgs/tech.svg'
 
 import {
-  RiCodepenFill,
   RiFacebookBoxFill,
-  RiGithubFill,
-  RiInstagramFill,
   RiLinkedinFill,
-  RiMapFill,
   RiMapPinFill,
   RiTwitterFill,
   RiWhatsappFill,
@@ -22,24 +17,17 @@ import {
   SiAngular,
   SiReact,
   SiAmazon,
-  SiMicrosoft,
   SiPostgresql,
   SiFirebase,
   SiMongodb,
   SiMysql,
   SiNetapp,
   SiCsharp,
-  SiAdobexd,
-  SiXcode,
-  SiGit,
   SiFlutter,
-  SiAndroid,
-  SiApple,
   SiPython,
   SiDart,
   SiSwift,
 } from "react-icons/si";
-import { GrJava } from 'react-icons/gr'
 import { Ri4KFill } from 'react-icons/ri';
 
 
