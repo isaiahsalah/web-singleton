@@ -7,10 +7,7 @@ const FooterComponent = () => {
   return (
     <FooterBox>
       <div className='footer-container'>
-        <div className='footer-contact-container'>
-          <h6>mapa</h6>
-        </div>
-        <div className='footer-slogan-container'>
+        
           <div className='footer-logo-container'>
             <LogoComponent />
           </div>
@@ -29,11 +26,9 @@ const FooterComponent = () => {
             }
           </ul>
 
-        </div>
+       
 
-        <div className='footer-contact-container'>
-          <h6>mapa</h6>
-        </div>
+        
       </div>
       <div className='footer-derechos'>
         © Singleton. Todos los derechos reservados.

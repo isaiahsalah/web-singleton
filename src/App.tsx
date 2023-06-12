@@ -12,13 +12,24 @@ import MyScrollReveal from './components/myScrollReveal/MyScrollReveal'
 import { GlobalStyle } from './GlobalStyle.ts'
 
 
-
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: { main: Color.active },
     background: { default: Color.secondary }
+
   },
+  components:{
+    MuiButton:{
+      defaultProps: {
+        style:{
+          borderRadius:'50px',
+          //color: Color.active,
+          color: Color.alternative
+        }
+      }
+    }
+  }
 });
 
 

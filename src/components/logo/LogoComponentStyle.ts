@@ -14,6 +14,8 @@ export const LogoComponentBox = styled.div`
     padding: 8px;
     cursor: pointer;
     transition: 0.25s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+
 
     &:hover {
       filter: drop-shadow(0 0 1.5em ${Color.alternative}4d);
@@ -30,10 +32,13 @@ export const LogoComponentBox = styled.div`
   }
 
   .logo-text {
+    
     line-height: 1.2;
+    text-align: left;
   }
   .logo-title,
   .logo-subtitle {
+    
     white-space: nowrap;
     &:hover {
       filter: drop-shadow(0 0 1.5em ${Color.alternative});

@@ -2,11 +2,13 @@ import React from "react";
 import { AboutBox } from "./AboutStyle";
 
 import { useNavigate } from "react-router-dom";
-import { AboutData, TeamList, Technologies } from "../../../utils/Config";
+import {  DataBussiness, Technologies } from "../../../utils/Config";
 
+interface AboutProps {
+    dataBussiness: DataBussiness[],
+  } 
 
-
-const AboutSection = () => {
+const AboutSection = (props:AboutProps) => {
     const navigate = useNavigate();
     return (
         <AboutBox id="about">
@@ -50,13 +52,13 @@ const AboutSection = () => {
             </div>
             <div className="about-data-list-container">
                 <div className="about-data-list">
-                    {AboutData.map((item, index) => (
+                    {props.dataBussiness.map((item, index) => (
                         <div className="about-data-item-container" key={index}>
                             <div className="about-data-item" key={index}>
                                 <h2 className="about-data-title">{item.title}</h2>
                                 <p className="about-data-description">{item.description}</p>
                             </div>
-                            {(index + 1) === AboutData.length ? null : <div className="about-data-line" />
+                            {(index + 1) === props.dataBussiness.length ? null : <div className="about-data-line" />
                             }
                         </div>
 

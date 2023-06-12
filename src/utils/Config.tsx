@@ -40,6 +40,47 @@ import {
   SiSwift,
 } from "react-icons/si";
 import { GrJava } from 'react-icons/gr'
+import { Ri4KFill } from 'react-icons/ri';
+
+
+export class Product {
+  title: string;
+  item: string;
+  description: string;
+  image: string;
+
+  constructor(title: string, item: string, description: string, image: string) {
+    this.title = title;
+    this.item = item;
+    this.description = description;
+    this.image = image;
+  }
+}
+
+export class Services {
+  title: string;
+  item: string;
+  description: string;
+  icon: string;
+
+  constructor(title: string, item: string, description: string, icon: string) {
+    this.title = title;
+    this.item = item;
+    this.description = description;
+    this.icon = icon;
+  }
+}
+
+export class DataBussiness {
+  title: string;
+  description: string;
+
+  constructor(title: string, description: string) {
+    this.title = title;
+    this.description = description;
+  }
+}
+
 export const Color = {
   primary: '#475A71',
   secondary: '#1F1F1F',
@@ -48,106 +89,6 @@ export const Color = {
   warning: '#E8A074',
 
 }
-/*
-export const FontSize = {
-  extraBigTitle1: '110px',
-  extraBigTitle2: '100px',
-  extraBigTitle3: '90px',
-  bigTitle1: '80px',
-  bigTitle2: '70px',
-  bigTitle3: '60px',
-  title1: '68px',
-  title2: '58px',
-  title3: '48px',
-  littleTitle1: '56px',
-  littleTitle2: '46px',
-  littleTitle3: '36px',
-  bigSubTitle1: '44px',
-  bigSubTitle2: '34px',
-  bigSubTitle3: '24px',
-  subTitle1: '32px',
-  subTitle2: '25px',
-  subTitle3: '18px',
-  littleSubTitle1: '20px',
-  littleSubTitle2: '18px',
-  littleSubTitle3: '16px',
-  description1: '14px',
-  description2: '13px',
-  description3: '12px',
-
-
-}
-*/
-export const ContactMessage = {
-  title: '¿Quieres saber más sobre nuestro proyecto?',
-  message: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,'
-}
-
-export const SocialMedia = [
-  {
-    title: "Whatsapp",
-    link: "https://api.whatsapp.com/send?phone=59170881108&text=%20",
-    icon: RiWhatsappFill
-  },
-  {
-    title: "Linkedin",
-    link: "https://www.linkedin.com/in/",
-    icon: RiLinkedinFill
-  },
-  {
-    title: "Twitter",
-    link: "https://twitter.com/",
-    icon: RiTwitterFill
-  },
-  {
-    title: "Facebook",
-    link: "https://codepen.io/",
-    icon: RiFacebookBoxFill
-  },
-  {
-    title: "Youtube",
-    link: "https://codepen.io/",
-    icon: RiYoutubeFill
-  },
-  {
-    title: "Map",
-    link: "https://codepen.io/",
-    icon: RiMapPinFill
-  }
-]
-
-
-export const PresentationItems = [
-  {
-    title: 'Singleton',
-    item: 'Nosotros',
-    description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    logo: img2,
-    backimage: img1,
-  },
-  {
-    title: 'Ramses',
-    item: 'General',
-    description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    logo: img1,
-    backimage: img2,
-  },
-  {
-    title: 'Sigma',
-    item: 'Farmacias',
-    description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    logo: img2,
-    backimage: img1,
-  },
-  {
-    title: 'Horus',
-    item: 'Transporte',
-    description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    logo: img3,
-    backimage: img2,
-  },
-]
-
 export const ProductsList = [
 
   {
@@ -248,6 +189,47 @@ export const ProductsList = [
   },
 ]
 
+export const ContactMessage = {
+  title: '¿Quieres saber más sobre nuestro proyecto?',
+  message: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,'
+}
+
+export const SocialMedia = [
+  {
+    title: "Whatsapp",
+    link: "https://api.whatsapp.com/send?phone=59170881108&text=%20",
+    icon: RiWhatsappFill
+  },
+  {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/",
+    icon: RiLinkedinFill
+  },
+  {
+    title: "Twitter",
+    link: "https://twitter.com/",
+    icon: RiTwitterFill
+  },
+  {
+    title: "Facebook",
+    link: "https://codepen.io/",
+    icon: RiFacebookBoxFill
+  },
+  {
+    title: "Youtube",
+    link: "https://codepen.io/",
+    icon: RiYoutubeFill
+  },
+  {
+    title: "Map",
+    link: "https://codepen.io/",
+    icon: RiMapPinFill
+  }
+]
+
+
+
+
 
 export const ServicesList = [
 
@@ -318,8 +300,8 @@ export const FaqList = [
     title: "ola",
     questions: [
       {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        title: "Lorem  dolor  amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscinLorem ipsum dolor sit amet, consectetur adipiscin",
       },
       {
         title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
@@ -394,7 +376,7 @@ export const FaqList = [
     title: "ramses",
     questions: [
       {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscinasd",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
       },
       {
@@ -486,81 +468,335 @@ export const Technologies = [
   },
 ];
 
-export const TeamList = [
+
+export const ListTeam = [
   {
-    Id: 1,
-    Name: "nombre random",
-    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position: "Developer",
-    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia: [
-      {
-        Name: "facebook",
-        Url: "https://www.facebook.com",
-        Icon: RiFacebookBoxFill
-      },
-      {
-        Name: "instagram",
-        Url: "https://www.instagram.com",
-        Icon: RiInstagramFill
-      }
-    ]
+      title: "Desarrollo",
+      description: "Lorem ipsum dolor sit amet, consectetur adip incididunt et justo e parturient mont taciti socios",
+      members: [
+          {
+              name: 'Olivier Tassinari',
+              flag: 'v1.x co-creator',
+              location: 'Paris, France',
+              image: 'https://i.imgur.com/EXQVxqQ.png',
+              social: [
+                  {
+                      icon: RiLinkedinFill,
+                      url: 'https://twitter.com/'
+                  },
+                  {
+                      icon: RiTwitterFill,
+                      url: 'https://twitter.com/'
+                  },
+              ],
+
+
+          },
+          {
+              name: 'Matt Brookes',
+              flag: 'Pioneer',
+              location: 'London, UK',
+              image: 'https://i.imgur.com/EXQVxqQ.png',
+
+              social: [
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+              ],
+          },
+          {
+              name: 'Sebastian Silbermann',
+              flag: 'Community team',
+              location: 'Dresden, Germany',
+              image: 'https://i.imgur.com/EXQVxqQ.png',
+
+              social: [
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+              ],
+          },
+          {
+              name: 'Damien Tassone',
+              flag: 'Enterprise team',
+              location: 'London, UK',
+              image: 'https://i.imgur.com/EXQVxqQ.png',
+
+              social: [
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+              ],
+          },
+          {
+              name: 'Marija Najdova',
+              flag: 'Community team',
+              location: 'Skopje, North Macedonia',
+              image: 'https://i.imgur.com/EXQVxqQ.png',
+
+              social: [
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+              ],
+          },
+          {
+              name: 'Danail Hadjiatanasov',
+              flag: 'Enterprise team',
+              location: 'Amsterdam, Netherlands',
+              image: 'https://i.imgur.com/EXQVxqQ.png',
+
+              social: [
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+              ],
+          },
+          {
+              name: 'Josh Wooding',
+              flag: 'Community member, J.P. Morgan',
+              location: 'London, UK',
+              image: 'https://i.imgur.com/EXQVxqQ.png',
+
+              social: [
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+                  {
+                      icon: Ri4KFill,
+                      url: 'https://twitter.com/'
+                  },
+              ],
+          },
+      ]
   },
   {
-    Id: 2,
-    Name: "nombre random",
-    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position: "Developer",
-    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia: [
-      {
-        Name: "facebook",
-        Url: "https://www.facebook.com",
-        Icon: RiFacebookBoxFill
-      },
-      {
-        Name: "instagram",
-        Url: "https://www.instagram.com",
-        Icon: RiInstagramFill
-      }
-    ]
+      title: "Implementacion",
+      description: "Lorem ipsum dolor sit amet, consectetur adip incididunt et justo e parturient mont taciti socios",
+      members:
+          [
+
+              {
+                  name: 'Matt Brookes',
+                  flag: 'Pioneer',
+                  location: 'London, UK',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Sebastian Silbermann',
+                  flag: 'Community team',
+                  location: 'Dresden, Germany',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Damien Tassone',
+                  flag: 'Enterprise team',
+                  location: 'London, UK',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Marija Najdova',
+                  flag: 'Community team',
+                  location: 'Skopje, North Macedonia',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Danail Hadjiatanasov',
+                  flag: 'Enterprise team',
+                  location: 'Amsterdam, Netherlands',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Josh Wooding',
+                  flag: 'Community member, J.P. Morgan',
+                  location: 'London, UK',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+          ]
   },
   {
-    Id: 3,
-    Name: "nombre random",
-    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position: "Developer",
-    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia: [
-      {
-        Name: "facebook",
-        Url: "https://www.facebook.com",
-        Icon: RiFacebookBoxFill
-      },
-      {
-        Name: "instagram",
-        Url: "https://www.instagram.com",
-        Icon: RiInstagramFill
-      }
-    ]
-  },
-  {
-    Id: 4,
-    Name: "nombre random",
-    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position: "Developer",
-    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia: [
-      {
-        Name: "facebook",
-        Url: "https://www.facebook.com",
-        Icon: RiFacebookBoxFill
-      },
-      {
-        Name: "instagram",
-        Url: "https://www.instagram.com",
-        Icon: RiInstagramFill
-      }
-    ]
+      title: "Ventas",
+      description: "Lorem ipsum dolor sit amet, consectetur adip incididunt et justo e parturient mont taciti socios",
+      members:
+          [
+
+              {
+                  name: 'Sebastian Silbermann',
+                  flag: 'Community team',
+                  location: 'Dresden, Germany',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Damien Tassone',
+                  flag: 'Enterprise team',
+                  location: 'London, UK',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Marija Najdova',
+                  flag: 'Community team',
+                  location: 'Skopje, North Macedonia',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Danail Hadjiatanasov',
+                  flag: 'Enterprise team',
+                  location: 'Amsterdam, Netherlands',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+              {
+                  name: 'Josh Wooding',
+                  flag: 'Community member, J.P. Morgan',
+                  location: 'London, UK',
+                  image: 'https://i.imgur.com/EXQVxqQ.png',
+
+                  social: [
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                      {
+                          icon: Ri4KFill,
+                          url: 'https://twitter.com/'
+                      },
+                  ],
+              },
+          ]
   }
 ]

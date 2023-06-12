@@ -73,6 +73,7 @@ button {
   font-family: inherit;
   background-color: ${Color.active};
   color: ${Color.alternative};
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 
   cursor: pointer;
   transition: 0.25s;
@@ -89,22 +90,6 @@ button:focus-visible {
   //outline: 4px auto -webkit-focus-ring-color;
 }
 
-.title-section-back{
-  position: absolute;
-  top: 0;
-  font-size:150px;
-  opacity: 0.05;
-  font-family: "Abril Fatface";
-}
-/*
-.section-title{
-  display: grid;
-  width: 100%;
-      text-align: center;
-      justify-content: center;
-    margin: 100px 0 50px 0;
-    gap: 20px;
-}*/
 
 
 .abril{
@@ -167,6 +152,9 @@ h1, h2, h3, h4, h5,h6 , p{
       border: 1px solid ${Color.alternative};
       border-top: 0;
       color: ${Color.alternative};
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+
+
    }
 
    ul{
@@ -175,6 +163,9 @@ h1, h2, h3, h4, h5,h6 , p{
     padding: 0;
    }
 
+   img, video{
+    user-select: none;
+   }
   
   @media screen and (max-width: 600px) {
     .title-section-container{

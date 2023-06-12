@@ -9,15 +9,16 @@ export const ServicesBox = styled.div`
   align-content: space-between;
   position: relative;
   overflow: hidden;
-  /*background-image: radial-gradient(
-    circle at 90% 90%,
-    ${Color.primary},
-    ${Color.secondary}
-  );*/
+  background-image: radial-gradient(
+    circle at 0% 20%,
+    ${Color.secondary},
+    ${Color.primary}
+  );
   z-index: 1;
 
   #services-back-image {
-    opacity: 1;
+    max-height: 100%;
+    opacity: 0.1;
     position: absolute;
     z-index: -2;
   }

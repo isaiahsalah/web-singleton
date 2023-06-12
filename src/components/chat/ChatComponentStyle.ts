@@ -4,11 +4,10 @@ import styled from "styled-components";
 export const ChatComponentBox = styled.nav`
   #chat-container {
     position: fixed;
-    right: 5vh;
-    bottom: 5vh;
+    right: 0;
+    bottom: 0;
     z-index: 10;
     transition: right 0.25s ease-out 0.2s, opacity 0.25s ease-out 0.2s;
-
   }
   a {
     text-align: right;
@@ -20,6 +19,7 @@ export const ChatComponentBox = styled.nav`
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    padding: 20px;
     
   }
 
@@ -37,7 +37,10 @@ export const ChatComponentBox = styled.nav`
     display: none;
   }
   .chat-icon{
-    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    aspect-ratio: 1;
+    //font-size: 30px;
 
   }
   .chat-button{

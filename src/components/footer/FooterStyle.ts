@@ -8,7 +8,7 @@ export const FooterBox = styled.nav`
   justify-content: center;
   text-align: center;
   font-size: 0.8em;
-  gap: 10px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.4);
 
   .footer-social-media-container,
   .footer-contact-container,
@@ -19,6 +19,9 @@ export const FooterBox = styled.nav`
     justify-content: center;
     gap: 20px;
     box-sizing: border-box;
+    max-width: 1200px;
+    background-color:blue;
+
   }
 
   .footer-logo-container {
@@ -32,23 +35,27 @@ export const FooterBox = styled.nav`
 
   .footer-container {
     display: grid;
+    max-width: 1200px;
+    margin:auto;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 40px;
+    padding: 40px 40px 20px 40px;
     box-sizing: border-box;
+    gap:20px;
+
   }
   .footer-derechos {
     white-space: nowrap;
 
     width: 100vw;
-    height: 5vh;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     white-space: nowrap;
-    gap: 20px;
     background-color: ${Color.primary};
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.4);
+
   }
   .social-link {
     display: flex;

@@ -1,89 +1,97 @@
 import React, { useState, useEffect } from 'react'
 import { TeamSectionBox } from './TeamSectionStyle'
-import { TeamList } from '../../../utils/Config'
-import AwesomeSlider from 'react-awesome-slider';
+import { ListTeam } from '../../../utils/Config'
 import 'react-awesome-slider/dist/styles.css';
-import { Box } from "@mui/material"
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+
+
+
+
+
 
 const TeamSection = () => {
-    const [selectedItem, setSelectedItem] = useState(TeamList[0])
-    const [selectedIndex, setSelectedIndex] = useState(0)
-    const [loaded, setLoaded] = useState(false);
-
-    useEffect(() => {
-
-        const interval = setInterval(() => {
-            nextNewItem(selectedIndex, TeamList)
-        }, 3500)
-
-        return () => {
-            clearInterval(interval)
-        }
-    })
-
-
-
-    const nextNewItem = (index: number, items: any, next = true) => {
-        //console.log(loaded)
-
-        setLoaded(false)
-        setTimeout(() => {
-            const condition = next ? selectedIndex < items.length - 1 : selectedIndex > 0;
-            const nextIndex = next ? (condition ? selectedIndex + 1 : 0) : (condition ? selectedIndex - 1 : items.length - 1)
-            setSelectedItem(items[nextIndex])
-            setSelectedIndex(nextIndex)
-        }, 1000)
-    }
-
-    const selectedNewItem = (nextIndex: number) => {
-        setLoaded(false)
-        setTimeout(() => {
-            setSelectedItem(TeamList[nextIndex])
-            setSelectedIndex(nextIndex)
-        }, 1000)
-    }
-
-
-
-
     return (
         <TeamSectionBox>
-            
+
             <div className="title-section-container">
                 <h6 className="section-title">Nuestra Equipo</h6>
             </div>
 
-            <div className="team-list">
-                {TeamList.map((item, index) =>
-                
-                    <div key={index} className="team-item">
-                        <img className={`team-item-image`} src={item.Image}  />
-                        <div className="slider-inner">
-                            <div id="slider-content">
-                                <div className={`meta`} >
-                                    {item.Name}
-                                </div>
-                                <h2 className={`abril slide-title`}  >
-                                    {item.Name}
-                                </h2>
 
-                                <div className={`meta-description`} >
-                                    Descripción
-                                </div>
-                                <p className={`team-item-description`}>
-                                    {item.Description}
-                                </p>
-                            </div>
-                        </div>
-                        
+            <Grid container padding='20px' gap='20px' style={{
+                maxWidth:"1200px"
+            }}>
+                {
+                    ListTeam.map((team, index) =>
+                        <Grid display='grid' gap='20px' textAlign='left'>
+                            <Grid>
+                                <Typography component="h2" variant="h5">
+                                    {team.title}
+                                </Typography>
+                                <Typography>{team.description}</Typography>
+                            </Grid>
 
+                            <Grid container spacing={2} >
+                                {team.members.map((member, index) => (
+                                    <Grid key={member.name} item xs={12} md={6} >
+                                        <Paper variant="elevation" elevation={4} >
+                                            <Grid
+                                                container
+                                                alignItems='center'
+                                                gap="20px"
+                                                padding='10px 20px'>
+                                                <Grid
+                                                    display='flex'
+                                                    justifyContent='center'
+                                                    alignItems='center'
+                                                    width='80px'
+                                                    height='80px'
+                                                >
+                                                    <Avatar
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%'
+                                                        }}
+                                                        alt="Remy Sharp"
+                                                        src={member.image}
+                                                    />
 
-                    </div>
-                )
+                                                </Grid>
+                                                <Grid style={{ textAlign: 'left' }}>
+                                                    <Typography component="h3" variant="h6">
+                                                        {member.name}
+                                                    </Typography>
+                                                    <Typography variant="body2" color="textSecondary">
+                                                        {member.flag}
+                                                    </Typography>
+                                                    <Typography variant="body2" color="textSecondary">
+                                                        {member.location}
+                                                    </Typography>
+                                                    <Grid 
+                                                    container 
+                                                    gap='10px' >
+                                                        {member.social.map(social =>
+                                                            <a href={social.url} target='_blank'>                                                            
+                                                            <h6><social.icon /></h6>
+                                                            </a>
+                                                        )
+
+                                                        }
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                        </Paper>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </Grid>
+                    )
                 }
 
-            </div>
-
+            </Grid>
         </TeamSectionBox>
     );
 }

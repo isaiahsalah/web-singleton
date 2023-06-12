@@ -110,6 +110,8 @@ export const AboutBox = styled.div`
     gap: 20px;
   }
   .about-data-list-container {
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.4);
+
     overflow: hidden;
     display: grid;
     justify-content: center;
@@ -132,6 +134,8 @@ export const AboutBox = styled.div`
   }
   .about-data-item-container{
     display: flex;
+    gap: 20px;
+
   }
   .about-data-item {
     display: grid;

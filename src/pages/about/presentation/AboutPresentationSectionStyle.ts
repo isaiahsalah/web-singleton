@@ -10,7 +10,6 @@ export const AboutPresentationSectionBox = styled.div`
   align-items: center;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
   #about-back-image {
     position: fixed;
     opacity: 0.4;
@@ -41,5 +40,21 @@ export const AboutPresentationSectionBox = styled.div`
     justify-content: center;
     display: flex;
     gap: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    .about-text {
+    width: 100%;
+    
+  }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    .about-text {
+    width: 80%;
+    
+  }
+  }
+
+  @media screen and (min-width: 1201px) {
   }
 `;

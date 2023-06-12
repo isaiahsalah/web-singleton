@@ -74,7 +74,7 @@ const FaqSection = () => {
 
       <div className='faq-list-container'>
         <div className='faq-list'>
-          <Box sx={{ width: '100%' }}>
+          <Box sx={{ width: '100%', display:"grid", justifyItems:"center" }}>
 
             <Box  sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
@@ -88,12 +88,15 @@ const FaqSection = () => {
             </Box>
             {
               FaqList.map((Faq, index) =>
-                <TabPanel value={value} index={index} key={index}>
+                <TabPanel value={value} index={index} key={index} >
 
                   {Faq.questions.map((Question, index) =>
                     <Accordion
                       style={{ backgroundColor: "transparent" }}
-                      key={index}>
+                      key={index}
+                      
+                      >
+                        
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"

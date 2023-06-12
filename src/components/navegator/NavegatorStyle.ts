@@ -32,6 +32,8 @@ export const NavegatorBox = styled.nav`
     border-radius: 100px;
     padding: 12px 24px;
     margin: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+
   }
 
   .nav-menu-container {
@@ -48,6 +50,7 @@ export const NavegatorBox = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
   }
 
   .nav-item {
@@ -56,6 +59,7 @@ export const NavegatorBox = styled.nav`
     align-items: center;
     margin: 0;
     padding: 0;
+    
   }
   .nav-link {
     text-decoration: none;
@@ -153,23 +157,28 @@ export const NavegatorBox = styled.nav`
   .hamburger {
     display: flex;
     cursor: pointer;
+    
   }
   .icon-movil-container {
-    display: flex;
-    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
     background-color: ${Color.active};
     border-radius: 50%;
-    padding: 12px;
     transition: 0.25s;
 
-    &:hover {
+    &:hover { 
       filter: drop-shadow(0 0 1em ${Color.alternative}80);
       background-color: ${Color.alternative};
       color: ${Color.active};
     }
   }
   .icon-movil {
+    
     display: flex;
+    
     //height: 100%;
     //width: 1.2em;
   }
@@ -203,6 +212,8 @@ export const NavegatorBox = styled.nav`
       top: 0;
       text-align: center;
       z-index: 20;
+      gap: 10px;
+      font-size: 1.4em;
     }
   }
 
@@ -229,6 +240,8 @@ export const NavegatorBox = styled.nav`
       top: 0;
       text-align: center;
       z-index: 20;
+      gap: 10px;
+      font-size: 1.4em;
     }
     .nav-container {
       width: 100%;

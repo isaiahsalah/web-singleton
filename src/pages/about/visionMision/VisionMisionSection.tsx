@@ -1,9 +1,11 @@
 import React from 'react'
 import { VisionMisionSectionBox } from './VisionMisionSectionStyle'
+import faqImage from '../../../assets/images/team.jpg'
 
 const VisionMisionSection = () => {
     return (
         <VisionMisionSectionBox>
+            <img id='vision-back-image' src={faqImage} />
 
             <div className="title-section-container">
                 <h6 className="section-title">Nuestra Misión</h6>
@@ -16,9 +18,8 @@ const VisionMisionSection = () => {
                 <p className="mision-description">
                     Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente.
                 </p>
-
             </div>
-            <div></div>
+            <div> </div>
         </VisionMisionSectionBox>
     )
 }

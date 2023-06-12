@@ -13,10 +13,9 @@ export const ContactBox = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
   .contact-back-video {
-
     top: 0;
     bottom: 0;
-   width: 100vw;
+    width: 100vw;
     min-height: 100vh;
     position: fixed;
     z-index: -2;
@@ -59,10 +58,18 @@ export const ContactBox = styled.div`
     .contact-section-container {
       width: 80%;
     }
+    .contact-back-video {
+      top: 100%;
+      scale: 1.5;
+    }
   }
 
   @media screen and (min-width: 601px) and (max-width: 1200px) {
     .blog-list-container {
+    }
+    .contact-back-video {
+      top: 50%;
+      scale: 1.25;
     }
   }
 

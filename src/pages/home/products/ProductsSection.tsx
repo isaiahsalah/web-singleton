@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { ProductBox } from './ProductsStyle';
-import { ProductsList } from '../../../utils/Config';
+import { Product } from '../../../utils/Config';
 import videoWork from '../../../assets/video/work-video.mp4'
 import Slider from "react-slick";
 
-const ProductsSection = () => {
-  const [selectedItem, setSelectedItem] = useState(ProductsList[0])
+
+
+interface ProductsProps {
+  products: Product[],
+} 
+
+
+const ProductsSection = (props:ProductsProps) => {
+  const [selectedItem, setSelectedItem] = useState(props.products[0])
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [loaded, setLoaded] = useState(false);
 /*
@@ -21,18 +28,18 @@ const ProductsSection = () => {
   const selectedNewItem = (index: number, items: any, next = true) => {
     setLoaded(false)
     setTimeout(() => {
-      const condition = next ? selectedIndex < items.length - 1 : selectedIndex > 0;
+      /*const condition = next ? selectedIndex < items.length - 1 : selectedIndex > 0;
       const nextIndex = next ? (condition ? selectedIndex + 1 : 0) : (condition ? selectedIndex - 1 : items.length - 1)
-      setSelectedItem(items[nextIndex])
-      setSelectedIndex(nextIndex)
+      */setSelectedItem(items[index])
+      setSelectedIndex(index)
     }, 1000)
   }
 
   const next = () => {
-    selectedNewItem(selectedIndex, ProductsList)
+    selectedNewItem(selectedIndex, props.products)
   }
   const previus = () => {
-    selectedNewItem(selectedIndex, ProductsList, false)
+    selectedNewItem(selectedIndex, props.products, false)
   }
   return (
     <ProductBox id='product'>
@@ -51,16 +58,7 @@ const ProductsSection = () => {
             <p className={`product-class ${loaded ? "loaded" : ""}`} >{selectedItem.item}</p>
             <h1 className={`product-title ${loaded ? "loaded" : ""}`}>{selectedItem.title}</h1>
             <p className={`product-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</p>
-            <div className={`product-module-list ${loaded ? "loaded" : ""}`}>
-              {selectedItem.modules.map((module, index) =>
-                <div
-                  className='product-module'
-                  key={index}>
-                  <module.icon className='product-module-icon' />
-                  <p className='product-module-title'>{module.title}</p>
-                </div>
-              )}
-            </div>
+            
             <div className={`product-button-container ${loaded ? "loaded" : ""}`}>
               <button className='product-button'>Ver Info</button>
             </div>
@@ -78,10 +76,10 @@ const ProductsSection = () => {
         </div>
         <div id="pagination">
           {
-            ProductsList.map((item, index) =>
+            props.products.map((item, index) =>
               <button
                 key={index}
-                onClick={() => selectedNewItem(index, ProductsList)}
+                onClick={() => selectedNewItem(index, props.products)}
                 className={`product-button ${index === selectedIndex ? "active" : ""}`}
                 data-slide={index}
               >

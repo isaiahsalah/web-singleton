@@ -38,7 +38,7 @@ const NavegatorComponent = () => {
         if (menu && menu.style.display === "none" || menu.style.display === "") {
             menu.style.display = "grid";
         }
-    };
+    }; 
     const closeMenuMovil = () => {
         const menu = document.querySelector(".nav-menu") as HTMLElement;
         const ancho = window.innerWidth;
@@ -53,11 +53,11 @@ const NavegatorComponent = () => {
                 <nav id='nav-container' className='nav-container'>
                     <LogoComponent />
                     <div className="hamburger" onClick={openMenuMovil}>
-                        <div className="icon-movil-container" >
+                        <button className="icon-movil-container" >
                             <h5>
                                 <GiHamburgerMenu className="icon-movil" />
                             </h5>
-                        </div>
+                        </button>
                     </div>
                     <div className='nav-menu-container'>
                         <ul className='nav-menu' onClick={closeMenuMovil}>
