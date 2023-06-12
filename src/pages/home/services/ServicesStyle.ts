@@ -45,17 +45,15 @@ export const ServicesBox = styled.div`
   .services-list-item {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap:10px;
   }
   .services-list-item-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid;
-    border-radius: 25%;
-    width: 50px;
-    height: 50px;
-    font-size: 35px;
+    //border: 1px solid;
+    //border-radius: 25%;
+    font-size: 50px;
   }
 
   .services-list-item-description {
@@ -65,16 +63,14 @@ export const ServicesBox = styled.div`
   @media screen and (max-width: 600px) {
     .services-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       justify-content: center;
       align-content: center;
-      text-align: center;
       width: 100%;
       min-height: 100vh;
       gap: 20px;
     }
     .services-list-item {
-      justify-content: center;
       align-items: center;
     }
     .services-list-item-icon{
@@ -92,13 +88,11 @@ export const ServicesBox = styled.div`
       grid-template-columns: 1fr 1fr;
       justify-content: center;
       align-content: center;
-      text-align: center;
       width: 100%;
       min-height: 100vh;
       gap: 20px;
     }
     .services-list-item {
-      justify-content: center;
       align-items: center;
     }
   }

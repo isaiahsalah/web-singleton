@@ -28,8 +28,13 @@ import {
   SiDart,
   SiSwift,
 } from "react-icons/si";
+import {
+  AiOutlineFileSync, AiOutlineSecurityScan
+} from "react-icons/ai";
 import { Ri4KFill } from 'react-icons/ri';
-
+import { IoSyncCircle } from 'react-icons/io5';
+import { BiSupport } from 'react-icons/bi';
+import { TbReport } from 'react-icons/tb';
 
 export class Product {
   title: string;
@@ -222,32 +227,27 @@ export const SocialMedia = [
 export const ServicesList = [
 
   {
-    title: 'Ramses',
-    item: 'General',
-    description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    icon: GiTBrick,
+    title: 'Sincronización',
+    description: 'Con este servicio puede operar en sucursales o almacenes distantes, sin necesidad de una conexión a internet constante.',
+    icon: AiOutlineFileSync,
   },
   {
-    title: 'Sigma',
-    item: 'Farmacias',
-    description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    icon: GiTBrick,
+    title: 'Soporte',
+    description: 'Contamos con un equipo multidiciplinario de profesionales, para brindar asistencia en diferentes áreas de la empresa.',
+    icon: BiSupport,
   },
   {
-    title: 'Horus',
-    item: 'Transporte',
-    description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    icon: GiTBrick,
+    title: 'Seguimiento de Integridad',
+    description: 'Las estructuras internas de nuestros sitemas nos permiten verificar alertas de correcto uso del sistema. Le brindamos al cliente la posibilidad de brindarle una alerta temprana de un uso incorrecto de alguno de nuestros sistemas.',
+    icon: AiOutlineSecurityScan,
   },
   {
-    title: 'Horus',
-    item: 'Transporte',
+    title: 'Elaboración de Informes periodicos personalizados',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    icon: GiTBrick,
+    icon: TbReport,
   },
   {
-    title: 'Horus',
-    item: 'Transporte',
+    title: 'blabla',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
     icon: GiTBrick,
   },

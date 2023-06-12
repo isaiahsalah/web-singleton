@@ -1,6 +1,7 @@
 import { ServicesBox } from './ServicesStyle'
 import { Services } from '../../../utils/Config'
 import servicesImage from '../../../assets/images/service.jpg'
+import { Grid } from '@mui/material'
 
 
 interface ServicesProps {
@@ -24,13 +25,20 @@ const ServicesSection = (props: ServicesProps) => {
           {
             props.services.map((item, index) =>
               <div key={index} className='services-list-item'>
-                <div className='services-list-item-icon'>
+                <div style={{
+                  display:'flex',
+                  justifyContent:'space-between',
+                  alignItems:'center',
+                  gap: 10,
+                  }}>
+                  <h3 className='services-list-item-icon'>
 
-                  {<item.icon />}
+                    {<item.icon />}
+                  </h3>
+                  <h5 className='services-list-item-title'>
+                    {item.title}
+                  </h5>
                 </div>
-                <h5 className='services-list-item-title'>
-                  {item.title}
-                </h5>
 
                 <p className='services-list-item-description'>
                   {item.description}
