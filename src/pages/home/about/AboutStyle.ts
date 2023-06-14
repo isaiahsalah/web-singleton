@@ -119,10 +119,13 @@ export const AboutBox = styled.div`
     background-color: ${Color.primary};
   }
   .about-data-list {
-    display: flex;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     width: 100%;
-    max-width: 1200px;
-    gap: 20px;
+    //max-width: 1200px;
+    grid-auto-flow: column;
+
+    grid-gap: 20px;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -134,7 +137,10 @@ export const AboutBox = styled.div`
   }
   .about-data-item-container{
     display: flex;
+    justify-content: space-around;
     gap: 20px;
+    //padding: 10px;
+    box-sizing: border-box;
 
   }
   .about-data-item {
@@ -143,6 +149,10 @@ export const AboutBox = styled.div`
   }
   .about-data-title {
     line-height: 1;
+  }
+  .about-data-description {
+    display: flex;
+    line-height: 1.1;
   }
   /*
   .team-container {
