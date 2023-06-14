@@ -24,12 +24,12 @@ const LogoComponent = () => {
                 {/*<img className='logo-img' src={singletonLogo} alt="" />*/}
                 <div className='logo-img'> <SVGLogoComponent color={Color.alternative} /></div>
             </div>
-            <div className='logo-text'>
+            <div className='logo-text audiowide'>
                 <h6 className='logo-title'>
                     Singleton
                 </h6>
                 <p className='logo-subtitle'>
-                    Tecnologia que  te libera
+                    Tecnología que  te libera
                 </p>
             </div>
 

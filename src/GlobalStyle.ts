@@ -64,6 +64,11 @@ body {
 
 }
 
+.audiowide{
+  font-family:"Audiowide";
+
+}
+
 button {
   display: flex;
   align-items: center;

@@ -181,7 +181,7 @@ export const CotizarButtonData = {
 
 //Se edita el botòn de chat fijado en la parte inferior derecha de la pantalla
 export const ChatButtonData = {
-  title: "Hablá con nosotros",
+  title: "Habla con nosotros",
   url: "https://wa.link/yg436s",
 }
 
