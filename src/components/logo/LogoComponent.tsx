@@ -25,9 +25,9 @@ const LogoComponent = () => {
                 <div className='logo-img'> <SVGLogoComponent color={Color.alternative} /></div>
             </div>
             <div className='logo-text audiowide'>
-                <h6 className='logo-title'>
+                <div className='h6 logo-title'>
                     Singleton
-                </h6>
+                </div>
                 <p className='logo-subtitle'>
                     Tecnología que  te libera
                 </p>

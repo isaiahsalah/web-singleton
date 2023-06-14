@@ -13,14 +13,14 @@ const ContactSection = () => {
             <video loop autoPlay className='contact-back-video' data-type="parallax" data-depth="0.10" src={videoContact}>
             </video>
             <div className='title-section-container'>
-                <h6 className='section-title'>
+                <div className='h6 section-title'>
                     Contáctanos
-                </h6>
+                </div>
             </div>
             <div className='contact-section-container'>
-                <h5 className='contact-title bold'>
+                <h4 className='contact-title bold'>
                     {ContactMessageData.title}
-                    </h5>
+                    </h4>
                 <p className='contact-message'>
                     {ContactMessageData.message}
                 </p>

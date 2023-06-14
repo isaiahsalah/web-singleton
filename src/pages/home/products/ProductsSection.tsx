@@ -42,9 +42,9 @@ const ProductsSection = (props:ProductsProps) => {
       <video loop autoPlay className='product-back-video' data-type="parallax" data-depth="0.10" src={videoWork}>
       </video>
       <div className='title-section-container'>
-        <h6 className='section-title'>
+        <div className='h6 section-title'>
           Nuestros Productos
-        </h6>
+        </div>
       </div>
 
 
@@ -65,7 +65,8 @@ const ProductsSection = (props:ProductsProps) => {
               className='product-image'
               src={selectedItem.image}
               alt={selectedItem.title}
-              onLoad={() => setLoaded(true)} />
+              onLoad={() => setLoaded(true)} 
+              />
           </div>
 
 

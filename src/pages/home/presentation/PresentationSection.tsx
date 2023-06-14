@@ -21,13 +21,13 @@ const PresentationSection = () => {
     return (
         <PresentationBox id='home' >
 
-            <img id='presentation-back-image' data-type="parallax" data-depth="0.20" src={faqImage} />
+            <img id='presentation-back-image' data-type="parallax" data-depth="0.20" src={faqImage} alt=''/>
 
             <div className='presentation-contend'>
                 <div className='presentation-text'>
-                    <h2 className='presentation-title bold'>
+                    <h1 className='presentation-title bold'>
                     {PresentationHomeData.title}
-                    </h2>
+                    </h1>
                     <p className='presentation-description'>
                         {PresentationHomeData.subtitle}
                     </p>

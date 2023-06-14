@@ -27,7 +27,7 @@ const ChatComponent = () => {
       <div id="chat-container">
         <div className="chat">
           <button onClick={chatClick} className="chat-button"  >
-            <h6><RiWhatsappFill className="chat-icon"/></h6>
+            <div className="h6"><RiWhatsappFill className="chat-icon"/></div>
 
             <p className="chat-text">{ChatButtonData.title}</p>
           </button>

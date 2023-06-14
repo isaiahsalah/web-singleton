@@ -3,11 +3,11 @@ import { NotFoundPageBox } from './NotFoundPageStyle'
 const NotFoundPage = () => {
   return (
     <NotFoundPageBox>
-      <img id='notfound-back-image' src="https://i.giphy.com/media/3ov9jNziFTMfzSumAw/giphy.webp">
+      <img id='notfound-back-image' src="https://i.giphy.com/media/3ov9jNziFTMfzSumAw/giphy.webp" alt=''>
       </img>
-      <h2 className='abril'>
+      <h1 className='abril'>
         En construcción...
-        </h2>
+        </h1>
         </NotFoundPageBox>
   )
 }

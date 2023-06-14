@@ -181,22 +181,20 @@ h1, h2, h3, h4, h5,h6 , p{
 
     }
   
+
 h1 {
-  font-size: 60px;
-}
-h2 {
   font-size: 55px;
 }
-h3 {
+h2, .h2 {
   font-size: 40px;
 }
-h4 {
+h3 {
   font-size: 30px;
 }
-h5 {
+h4 {
   font-size: 20px;
 }
-h6 {
+.h6 {
   font-size: 16px;
 }
 p{
@@ -205,22 +203,20 @@ p{
   }
 
   @media screen and (min-width: 601px) and (max-width: 1200px) {
-    h1 {
-  font-size: 70px;
-}
-h2 {
+
+h1 {
   font-size: 65px;
 }
-h3 {
+h2, .h2 {
   font-size: 50px;
 }
-h4 {
+h3 {
   font-size: 40px;
 }
-h5 {
+h4 {
   font-size: 24px;
 }
-h6 {
+.h6 {
   font-size: 17px;
 }
 p{
@@ -229,22 +225,20 @@ p{
   }
 
   @media screen and (min-width: 1201px) {
-    h1 {
-  font-size: 80px;
-}
-h2 {
+
+h1 {
   font-size: 65px;
 }
-h3 {
+h2, .h2 {
   font-size: 50px;
 }
-h4 {
+h3 {
   font-size: 35px;
 }
-h5 {
+h4 {
   font-size: 28px;
 }
-h6 {
+.h6 {
   font-size: 18px;
 }
 p{

@@ -38,8 +38,8 @@ export const Color = {
 
 //Se edita los datos que apareceran en el banner principal de la la pagina de inicio
 export const PresentationHomeData = {
-  title: 'Tecnología que te Libera...',
-  subtitle: 'Nuestros Métodos de Trabajo se unen para brindarte una experiencia única y eficiente, permitiéndote alcanzar tus metas de manera más rápida y efectiva.',
+  title: 'INNOVACION',
+  subtitle: 'La clave para mantenerse relevante en un mundo de constante evolución. Únete a la revolución con nuestro software',
   button:
   {
     title: 'Cotizar',
@@ -67,8 +67,8 @@ export const MisionAboutData = {
 
 //Se escribe el mensaje que se imprimira en la sección de nosotros de la pagina principal
 export const AboutSectionData = {
-  years: '17',
-  title: 'años dando soluciones tecnologicas a pequeñas y grandes empresas',
+  years: '18',
+  title: 'Años apoyando el crecimiento de las empresas.',
   subtitle: 'Somos una empresa de desarrollo de software líder y confiable. Nuestro equipo experto está comprometido en brindarte soluciones personalizadas de calidad que impulsen el crecimiento de tu negocio. Confía en nosotros para alcanzar el éxito tecnológico que deseas.',
   button: {
     title: 'Ver más',
@@ -131,7 +131,7 @@ export const TechnologiesData = [
 
 //Se escribe el mensaje que se imprimira en la sección de contact de la pagina principal
 export const ContactMessageData = {
-  title: '¿Estás listo para acceder a soluciones tecnológicas que impulsen el crecimiento de tu empresa?',
+  title: '¿Estas listo para llevar tu empresa al siguiente nivel?',
   message: 'Impulsamos el éxito de tu proyecto a través de soluciones personalizadas, innovadoras y de alta calidad, respaldadas por nuestra experiencia y un compromiso inquebrantable con la satisfacción de nuestros cliente.',
   button: {
     title: 'Salúdanos',

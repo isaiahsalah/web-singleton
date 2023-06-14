@@ -5,10 +5,10 @@ import { MisionAboutData } from '../../../utils/Config'
 const VisionMisionSection = () => {
     return (
         <VisionMisionSectionBox>
-            <img id='vision-back-image' data-type="parallax" data-depth="0.10" src={faqImage} />
+            <img id='vision-back-image' data-type="parallax" data-depth="0.10" src={faqImage} alt=''/>
 
             <div className="title-section-container">
-                <h6 className="section-title">Nuestra Misión</h6>
+                <div className="h6 section-title">Nuestra Misión</div>
             </div>
 
             <div className='vision-section-container'>

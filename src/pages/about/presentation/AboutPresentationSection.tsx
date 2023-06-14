@@ -17,13 +17,13 @@ const AboutPresentationSection = () => {
     }
     return (
         <AboutPresentationSectionBox id='about'>
-            <img id='about-back-image' data-type="parallax" data-depth="0.20" src={aboutImage} />
+            <img id='about-back-image' data-type="parallax" data-depth="0.20" src={aboutImage} alt='' />
 
             <div className='about-contend'>
                 <div className='about-text'>
-                    <h2 className='about-title bold' style={{lineHeight:1}}>
+                    <h1 className='about-title bold' style={{lineHeight:1}}>
                     {PresentationAboutData.title}
-                    </h2>
+                    </h1>
                     <p className='about-description'>
                     {PresentationAboutData.subtitle}
                     </p>

@@ -65,7 +65,7 @@ export const AboutBox = styled.div`
     width: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     gap: 20px;
   }
   .experience-year {
@@ -82,6 +82,7 @@ export const AboutBox = styled.div`
     text-align: left;
     //padding: 50px 0;
     line-height: 1em;
+    margin-bottom: 20px;
   }
   .text-description {
     //font-size: 0.85em;
@@ -243,6 +244,8 @@ padding: 10px 10px 10px 20%;
     .about-data-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-auto-flow: row;
+
     }
     .about-data-line {
       display: none;
@@ -252,6 +255,15 @@ padding: 10px 10px 10px 20%;
   @media screen and (min-width: 601px) and (max-width: 1200px) {
     .about-section {
       width: 100%;
+    }
+    .about-data-line {
+      display: none;
+    }
+    .about-data-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-flow: row;
+
     }
   }
 

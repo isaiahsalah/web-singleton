@@ -63,10 +63,11 @@ const FaqSection = (props:faqProp) => {
         data-type="parallax"
         data-depth="0.03"
         src={PresentationImage}
+        alt=""
       />
 
       <div className="title-section-container">
-        <h6 className="section-title">Faq</h6>
+        <div className="h6 section-title">Faq</div>
       </div>
 
       <div className="faq-list-container">
@@ -101,7 +102,7 @@ const FaqSection = (props:faqProp) => {
                       aria-controls="panel1a-content"
                       id="panel1a-header"
                     >
-                      <h6>{Question.question}</h6>
+                      <div className="h6">{Question.question}</div>
                     </AccordionSummary>
                     <AccordionDetails>
                       <p>{Question.answer}</p>

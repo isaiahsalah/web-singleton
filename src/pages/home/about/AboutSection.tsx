@@ -13,7 +13,7 @@ const AboutSection = (props: AboutProps) => {
     return (
         <AboutBox id="about">
             <div className="title-section-container">
-                <h6 className="section-title">Uno poco sobre nosotros</h6>
+                <div className="h6 section-title">Uno poco sobre nosotros</div>
             </div>
             <div className="about-section">
 
@@ -21,8 +21,8 @@ const AboutSection = (props: AboutProps) => {
                     <div className="text">
                         <div className="text-experience">
                             <h1 className="experience-year">{AboutSectionData.years}</h1>
-                            <h6 className="experience-year-about">
-                                {AboutSectionData.title}                            </h6>
+                            <div className="h6 experience-year-about">
+                                {AboutSectionData.title}                            </div>
                         </div>
                         <p className="text-description">
                             {AboutSectionData.subtitle}
@@ -51,7 +51,7 @@ const AboutSection = (props: AboutProps) => {
                     {props.dataBussiness.map((item, index) => (
                         <div className="about-data-item-container" key={index}>
                             <div className="about-data-item" key={index}>
-                                <h3 className="about-data-title bold abril">{item.title}</h3>
+                                <div className="h2 about-data-title bold abril">{item.title}</div>
                                 <p className="about-data-description">{item.description}</p>
                             </div>
                             {(index + 1) === props.dataBussiness.length ? null : <div className="about-data-line" />

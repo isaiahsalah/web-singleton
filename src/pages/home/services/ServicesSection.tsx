@@ -10,13 +10,13 @@ const ServicesSection = (props: ServicesProps) => {
 
   return (
     <ServicesBox id='service'>
-      <img id='services-back-image' src={servicesImage}>
+      <img id='services-back-image' src={servicesImage} alt=''>
       </img>
 
       <div className='title-section-container'>
-        <h6 className='section-title'>
+        <div className='h6 section-title'>
           Nuestros Servicios
-        </h6>
+        </div>
       </div>
       <div className='services-list-container'>
         <div className='services-list'>
@@ -30,9 +30,9 @@ const ServicesSection = (props: ServicesProps) => {
                 }}>
 
                   <div className='services-list-item-icon'  dangerouslySetInnerHTML={{ __html: item.icon }} />
-                  <h5 className='services-list-item-title bold'>
+                  <h4 className='services-list-item-title bold'>
                     {item.title}
-                  </h5>
+                  </h4>
                 </div>
 
                 <p className='services-list-item-description'>

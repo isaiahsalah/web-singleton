@@ -13,9 +13,9 @@ interface TeamProps {
 const TeamSection = (props:TeamProps) => {
     return (
         <TeamSectionBox id="team">
-            <img id='team-back-image'  src={teamImage} />
+            <img id='team-back-image'  src={teamImage} alt=''/>
             <div className="title-section-container">
-                <h6 className="section-title">Nuestra Equipo</h6>
+                <div className="h6 section-title">Nuestra Equipo</div>
             </div>
             <Grid display='grid' padding='20px' gap='40px' style={{
                 maxWidth:"1200px"
