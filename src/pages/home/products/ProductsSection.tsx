@@ -52,7 +52,7 @@ const ProductsSection = (props:ProductsProps) => {
         <div className='product-item' >
           <div className='product-info'>
             <p className={`product-class ${loaded ? "loaded" : ""}`} >{selectedItem.item}</p>
-            <h1 className={`product-title ${loaded ? "loaded" : ""}`}>{selectedItem.title}</h1>
+            <h1 className={`product-title bold ${loaded ? "loaded" : ""}`}>{selectedItem.title}</h1>
             <p className={`product-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</p>
             
             <div className={`product-button-container ${loaded ? "loaded" : ""}`}>
