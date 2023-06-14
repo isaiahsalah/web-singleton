@@ -1,6 +1,5 @@
 import { TeamSectionBox } from './TeamSectionStyle'
 import {  Team } from '../../../utils/Classes'
-import 'react-awesome-slider/dist/styles.css';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
