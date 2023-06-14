@@ -35,7 +35,7 @@ const FooterComponent = () => {
 
             <li key={index}>
               <a className='social-link' href={social.link} target='_blank' rel='noopener noreferrer'>
-                <h5><social.icon /></h5>
+                <h4><social.icon /></h4>
               </a>
             </li>
           )
