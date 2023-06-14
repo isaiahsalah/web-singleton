@@ -27,7 +27,7 @@ const AboutSection = (props: AboutProps) => {
                         <p className="text-description">
                             {AboutSectionData.subtitle}
                         </p>
-                        <button className="about-button-link" onClick={() => navigate("/about")}>Ver más</button>
+                        <button className="about-button-link" onClick={() => navigate("/about")}>Ver Equipo</button>
                     </div>
                     <div className="technologies-container">
                         <div className="line-horizontal-long" />

@@ -1,29 +1,29 @@
 
 
 import {
-  RiFacebookBoxFill,
-  RiLinkedinFill,
-  RiMapPinFill,
-  RiTwitterFill,
-  RiWhatsappFill,
-  RiYoutubeFill
-} from "react-icons/ri"
+  IoLocation,
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoTiktok
+}
+  from "react-icons/io5"
+import { IoLogoWhatsapp as IoLogoWhatsapp4 }
+  from "react-icons/io"
+
 import {
   SiTypescript,
   SiJavascript,
   SiAngular,
   SiReact,
-  SiAmazon,
-  SiPostgresql,
-  SiFirebase,
-  SiMongodb,
-  SiMysql,
   SiNetapp,
   SiCsharp,
-  SiFlutter,
-  SiPython,
-  SiDart,
-  SiSwift,
+  SiMicrosoftsqlserver,
+  SiMicrosoft,
+  SiMaterialdesign,
+  SiKotlin,
+  SiAndroid,
+  SiVite
 } from "react-icons/si";
 
 //Se seleccionan los colores que representan a la organización
@@ -36,16 +36,14 @@ export const Color = {
 
 }
 
-
-
 //Se edita los datos que apareceran en el banner principal de la la pagina de inicio
 export const PresentationHomeData = {
   title: 'Tecnología que te Libera...',
-  subtitle: 'Nuestro Método de Trabajo revolucionario se unen para brindarte una experiencia única y eficiente, permitiéndote alcanzar tus metas de manera más rápida y efectiva.',
+  subtitle: 'Nuestros Métodos de Trabajo se unen para brindarte una experiencia única y eficiente, permitiéndote alcanzar tus metas de manera más rápida y efectiva.',
   button:
   {
     title: 'Cotizar',
-    url: 'https://facebook.com'
+    url: 'https://wa.link/yg436s'
   }
 };
 
@@ -56,7 +54,7 @@ export const PresentationAboutData = {
   button:
   {
     title: 'Cotizar',
-    url: 'https://facebook.com'
+    url: 'https://wa.link/yg436s'
   }
 };
 
@@ -73,79 +71,64 @@ export const AboutSectionData = {
 
 //Se seleccionan las tecnologias que se usan en la empresa
 export const TechnologiesData = [
+
+  {
+    name: "",
+    icon: <SiCsharp />,
+  },
+  {
+    name: "",
+    icon: <SiNetapp />,
+  },
+  {
+    name: "",
+    icon: <SiMicrosoftsqlserver />,
+  },
+  {
+    name: "",
+    icon: <SiMicrosoft />,
+  },
+  {
+    name: "",
+    icon: <SiVite />,
+  },
   {
     name: "React",
     icon: <SiReact />,
   },
   {
-    name: "Redux",
-    icon: <SiAmazon />,
-  },
-  {
-    name: "Redux",
-    icon: <SiTypescript />,
-  },
-  {
-    name: "Redux",
-    icon: <SiAngular />,
-  },
-  {
-    name: "Redux",
-    icon: <SiPython />,
-  },
-  {
-    name: "Redux",
-    icon: <SiPostgresql />,
-  },
-  {
-    name: "Redux",
-    icon: <SiFirebase />,
-  },
-  {
-    name: "Redux",
-    icon: <SiMongodb />,
-  },
-  {
-    name: "Redux",
-    icon: <SiMysql />,
-  },
-  {
-    name: "Redux",
-    icon: <SiNetapp />,
-  },
-  {
-    name: "Redux",
+    name: "",
     icon: <SiJavascript />,
   },
   {
-    name: "Redux",
-    icon: <SiCsharp />,
+    name: "",
+    icon: <SiMaterialdesign />,
   },
   {
-    name: "Redux",
-    icon: <SiNetapp />,
+    name: "",
+    icon: <SiKotlin />,
   },
   {
-    name: "Redux",
-    icon: <SiSwift />,
+    name: "",
+    icon: <SiAndroid />,
   },
   {
-    name: "Redux",
-    icon: <SiDart />,
+    name: "",
+    icon: <SiAngular />,
   },
   {
-    name: "Redux",
-    icon: <SiFlutter />,
-  },
+    name: "",
+    icon: <SiTypescript />,
+  }
 ];
 
 //Se escribe el mensaje que se imprimira en la sección de contact de la pagina principal
 export const ContactMessageData = {
-  title: '¿Quieres saber más sobre nuestro proyecto?',
-  message: 'Somos una empresa de desarrollo de software líder y confiable. Nuestro equipo experto está comprometido en brindarte soluciones personalizadas de calidad que impulsen el crecimiento de tu negocio. Confía en nosotros para alcanzar el éxito tecnológico que deseas.',
+  title: '¿Estás listo para acceder a soluciones tecnológicas que impulsen el crecimiento de tu empresa?',
+  message: 'Impulsamos el éxito de tu proyecto a través de soluciones personalizadas, innovadoras y de alta calidad, respaldadas por nuestra experiencia y un compromiso inquebrantable con la satisfacción de nuestros cliente.',
   button: {
-    title: 'Di hola',
-    url: 'https://facebook.com/'
+    title: 'Salúdanos',
+    url: 'https://wa.link/yg436s'
   }
 }
 
@@ -153,46 +136,46 @@ export const ContactMessageData = {
 export const SocialMediaData = [
   {
     title: "Whatsapp",
-    link: "https://api.whatsapp.com/send?phone=59170881108&text=%20",
-    icon: RiWhatsappFill
+    link: "https://wa.link/yg436s",
+    icon: IoLogoWhatsapp4
   },
   {
     title: "Linkedin",
-    link: "https://www.linkedin.com/company/singletonsoftware",
-    icon: RiLinkedinFill
-  },
-  {
-    title: "Twitter",
-    link: "https://twitter.com/",
-    icon: RiTwitterFill
+    link: "https://www.linkedin.com/company/singletonsoftware/",
+    icon: IoLogoLinkedin
   },
   {
     title: "Facebook",
-    link: "https://codepen.io/",
-    icon: RiFacebookBoxFill
+    link: "https://www.facebook.com/SistemasSingleton/",
+    icon: IoLogoFacebook
   },
   {
-    title: "Youtube",
-    link: "https://codepen.io/",
-    icon: RiYoutubeFill
+    title: "Instagram",
+    link: "https://www.instagram.com/singleton2.0/",
+    icon: IoLogoInstagram
+  },
+  {
+    title: "Tiktok",
+    link: "https://www.tiktok.com/@singleton.bo",
+    icon: IoLogoTiktok
   },
   {
     title: "Map",
-    link: "https://codepen.io/",
-    icon: RiMapPinFill
+    link: "https://goo.gl/maps/Zmz6JYhJir3bmsjH6",
+    icon: IoLocation
   }
 ]
 
 //Se edita el botòn de cotizar fijado en la barra de navegaciòn
 export const CotizarButtonData = {
   title: "Cotizar",
-  url: "https://twitter.com/",
+  url: "https://wa.link/yg436s",
 }
 
 //Se edita el botòn de chat fijado en la parte inferior derecha de la pantalla
 export const ChatButtonData = {
   title: "Hablá con nosotros",
-  url: "https://facebook.com/",
+  url: "https://wa.link/yg436s",
 }
 
 /*

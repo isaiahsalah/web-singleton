@@ -33,12 +33,11 @@ export const ContactBox = styled.div`
     justify-items: center;
   }
   .contact-title {
-    width: 50%;
+    width: 70%;
 
-    font-family: "Abril Fatface";
   }
   .contact-message {
-    width: 80%;
+    width: 85%;
 
     //font-size: 0.8em;
   }
