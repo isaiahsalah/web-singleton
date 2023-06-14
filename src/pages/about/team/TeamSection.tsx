@@ -6,12 +6,9 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import teamImage from "../../../assets/images/team.jpg"
 
-
 interface TeamProps {
     team: Team[]
-  }
-
-
+    }
 
 const TeamSection = (props:TeamProps) => {
     return (
@@ -76,7 +73,6 @@ const TeamSection = (props:TeamProps) => {
                         </Grid>
                     )
                 }
-
             </Grid>
         </TeamSectionBox>
     );

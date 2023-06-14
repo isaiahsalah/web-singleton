@@ -8,10 +8,10 @@ import { DelayAnimationIntro } from '../../utils/Animations'
 const FooterComponent = () => {
   
   useEffect(() => {
-    MyScrollReveal.reveal(".footer-slogan-text", { origin: 'bottom', ...DelayAnimationIntro(0) });
-    MyScrollReveal.reveal(".footer-social-list", { origin: 'bottom', ...DelayAnimationIntro(250) });
+    //MyScrollReveal.reveal(".footer-slogan-text", { origin: 'bottom', ...DelayAnimationIntro(0) });
+    MyScrollReveal.reveal(".footer-social-list", { origin: 'top', ...DelayAnimationIntro(250) });
 
-    MyScrollReveal.reveal(".footer-derechos", { origin: 'bottom', ...DelayAnimationIntro(500) });
+    //MyScrollReveal.reveal(".footer-derechos", { origin: 'bottom', ...DelayAnimationIntro(500) });
 
   }, [])
   return (
