@@ -51,11 +51,13 @@ export const ServicesBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    fill: ${Color.alternative};
     //border: 1px solid;
     //border-radius: 25%;
-    font-size: 50px;
+    font-size: 45px;
     width: 50px;
     height: 50px;
+    margin-inline: 20px;
   }
 
   .services-list-item-description {

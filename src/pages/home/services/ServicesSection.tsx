@@ -27,11 +27,9 @@ const ServicesSection = (props: ServicesProps) => {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  gap: 10,
                 }}>
-                  <img className='services-list-item-icon' src={item.icon}>
-                  </img>
 
+                  <div className='services-list-item-icon'  dangerouslySetInnerHTML={{ __html: item.icon }} />
                   <h5 className='services-list-item-title'>
                     {item.title}
                   </h5>
