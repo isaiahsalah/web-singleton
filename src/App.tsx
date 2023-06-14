@@ -47,7 +47,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'https://docs.google.com/spreadsheets/d/1cOh3fWUC__I8hr-rDpILpl44N7Tw_T3noSuU1jAa40w/gviz/tq?tqx=out:json'
+          'https://docs.google.com/spreadsheets/d/1_A7p42AuyXe0xN1whzysk-LJ_nIKEeqhN3jDyzga1sY/gviz/tq?tqx=out:json'
         );
 
         const rawData = response.data.substr(47).slice(0, -2);
@@ -60,7 +60,7 @@ function App() {
         setTeam(JSON.parse(parsedData.table.rows[4].c[1].v))
         //setSocial(JSON.parse(parsedData.table.rows[5].c[1].v))
         setIsLoading(false)
-        console.log("baolbaol")
+        //console.log("baolbaol")
 
       } catch (error) {
         console.error('Error retrieving data:', error);
@@ -98,7 +98,7 @@ function App() {
             layer.style['-ms-transform'] = translate3d;
             layer.style['-o-transform'] = translate3d;*/
             layer.style.transform = translate3d;
-            console.log("ola")
+            //console.log("ola")
           }
         }
         if (navBar.style.left === "") {

@@ -68,7 +68,7 @@ const NavegatorComponent = () => {
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#home' }}>Inicio</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#product' }}>Productos</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#service' }}>Servicios</HashLink></li>
-                            <li className='nav-item'><Link className='nav-link' to='/about'>Nosotros</Link></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/about', hash: '#about' }}>Nosotros</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#faq' }}>Faq</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#contact' }}>Contacto</HashLink></li>
                             <div>

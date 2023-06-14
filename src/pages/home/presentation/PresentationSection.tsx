@@ -1,7 +1,7 @@
 import { PresentationBox } from './PresentationStyle';
 import faqImage from '../../../assets/images/teclado.jpg'
 //import { useNavigate } from 'react-router-dom';
-import { PresentationData } from '../../../utils/Config';
+import { PresentationHomeData } from '../../../utils/Config';
 
 const PresentationSection = () => {
     //const navigate = useNavigate()
@@ -14,7 +14,7 @@ const PresentationSection = () => {
 
     }
     const cotizarClick = () => {
-        const nuevaVentana = window.open(PresentationData.button.url, '_blank');
+        const nuevaVentana = window.open(PresentationHomeData.button.url, '_blank');
         if(nuevaVentana)nuevaVentana.focus();
     }
 
@@ -26,13 +26,13 @@ const PresentationSection = () => {
             <div className='presentation-contend'>
                 <div className='presentation-text'>
                     <h2 className='presentation-title'>
-                    {PresentationData.title}
+                    {PresentationHomeData.title}
                     </h2>
                     <p className='presentation-description'>
-                        {PresentationData.subtitle}
+                        {PresentationHomeData.subtitle}
                     </p>
                     <div className='presentation-button-container'>
-                        <button onClick={cotizarClick}>{PresentationData.button.title}</button>
+                        <button onClick={cotizarClick}>{PresentationHomeData.button.title}</button>
                         <button onClick={productClick}>Ver Productos</button>
                     </div>
                 </div>

@@ -39,7 +39,18 @@ export const Color = {
 
 
 //Se edita los datos que apareceran en el banner principal de la la pagina de inicio
-export const PresentationData = {
+export const PresentationHomeData = {
+  title: 'Tecnología que te Libera...',
+  subtitle: 'Nuestro Método de Trabajo revolucionario se unen para brindarte una experiencia única y eficiente, permitiéndote alcanzar tus metas de manera más rápida y efectiva.',
+  button:
+  {
+    title: 'Cotizar',
+    url: 'https://facebook.com'
+  }
+};
+
+//Se edita los datos que apareceran en el banner principal de la la pagina de nosotros
+export const PresentationAboutData = {
   title: 'Tecnología que te Libera...',
   subtitle: 'Nuestro Método de Trabajo revolucionario se unen para brindarte una experiencia única y eficiente, permitiéndote alcanzar tus metas de manera más rápida y efectiva.',
   button:

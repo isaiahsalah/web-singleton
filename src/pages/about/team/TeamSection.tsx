@@ -16,14 +16,11 @@ interface TeamProps {
 
 const TeamSection = (props:TeamProps) => {
     return (
-        <TeamSectionBox>
+        <TeamSectionBox id="team">
             <img id='team-back-image'  src={teamImage} />
-
             <div className="title-section-container">
                 <h6 className="section-title">Nuestra Equipo</h6>
             </div>
-
-
             <Grid display='grid' padding='20px' gap='40px' style={{
                 maxWidth:"1200px"
             }}>
@@ -36,7 +33,6 @@ const TeamSection = (props:TeamProps) => {
                                 </Typography>
                                 <Typography>{team.description}</Typography>
                             </Grid>
-
                             <Grid container spacing={2} >
                                 {team.members.map((member, index) => (
                                     <Grid  key={index}  item xs={12} sm={6} md={4}  >
@@ -61,7 +57,6 @@ const TeamSection = (props:TeamProps) => {
                                                         alt="Remy Sharp"
                                                         src={member.image}
                                                     />
-
                                                 </Grid>
                                                 <Grid style={{ textAlign: 'left' }}>
                                                     <Typography component="h3" variant="h6">

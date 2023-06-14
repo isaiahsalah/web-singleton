@@ -19,8 +19,11 @@ export const LogoComponentBox = styled.div`
 
     &:hover {
       filter: drop-shadow(0 0 1.5em ${Color.alternative}4d);
-      background-color: ${Color.alternative};
-
+      background-color: ${Color.primary};
+      scale: 0.95;
+      .logo-img {
+    scale: 1.05;
+  }
 
     }
   }
@@ -29,6 +32,7 @@ export const LogoComponentBox = styled.div`
     display: flex;
     width: 25px;
     height: 25px;
+    transition: 0.25s ease-in-out 0.15s;
   }
 
   .logo-text {

@@ -1,8 +1,19 @@
 import { FooterBox } from './FooterStyle'
 import { SocialMediaData } from '../../utils/Config'
 import LogoComponent from '../logo/LogoComponent'
+import MyScrollReveal from '../myScrollReveal/MyScrollReveal'
+import { useEffect } from 'react'
+import { DelayAnimationIntro } from '../../utils/Animations'
 
 const FooterComponent = () => {
+  
+  useEffect(() => {
+    MyScrollReveal.reveal(".footer-slogan-text", { origin: 'bottom', ...DelayAnimationIntro(0) });
+    MyScrollReveal.reveal(".footer-social-list", { origin: 'bottom', ...DelayAnimationIntro(250) });
+
+    MyScrollReveal.reveal(".footer-derechos", { origin: 'bottom', ...DelayAnimationIntro(500) });
+
+  }, [])
   return (
     <FooterBox>
       <div className='footer-container'>

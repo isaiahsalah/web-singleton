@@ -12,6 +12,7 @@ import ChatComponent from '../../components/chat/ChatComponent'
 import FaqSection from './faq/FaqSection'
 import {Faq, Product, Services, DataBussiness  } from '../../utils/Classes'
 import MyScrollReveal from '../../components/myScrollReveal/MyScrollReveal'
+import { DelayAnimationIntro } from '../../utils/Animations'
 
 interface  HomeProps {
   products:Product[],
@@ -24,77 +25,36 @@ const HomePage = (props:HomeProps) => {
 
   useEffect(() => {
 
-    const config0 = {
-      distance: '200%',
-      duration: 800,
-      delay: 0,
-      opacity: 0,
-      easing: 'ease',
-    }
-    const config1 = {
-      distance: '200%',
-      duration: 800,
-      delay: 250,
-      opacity: 0,
-      easing: 'ease',
-    }
-    const config2 = {
-      distance: '200%',
-      duration: 800,
-      delay: 500,
-      opacity: 0,
-      easing: 'ease',
-    }
-    const config3 = {
-      distance: '200%',
-      duration: 800,
-      delay: 750,
-      opacity: 0,
-      easing: 'ease',
-    }
+    MyScrollReveal.reveal(".title-section-container", { origin: 'top', ...DelayAnimationIntro(0) });
 
-    MyScrollReveal.reveal(".title-section-container", { origin: 'top', ...config3 });
+    MyScrollReveal.reveal(".presentation-title", { origin: 'left', ...DelayAnimationIntro(250) });
+    MyScrollReveal.reveal(".presentation-description", { origin: 'left', ...DelayAnimationIntro(500) });
+    MyScrollReveal.reveal(".presentation-button-container", { origin: 'left', ...DelayAnimationIntro(750) });
 
-    MyScrollReveal.reveal("#chat-container", { origin: 'bottom', ...config2 });
+    MyScrollReveal.reveal(".product-image-container", { origin: 'rigth', ...DelayAnimationIntro(0) });
+    MyScrollReveal.reveal(".product-class", { origin: 'left', ...DelayAnimationIntro(0) });
+    MyScrollReveal.reveal(".product-title", { origin: 'left', ...DelayAnimationIntro(250) });
+    MyScrollReveal.reveal(".product-description", { origin: 'left', ...DelayAnimationIntro(500) });
+    MyScrollReveal.reveal(".product-button-container", { origin: 'left', ...DelayAnimationIntro(750) });
 
-    MyScrollReveal.reveal("#logo-container", { origin: 'top', ...config0 });
-    MyScrollReveal.reveal(".nav-menu", { origin: 'top', ...config1 });
-    MyScrollReveal.reveal(".nav-button-cotizar", { origin: 'top', ...config2 });
-    MyScrollReveal.reveal(".hamburger", { origin: 'top', ...config1 });
+    MyScrollReveal.reveal(".services-list-item", { origin: 'left', ...DelayAnimationIntro(250) });
 
+    MyScrollReveal.reveal(".text-experience", { origin: 'left', ...DelayAnimationIntro(250) });
+    MyScrollReveal.reveal(".text-description", { origin: 'left', ...DelayAnimationIntro(500) });
+    MyScrollReveal.reveal(".about-button-link", { origin: 'left', ...DelayAnimationIntro(750) });
+    MyScrollReveal.reveal(".technologies", { origin: 'rigth', ...DelayAnimationIntro(250) });
+    MyScrollReveal.reveal(".line-horizontal-long", { origin: 'rigth', ...DelayAnimationIntro(500) });
+    MyScrollReveal.reveal(".technologies-title", { origin: 'rigth', ...DelayAnimationIntro(250) });
 
-    MyScrollReveal.reveal(".presentation-title", { origin: 'left', ...config0 });
-    MyScrollReveal.reveal(".presentation-description", { origin: 'left', ...config1 });
-    MyScrollReveal.reveal(".presentation-button-container", { origin: 'left', ...config2 });
+    MyScrollReveal.reveal(".about-data-title", { origin: 'bottom', ...DelayAnimationIntro(250) });
+    MyScrollReveal.reveal(".about-data-description", { origin: 'bottom', ...DelayAnimationIntro(500) });
+    MyScrollReveal.reveal(".about-data-line", { origin: 'bottom', ...DelayAnimationIntro(750) });
 
-    MyScrollReveal.reveal(".product-image-container", { origin: 'rigth', ...config2 });
-    MyScrollReveal.reveal(".product-class", { origin: 'left', ...config0 });
-    MyScrollReveal.reveal(".product-title", { origin: 'left', ...config1 });
-    MyScrollReveal.reveal(".product-description", { origin: 'left', ...config2 });
-    MyScrollReveal.reveal(".product-button-container", { origin: 'left', ...config3 });
+    MyScrollReveal.reveal(".faq-list", { origin: 'left', ...DelayAnimationIntro(250) });
 
-    MyScrollReveal.reveal(".services-list-item", { origin: 'left', ...config2 });
-
-    MyScrollReveal.reveal(".text-experience", { origin: 'left', ...config0 });
-    MyScrollReveal.reveal(".text-description", { origin: 'left', ...config1 });
-    MyScrollReveal.reveal(".about-button-link", { origin: 'left', ...config2 });
-    MyScrollReveal.reveal(".technologies", { origin: 'rigth', ...config1 });
-    MyScrollReveal.reveal(".line-horizontal-long", { origin: 'rigth', ...config2 });
-    MyScrollReveal.reveal(".technologies-title", { origin: 'rigth', ...config3 });
-    MyScrollReveal.reveal(".about-data-title", { origin: 'bottom', ...config0 });
-    MyScrollReveal.reveal(".about-data-description", { origin: 'bottom', ...config1 });
-    MyScrollReveal.reveal(".about-data-line", { origin: 'bottom', ...config2 });
-
-    MyScrollReveal.reveal(".faq-list", { origin: 'left', ...config1 });
-
-    MyScrollReveal.reveal(".contact-title", { origin: 'left', ...config1 });
-    MyScrollReveal.reveal(".contact-message", { origin: 'left', ...config1 });
-    MyScrollReveal.reveal(".contact-button-container", { origin: 'left', ...config1 });
-
-    MyScrollReveal.reveal(".footer-slogan-text", { origin: 'bottom', ...config0 });
-    MyScrollReveal.reveal(".footer-social-list", { origin: 'bottom', ...config1 });
-
-    MyScrollReveal.reveal(".footer-derechos", { origin: 'bottom', ...config2 });
+    MyScrollReveal.reveal(".contact-title", { origin: 'left', ...DelayAnimationIntro(250) });
+    MyScrollReveal.reveal(".contact-message", { origin: 'left', ...DelayAnimationIntro(500) });
+    MyScrollReveal.reveal(".contact-button-container", { origin: 'left', ...DelayAnimationIntro(700) });
 
   }, [])
 /*
