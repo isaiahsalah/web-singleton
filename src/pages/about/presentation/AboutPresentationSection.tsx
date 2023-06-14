@@ -21,7 +21,7 @@ const AboutPresentationSection = () => {
 
             <div className='about-contend'>
                 <div className='about-text'>
-                    <h2 className='about-title' style={{lineHeight:1}}>
+                    <h2 className='about-title bold' style={{lineHeight:1}}>
                     {PresentationAboutData.title}
                     </h2>
                     <p className='about-description'>

@@ -17,12 +17,16 @@ export const VisionMisionSectionBox = styled.div`
   .vision-section-container {
     padding: 20px;
     display: grid;
+    justify-items: center;
     width: 100%;
     height: 100%;
     max-width: 1200px;
-    z-index:5
+    z-index:5;
+    gap: 20px;
   }
   .mision-title{
+    width: 70%;
+    line-height: 1;
   }
   #vision-back-image {
     top: 10%;
@@ -34,9 +38,22 @@ export const VisionMisionSectionBox = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .mision-description{
+  }
+  @media screen and (max-width: 600px) {
+    .mision-title{
+    width: 100%;
+  }
+  }
 
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    .mision-title{
+    width: 90%;
+  }
+  }
 
-
+  @media screen and (min-width: 1201px) {
   }
 `
 

@@ -24,7 +24,7 @@ const TeamSection = (props:TeamProps) => {
                     props.team.map((team, index) =>
                         <Grid key={index} display='grid' gap='20px' textAlign='left'>
                             <Grid className='team-title'>
-                                <Typography component="h2" variant="h5">
+                                <Typography component="h2"  variant="h5">
                                     {team.area}
                                 </Typography>
                                 <Typography>{team.description}</Typography>

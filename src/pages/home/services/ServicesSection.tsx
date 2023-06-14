@@ -30,7 +30,7 @@ const ServicesSection = (props: ServicesProps) => {
                 }}>
 
                   <div className='services-list-item-icon'  dangerouslySetInnerHTML={{ __html: item.icon }} />
-                  <h5 className='services-list-item-title'>
+                  <h5 className='services-list-item-title bold'>
                     {item.title}
                   </h5>
                 </div>

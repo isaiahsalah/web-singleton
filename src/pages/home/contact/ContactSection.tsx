@@ -18,7 +18,7 @@ const ContactSection = () => {
                 </h6>
             </div>
             <div className='contact-section-container'>
-                <h5 className='contact-title abril'>
+                <h5 className='contact-title bold'>
                     {ContactMessageData.title}
                     </h5>
                 <p className='contact-message'>

@@ -48,20 +48,10 @@ export const ContactBox = styled.div`
   .contact-button {
     margin: 15px 0px;
   }
-  .contact-back {
-    position: absolute;
-    font-size: 8em;
-    font-family: "Abril Fatface";
-    opacity: 0.1;
-    right: 5%;
-    bottom: 5%;
-  }
 
   @media screen and (max-width: 600px) {
     .contact-title {
     width: 80%;
-
-    font-family: "Abril Fatface";
   }
   .contact-message {
     width: 100%;

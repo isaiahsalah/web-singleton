@@ -1,21 +1,22 @@
 import { VisionMisionSectionBox } from './VisionMisionSectionStyle'
 import faqImage from '../../../assets/images/server.jpg'
+import { MisionAboutData } from '../../../utils/Config'
 
 const VisionMisionSection = () => {
     return (
         <VisionMisionSectionBox>
-            <img id='vision-back-image'  data-type="parallax" data-depth="0.10" src={faqImage} />
+            <img id='vision-back-image' data-type="parallax" data-depth="0.10" src={faqImage} />
 
             <div className="title-section-container">
                 <h6 className="section-title">Nuestra Misión</h6>
             </div>
 
             <div className='vision-section-container'>
-                <h5 className="mision-title">
-                    Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Har la fuente.
-                </h5>
+                <h4 className="mision-title bold">
+                    {MisionAboutData.title}
+                </h4>
                 <p className="mision-description">
-                    Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente.
+                    {MisionAboutData.subtitle}
                 </p>
             </div>
             <div> </div>

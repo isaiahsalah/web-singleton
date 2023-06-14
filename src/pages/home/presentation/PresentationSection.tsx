@@ -25,7 +25,7 @@ const PresentationSection = () => {
 
             <div className='presentation-contend'>
                 <div className='presentation-text'>
-                    <h2 className='presentation-title'>
+                    <h2 className='presentation-title bold'>
                     {PresentationHomeData.title}
                     </h2>
                     <p className='presentation-description'>

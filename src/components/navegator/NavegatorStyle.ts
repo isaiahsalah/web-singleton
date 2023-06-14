@@ -214,6 +214,7 @@ export const NavegatorBox = styled.nav`
       z-index: 20;
       gap: 10px;
       font-size: 1.4em;
+      font-weight: bold;
     }
   }
 

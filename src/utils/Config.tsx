@@ -49,13 +49,20 @@ export const PresentationHomeData = {
 
 //Se edita los datos que apareceran en el banner principal de la la pagina de nosotros
 export const PresentationAboutData = {
-  title: 'Tecnología que te Libera...',
-  subtitle: 'Nuestro Método de Trabajo revolucionario se unen para brindarte una experiencia única y eficiente, permitiéndote alcanzar tus metas de manera más rápida y efectiva.',
+  title: 'Impulsando el éxito y la innovación',
+  subtitle: 'Somos una empresa apasionada por la tecnología y el desarrollo de software, comprometidos en brindar soluciones creativas y vanguardistas que impulsen el crecimiento y el éxito de nuestros clientes.',
   button:
   {
     title: 'Cotizar',
     url: 'https://wa.link/yg436s'
   }
+};
+
+//Se edita los datos que apareceran en la misiòn de la la pagina de nosotros
+export const MisionAboutData = {
+  title: 'Ofrecemos soluciones de software innovadoras y de alta calidad',
+  subtitle: 'Nos enfocamos en ofrecer soluciones personalizadas y escalables, utilizando tecnologías de vanguardia y un enfoque ágil. Nuestra misión es colaborar estrechamente con nuestros clientes, comprender sus necesidades y desafíos específicos, y proporcionarles software innovador y confiable que impulse su crecimiento y los ayude a alcanzar el éxito en un entorno empresarial en constante evolución. Valoramos la calidad, la eficiencia y la satisfacción del cliente, y nos esforzamos por establecer relaciones sólidas y duraderas basadas en la confianza mutua y el logro de resultados excepcionales.',
+  
 };
 
 //Se escribe el mensaje que se imprimira en la sección de nosotros de la pagina principal

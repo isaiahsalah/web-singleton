@@ -59,7 +59,10 @@ body {
 }
 
 
+.bold{
+  font-weight: bold;
 
+}
 
 button {
   display: flex;
