@@ -58,9 +58,9 @@ const NavegatorComponent = () => {
                     <LogoComponent />
                     <div className="hamburger" onClick={openMenuMovil}>
                         <button className="icon-movil-container" >
-                            <h5>
+                            <h4>
                                 <GiHamburgerMenu className="icon-movil" />
-                            </h5>
+                            </h4>
                         </button>
                     </div>
                     <div className='nav-menu-container'>
