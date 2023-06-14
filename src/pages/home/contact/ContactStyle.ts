@@ -23,19 +23,24 @@ export const ContactBox = styled.div`
   }
 
   .contact-section-container {
-    width: 40%;
+    width: 100%;
     display: grid;
     gap: 20px;
 
     max-width: 1200px;
     padding: 20px;
     box-sizing: border-box;
+    justify-items: center;
   }
   .contact-title {
+    width: 50%;
+
     font-family: "Abril Fatface";
   }
   .contact-message {
-    font-size: 0.8em;
+    width: 80%;
+
+    //font-size: 0.8em;
   }
   .contact-button-container {
     display: flex;
@@ -54,9 +59,16 @@ export const ContactBox = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    .contact-section-container {
-      width: 80%;
-    }
+    .contact-title {
+    width: 80%;
+
+    font-family: "Abril Fatface";
+  }
+  .contact-message {
+    width: 100%;
+
+    //font-size: 0.8em;
+  }
     .contact-back-video {
       top: 100%;
       scale: 1.5;

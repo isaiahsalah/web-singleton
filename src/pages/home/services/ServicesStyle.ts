@@ -54,6 +54,8 @@ export const ServicesBox = styled.div`
     //border: 1px solid;
     //border-radius: 25%;
     font-size: 50px;
+    width: 50px;
+    height: 50px;
   }
 
   .services-list-item-description {

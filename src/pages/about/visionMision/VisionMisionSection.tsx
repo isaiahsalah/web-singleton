@@ -1,10 +1,10 @@
 import { VisionMisionSectionBox } from './VisionMisionSectionStyle'
-import faqImage from '../../../assets/images/team.jpg'
+import faqImage from '../../../assets/images/server.jpg'
 
 const VisionMisionSection = () => {
     return (
         <VisionMisionSectionBox>
-            <img id='vision-back-image' src={faqImage} />
+            <img id='vision-back-image'  data-type="parallax" data-depth="0.10" src={faqImage} />
 
             <div className="title-section-container">
                 <h6 className="section-title">Nuestra Misión</h6>

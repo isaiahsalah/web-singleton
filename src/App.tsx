@@ -1,13 +1,16 @@
-import { useEffect, } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Color } from './utils/Config'
-import MyScrollReveal from './components/myScrollReveal/MyScrollReveal'
 import { GlobalStyle } from './GlobalStyle.ts'
+import { } from './utils/Config'
+import {  Faq, Product, Services, Team, DataBussiness } from './utils/Classes'
 
+import axios from 'axios'
+import NotFoundPage from './pages/notfound/NotFoundPage.tsx';
 
 const darkTheme = createTheme({
   palette: {
@@ -16,11 +19,11 @@ const darkTheme = createTheme({
     background: { default: Color.secondary }
 
   },
-  components:{
-    MuiButton:{
+  components: {
+    MuiButton: {
       defaultProps: {
-        style:{
-          borderRadius:'50px',
+        style: {
+          borderRadius: '50px',
           //color: Color.active,
           color: Color.alternative
         }
@@ -32,101 +35,56 @@ const darkTheme = createTheme({
 
 
 function App() {
-
+  const [products, setProducts] = useState<Product[]>([]);
+  const [services, setServices] = useState<Services[]>([]);
+  const [dataBussiness, setDataBussiness] = useState<DataBussiness[]>([]);
+  const [faq, setFaq] = useState<Faq[]>([]);
+  const [team, setTeam] = useState<Team[]>([]);
+  //const [social, setSocial] = useState<Social[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          'https://docs.google.com/spreadsheets/d/1cOh3fWUC__I8hr-rDpILpl44N7Tw_T3noSuU1jAa40w/gviz/tq?tqx=out:json'
+        );
 
-    const config0 = {
-      distance: '200%',
-      duration: 800,
-      delay: 0,
-      opacity: 0,
-      easing: 'ease',
-    }
-    const config1 = {
-      distance: '200%',
-      duration: 800,
-      delay: 250,
-      opacity: 0,
-      easing: 'ease',
-    }
-    const config2 = {
-      distance: '200%',
-      duration: 800,
-      delay: 500,
-      opacity: 0,
-      easing: 'ease',
-    }
-    const config3 = {
-      distance: '200%',
-      duration: 800,
-      delay: 750,
-      opacity: 0,
-      easing: 'ease',
-    }
+        const rawData = response.data.substr(47).slice(0, -2);
+        const parsedData = JSON.parse(rawData);
 
-    MyScrollReveal.reveal(".title-section-container", {origin: 'top',...config3});
+        setProducts(JSON.parse(parsedData.table.rows[0].c[1].v))
+        setServices(JSON.parse(parsedData.table.rows[1].c[1].v))
+        setDataBussiness(JSON.parse(parsedData.table.rows[2].c[1].v))
+        setFaq(JSON.parse(parsedData.table.rows[3].c[1].v))
+        setTeam(JSON.parse(parsedData.table.rows[4].c[1].v))
+        //setSocial(JSON.parse(parsedData.table.rows[5].c[1].v))
+        setIsLoading(false)
+        console.log("baolbaol")
 
-    MyScrollReveal.reveal("#chat-container", {origin: 'bottom',...config2});
+      } catch (error) {
+        console.error('Error retrieving data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
-    MyScrollReveal.reveal("#logo-container", {origin: 'top',...config0});
-    MyScrollReveal.reveal(".nav-menu", {origin: 'top',...config1});
-    MyScrollReveal.reveal(".nav-button-cotizar", {origin: 'top',...config2});
-    MyScrollReveal.reveal(".hamburger", {origin: 'top',...config1});
-
-
-    MyScrollReveal.reveal(".presentation-title", {origin: 'left',...config0});
-    MyScrollReveal.reveal(".presentation-description", {origin: 'left',...config1});
-    MyScrollReveal.reveal(".presentation-button-container", {origin: 'left',...config2});
-
-    MyScrollReveal.reveal(".product-image-container", {origin: 'rigth',...config2});
-    MyScrollReveal.reveal(".product-class", {origin: 'left',...config0});
-    MyScrollReveal.reveal(".product-title", {origin: 'left',...config1});
-    MyScrollReveal.reveal(".product-description", {origin: 'left',...config2});
-    MyScrollReveal.reveal(".product-button-container", {origin: 'left',...config3});
-
-    MyScrollReveal.reveal(".services-list-container", {origin: 'left',...config2});
-
-    MyScrollReveal.reveal(".text-experience", {origin: 'left',...config0});
-    MyScrollReveal.reveal(".text-description", {origin: 'left',...config1});
-    MyScrollReveal.reveal(".about-button-link", {origin: 'left',...config2});
-    MyScrollReveal.reveal(".technologies", {origin: 'rigth',...config1});
-    MyScrollReveal.reveal(".line-horizontal-long", {origin: 'rigth',...config2});
-    MyScrollReveal.reveal(".technologies-title", {origin: 'rigth',...config3});
-    MyScrollReveal.reveal(".about-data-title", {origin: 'bottom',...config0});
-    MyScrollReveal.reveal(".about-data-description", {origin: 'bottom',...config1});
-    MyScrollReveal.reveal(".about-data-line", {origin: 'bottom',...config2});
-
-    MyScrollReveal.reveal(".faq-list", {origin: 'left',...config1});
-
-    MyScrollReveal.reveal(".contact-title", {origin: 'left',...config1});
-    MyScrollReveal.reveal(".contact-message", {origin: 'left',...config1});
-    MyScrollReveal.reveal(".contact-button-container", {origin: 'left',...config1});
-
-    MyScrollReveal.reveal(".footer-slogan-text", {origin: 'bottom',...config0});
-    MyScrollReveal.reveal(".footer-social-list", {origin: 'bottom',...config1});
-
-    MyScrollReveal.reveal(".footer-derechos", {origin: 'bottom',...config2});
-
-  }, [])
   useEffect(() => {
-
     const navBar = document.querySelector("#header-nav") as HTMLElement;
     let prevScrollPos = window.pageYOffset;
-    if (navBar) {
-
+    if (navBar && !isLoading) {
       window.onscroll = () => {
         const layers = document.querySelectorAll("[data-type='parallax']");
-
         const servicesBackImage = document.querySelector("#services-back-image") as HTMLImageElement;
         const FaqBackImage = document.querySelector("#presentation-back-image") as HTMLImageElement;
-
         const topDistance = window.pageYOffset;
-
         const movement = -(topDistance * 0.1);
         const translate3d = 'translate3d(' + movement + 'px, 0,0)';
-        servicesBackImage.style.transform = translate3d;
-        FaqBackImage.style.transform = translate3d;
+        if(servicesBackImage){
+          servicesBackImage.style.transform = translate3d;
+          FaqBackImage.style.transform = translate3d;
+        }
+        
 
         for (let i = 0; i < layers.length; i++) {
           const layer = layers[i] as HTMLElement;
@@ -140,14 +98,9 @@ function App() {
             layer.style['-ms-transform'] = translate3d;
             layer.style['-o-transform'] = translate3d;*/
             layer.style.transform = translate3d;
+            console.log("ola")
           }
-
         }
-
-
-
-
-
         if (navBar.style.left === "") {
           navBar.style.top = "0px";
         }
@@ -161,18 +114,26 @@ function App() {
           navBar.style.opacity = "0";
         }
         prevScrollPos = currentScrollPos;
-
-
       }
     }
 
-    /*// Cleanup function to remove the event listener
+    // Cleanup function to remove the event listener
     return () => {
         window.onscroll = null;
-    };*/
-  }, []);
+    };
+  }, [isLoading]);
+
+if(isLoading){
+  return (
+
+    <ThemeProvider theme={darkTheme}>
+      <GlobalStyle />
+      <CssBaseline />
+    </ThemeProvider>
 
 
+  )
+}else{
   return (
 
     <ThemeProvider theme={darkTheme}>
@@ -180,16 +141,29 @@ function App() {
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/*" element={<HomePage />} />
+          <Route path="/" element={<HomePage
+            products={products}
+            services={services}
+            dataBussiness={dataBussiness}
+            faq={faq}
+          />} />
 
+          <Route path="/about" element={<AboutPage  team={team}/>} />
+          <Route path="/pa" element={<NotFoundPage/>} />
+          <Route path="/*" element={<HomePage
+            products={products}
+            services={services}
+            dataBussiness={dataBussiness}
+            faq={faq}
+          />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
 
 
   )
+}
+
 }
 
 export default App

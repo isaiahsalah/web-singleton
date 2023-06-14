@@ -66,11 +66,11 @@ export const FooterBox = styled.nav`
 
   .footer-social-list {
     display: flex;
-
+flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 10px;
   }
 
   .footer-social-list li {

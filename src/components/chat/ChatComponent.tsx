@@ -1,3 +1,4 @@
+import { ChatButtonData } from "../../utils/Config";
 import { ChatComponentBox } from "./ChatComponentStyle";
 import { 
   RiWhatsappFill, 
@@ -6,7 +7,7 @@ import {
  
 const ChatComponent = () => {
   const chatClick = () => {
-    const nuevaVentana = window.open('https://www.twitter.com', '_blank');
+    const nuevaVentana = window.open(ChatButtonData.url, '_blank');
     if(nuevaVentana)nuevaVentana.focus();
 }
   return (
@@ -16,7 +17,7 @@ const ChatComponent = () => {
           <button onClick={chatClick} className="chat-button"  >
             <h6><RiWhatsappFill className="chat-icon"/></h6>
 
-            <p className="chat-text">Hablá con nosotros</p>
+            <p className="chat-text">{ChatButtonData.title}</p>
           </button>
         </div>
       </div>

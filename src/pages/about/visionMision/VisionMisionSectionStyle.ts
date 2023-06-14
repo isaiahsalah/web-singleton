@@ -10,6 +10,8 @@ export const VisionMisionSectionBox = styled.div`
   position: relative;
   gap: 20px;
   overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 
   .vision-section-container {
@@ -23,11 +25,15 @@ export const VisionMisionSectionBox = styled.div`
   .mision-title{
   }
   #vision-back-image {
-    position: absolute;
+    top: 10%;
+    scale: 1;
+    position: fixed;
     opacity: 0.4;
     z-index: 0;
     transition: .25s;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 
 
 

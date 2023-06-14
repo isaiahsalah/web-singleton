@@ -22,15 +22,26 @@ export const FacSectionBox = styled.div`
   }
 
   .faq-list-container {
-    padding: 20px;
+    padding: 5vw;
+    box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
+    justify-content: center;
     display: flex;
-    justify-content: left;
   }
   .faq-list {
-    width: 100%;
+    max-width: 90vw;
+    //overflow-x: auto;
+    justify-content: left;
+    z-index: 5;
   }
+
+  .faqs-tabs{
+    overflow-x: "auto";
+    max-width: 90vw;
+  }
+
+  
 
   @media screen and (max-width: 600px) {
     .faq-list {

@@ -30,7 +30,7 @@ const LogoComponent = () => {
                     Singleton
                 </h6>
                 <p className='logo-subtitle'>
-                    Tech Solutions
+                    Tecnologia que  te libera
                 </p>
             </div>
 

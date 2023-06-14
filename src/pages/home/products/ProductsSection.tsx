@@ -1,6 +1,6 @@
 import  { useState } from 'react'
 import { ProductBox } from './ProductsStyle';
-import { Product } from '../../../utils/Config';
+import { Product } from '../../../utils/Classes';
 import videoWork from '../../../assets/video/work-video.mp4'
 
 interface ProductsProps {
@@ -32,6 +32,10 @@ const ProductsSection = (props:ProductsProps) => {
     }, 1000)
   }
 
+  const ProductClick = (url:string) => {
+    const nuevaVentana = window.open(url, '_blank');
+    if(nuevaVentana)nuevaVentana.focus();
+}
   
   return (
     <ProductBox id='product'>
@@ -52,7 +56,7 @@ const ProductsSection = (props:ProductsProps) => {
             <p className={`product-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</p>
             
             <div className={`product-button-container ${loaded ? "loaded" : ""}`}>
-              <button className='product-button'>Ver Info</button>
+              <button onClick={()=>ProductClick(selectedItem.link)} className='product-button'>Ver Info</button>
             </div>
 
           </div>

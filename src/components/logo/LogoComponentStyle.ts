@@ -33,7 +33,7 @@ export const LogoComponentBox = styled.div`
 
   .logo-text {
     
-    line-height: 1.2;
+    line-height: 1;
     text-align: left;
   }
   .logo-title,
@@ -51,6 +51,8 @@ export const LogoComponentBox = styled.div`
     margin: 0;
     color: ${Color.alternative};
     cursor: pointer;
+    font-size: 24px;
+
   }
   .logo-subtitle {
     transition: color 0.15s ease-in-out;
@@ -58,6 +60,8 @@ export const LogoComponentBox = styled.div`
     color: ${Color.alternative};
     cursor: pointer;
     opacity: 0.75;
+    font-size: 11.7px;
+    //background-color:red
   }
 
 `

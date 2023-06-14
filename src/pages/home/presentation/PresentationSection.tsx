@@ -1,9 +1,10 @@
 import { PresentationBox } from './PresentationStyle';
 import faqImage from '../../../assets/images/teclado.jpg'
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
+import { PresentationData } from '../../../utils/Config';
 
 const PresentationSection = () => {
-    const navigate = useNavigate()
+    //const navigate = useNavigate()
 
     const productClick = () => {
         const section = document.getElementById('product') as HTMLDivElement;
@@ -13,7 +14,7 @@ const PresentationSection = () => {
 
     }
     const cotizarClick = () => {
-        const nuevaVentana = window.open('https://www.twitter.com', '_blank');
+        const nuevaVentana = window.open(PresentationData.button.url, '_blank');
         if(nuevaVentana)nuevaVentana.focus();
     }
 
@@ -25,13 +26,13 @@ const PresentationSection = () => {
             <div className='presentation-contend'>
                 <div className='presentation-text'>
                     <h2 className='presentation-title'>
-                        Tecnología que te Libera...
+                    {PresentationData.title}
                     </h2>
                     <p className='presentation-description'>
-                        Nuestro Método de Trabajo revolucionario se unen para brindarte una experiencia única y eficiente, permitiéndote alcanzar tus metas de manera más rápida y efectiva.
+                        {PresentationData.subtitle}
                     </p>
                     <div className='presentation-button-container'>
-                        <button onClick={cotizarClick}>Cotizar</button>
+                        <button onClick={cotizarClick}>{PresentationData.button.title}</button>
                         <button onClick={productClick}>Ver Productos</button>
                     </div>
                 </div>

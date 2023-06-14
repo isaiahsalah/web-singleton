@@ -1,42 +1,46 @@
 import { TeamSectionBox } from './TeamSectionStyle'
-import { ListTeam } from '../../../utils/Config'
+import {  Team } from '../../../utils/Classes'
 import 'react-awesome-slider/dist/styles.css';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
+import teamImage from "../../../assets/images/team.jpg"
+
+
+interface TeamProps {
+    team: Team[]
+  }
 
 
 
-
-
-
-const TeamSection = () => {
+const TeamSection = (props:TeamProps) => {
     return (
         <TeamSectionBox>
+            <img id='team-back-image'  src={teamImage} />
 
             <div className="title-section-container">
                 <h6 className="section-title">Nuestra Equipo</h6>
             </div>
 
 
-            <Grid container padding='20px' gap='20px' style={{
+            <Grid display='grid' padding='20px' gap='40px' style={{
                 maxWidth:"1200px"
             }}>
                 {
-                    ListTeam.map((team, index) =>
+                    props.team.map((team, index) =>
                         <Grid key={index} display='grid' gap='20px' textAlign='left'>
-                            <Grid>
+                            <Grid className='team-title'>
                                 <Typography component="h2" variant="h5">
-                                    {team.title}
+                                    {team.area}
                                 </Typography>
                                 <Typography>{team.description}</Typography>
                             </Grid>
 
                             <Grid container spacing={2} >
                                 {team.members.map((member, index) => (
-                                    <Grid key={index} item xs={12} md={6} >
-                                        <Paper variant="elevation" elevation={4} >
+                                    <Grid  key={index}  item xs={12} sm={6} md={4}  >
+                                        <Paper className='team-member' variant="elevation" elevation={4} >
                                             <Grid
                                                 container
                                                 alignItems='center'
@@ -64,22 +68,11 @@ const TeamSection = () => {
                                                         {member.name}
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary">
-                                                        {member.flag}
+                                                        {member.position}
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary">
-                                                        {member.location}
+                                                        {member.description}
                                                     </Typography>
-                                                    <Grid 
-                                                    container 
-                                                    gap='10px' >
-                                                        {member.social.map(social =>
-                                                            <a href={social.url} target='_blank'>                                                            
-                                                            <h6><social.icon /></h6>
-                                                            </a>
-                                                        )
-
-                                                        }
-                                                    </Grid>
                                                 </Grid>
                                             </Grid>
                                         </Paper>

@@ -5,6 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 import { NavegatorBox } from './NavegatorStyle'
 import { GiHamburgerMenu } from "react-icons/gi"
 import LogoComponent from '../logo/LogoComponent'
+import { CotizarButtonData } from '../../utils/Config';
 
 const NavegatorComponent = () => {
 
@@ -44,6 +45,12 @@ const NavegatorComponent = () => {
         }
     };
 
+  
+        const cotizarClick = () => {
+          const nuevaVentana = window.open(CotizarButtonData.url, '_blank');
+          if(nuevaVentana)nuevaVentana.focus();
+      }
+
     return (
         <NavegatorBox>
             <header id='header-nav'>
@@ -58,9 +65,9 @@ const NavegatorComponent = () => {
                     </div>
                     <div className='nav-menu-container'>
                         <ul className='nav-menu' onClick={closeMenuMovil}>
-                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#home' }}>Home</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#home' }}>Inicio</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#product' }}>Productos</HashLink></li>
-                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#service' }}>Servicioss</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#service' }}>Servicios</HashLink></li>
                             <li className='nav-item'><Link className='nav-link' to='/about'>Nosotros</Link></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#faq' }}>Faq</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#contact' }}>Contacto</HashLink></li>
@@ -78,7 +85,7 @@ const NavegatorComponent = () => {
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/" className='country-container paraguay'>
+                                <Link to="/pa" className='country-container paraguay'>
                                     <span className='P'>
                                         P
                                     </span >
@@ -93,8 +100,8 @@ const NavegatorComponent = () => {
 
                         </ul>
                         <div className='nav-button-cotizar'>
-                            <button className='nav-item-cotizar'>
-                                Cotizar
+                            <button onClick={cotizarClick} className='nav-item-cotizar'>
+                                {CotizarButtonData.title}
                             </button>
                         </div>
 
