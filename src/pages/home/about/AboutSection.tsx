@@ -49,15 +49,17 @@ const AboutSection = (props: AboutProps) => {
             <div className="about-data-list-container">
                 <div className="about-data-list">
                     {props.dataBussiness.map((item, index) => (
+                        <>
                         <div className="about-data-item-container" key={index}>
                             <div className="about-data-item" key={index}>
                                 <div className="h2 about-data-title bold abril">{item.title}</div>
                                 <p className="about-data-description">{item.description}</p>
                             </div>
-                            {(index + 1) === props.dataBussiness.length ? null : <div className="about-data-line" />
-                            }
+                            
                         </div>
-
+                        {(index + 1) === props.dataBussiness.length ? null : <div className="about-data-line" />
+                            }
+                        </>
                     ))}
                 </div>
             </div>
