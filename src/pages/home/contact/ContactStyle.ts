@@ -14,6 +14,7 @@ export const ContactBox = styled.div`
   .contact-back-video {
     top: 0;
     bottom: 0;
+    min-width: 100vw;
     width: 100vw;
     min-height: 100vh;
     position: fixed;

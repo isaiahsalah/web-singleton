@@ -1,6 +1,6 @@
 import { ContactBox } from './ContactStyle'
 import { ContactMessageData } from '../../../utils/Config'
-import videoContact from '../../../assets/video/mano-escribiendo-fonto-blanco.mp4'
+import videoContact from '../../../assets/images/teclado-minimalista.jpg'
 
 
 const ContactSection = () => {
@@ -10,8 +10,8 @@ const ContactSection = () => {
     }
     return (
         <ContactBox id='contact'>
-            <video loop autoPlay className='contact-back-video' data-type="parallax" data-depth="0.10" src={videoContact}>
-            </video>
+            <img className='contact-back-video' data-type="parallax" data-depth="0.10" src={videoContact}>
+            </img>
             <div className='title-section-container'>
                 <div className='h6 section-title'>
                     Contáctanos

@@ -50,7 +50,7 @@ export const PresentationHomeData = {
 //Se edita los datos que apareceran en el banner principal de la la pagina de nosotros
 export const PresentationAboutData = {
   title: 'Impulsando el éxito y la innovación',
-  subtitle: 'Somos una empresa apasionada por la tecnología y el desarrollo de software, comprometidos en brindar soluciones creativas y vanguardistas que impulsen el crecimiento y el éxito de nuestros clientes.',
+  subtitle: 'Somos una empresa apasionada por \n la tecnología  y el desarrollo de software, comprometidos en brindar soluciones creativas y vanguardistas que impulsen el crecimiento y el éxito de nuestros clientes.',
   button:
   {
     title: 'Cotizar',

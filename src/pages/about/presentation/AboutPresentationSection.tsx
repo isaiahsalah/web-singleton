@@ -1,5 +1,5 @@
 import { AboutPresentationSectionBox } from './AboutPresentationSectionStyle'
-import aboutImage from "../../../assets/images/office.jpg"
+import aboutImage from "../../../assets/webp/office.webp"
 import { PresentationAboutData } from '../../../utils/Config';
 
 const AboutPresentationSection = () => {
@@ -25,7 +25,7 @@ const AboutPresentationSection = () => {
                     {PresentationAboutData.title}
                     </h1>
                     <p className='about-description'>
-                    {PresentationAboutData.subtitle}
+                    {PresentationAboutData.subtitle} 
                     </p>
                     <div className='about-button-container'>
                         <button onClick={cotizarClick}>{PresentationAboutData.button.title}</button>

@@ -40,6 +40,7 @@ export const AboutPresentationSectionBox = styled.div`
     display: flex;
     gap: 20px;
   }
+
   @media screen and (max-width: 600px) {
     .about-text {
     width: 100%;

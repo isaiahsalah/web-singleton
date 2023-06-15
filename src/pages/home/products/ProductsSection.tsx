@@ -1,7 +1,7 @@
 import  { useState } from 'react'
 import { ProductBox } from './ProductsStyle';
 import { Product } from '../../../utils/Classes';
-import videoWork from '../../../assets/video/work-video.mp4'
+import videoWork from '../../../assets/webp/work-video.webp'
 
 interface ProductsProps {
   products: Product[],
@@ -39,8 +39,8 @@ const ProductsSection = (props:ProductsProps) => {
   
   return (
     <ProductBox id='product'>
-      <video loop autoPlay className='product-back-video' data-type="parallax" data-depth="0.10" src={videoWork}>
-      </video>
+      <img  className='product-back-video' data-type="parallax" data-depth="0.10" src={videoWork}>
+      </img>
       <div className='title-section-container'>
         <div className='h6 section-title'>
           Nuestros Productos
