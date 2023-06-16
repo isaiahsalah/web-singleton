@@ -249,22 +249,22 @@ h1, h2, h3, h4, h5,h6 , p{
   @media screen and (min-width: 1601px) {
 
     h1 {
-      font-size: 85px;
+      font-size: 90px;
     }
     h2, .h2 {
       font-size: 70px;
     }
     h3 {
-      font-size: 50px;
+      font-size: 55px;
     }
     h4 {
-      font-size: 30px;
+      font-size: 40px;
     }
     .h6 {
-      font-size: 19px;
+      font-size: 22px;
     }
     p{
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 /*
