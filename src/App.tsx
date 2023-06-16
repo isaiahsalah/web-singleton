@@ -149,8 +149,11 @@ if(isLoading){
 
           <Route path="/about" element={<AboutPage  team={team}/>} />
           <Route path="/pa" element={<NotFoundPage/>} />
-          <Route path="*"
-            element={<Navigate to="/" replace />} />
+          <Route
+            element={<Navigate to="/" replace />}
+          >
+            <Route path="*" />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
