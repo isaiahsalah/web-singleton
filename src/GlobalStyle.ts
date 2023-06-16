@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5,h6 , p{
     }
   }
 
-  @media screen and (min-width: 1201px) {
+  @media screen and (min-width: 1201px) and (max-width: 1600px) {
 
     h1 {
       font-size: 75px;

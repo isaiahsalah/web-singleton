@@ -50,8 +50,8 @@ const AboutSection = (props: AboutProps) => {
                 <div className="about-data-list">
                     {props.dataBussiness.map((item, index) => (
                         <>
-                        <div className="about-data-item-container" key={index}>
-                            <div className="about-data-item" key={index}>
+                        <div className="about-data-item-container" >
+                            <div className="about-data-item" >
                                 <div className="h2 about-data-title bold abril">{item.title}</div>
                                 <p className="about-data-description">{item.description}</p>
                             </div>

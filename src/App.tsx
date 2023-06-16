@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Color } from './utils/Config'
 import { GlobalStyle } from './GlobalStyle.ts'
-import { } from './utils/Config'
 import {  Faq, Product, Services, Team, DataBussiness } from './utils/Classes'
 
 import axios from 'axios'
@@ -141,7 +140,7 @@ if(isLoading){
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage
+          <Route path="/home" element={<HomePage
             products={products}
             services={services}
             dataBussiness={dataBussiness}
@@ -150,12 +149,8 @@ if(isLoading){
 
           <Route path="/about" element={<AboutPage  team={team}/>} />
           <Route path="/pa" element={<NotFoundPage/>} />
-          <Route path="/*" element={<HomePage
-            products={products}
-            services={services}
-            dataBussiness={dataBussiness}
-            faq={faq}
-          />} />
+          <Route path="*"
+            element={<Navigate to="/home" replace />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

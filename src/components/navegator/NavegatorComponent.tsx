@@ -72,7 +72,7 @@ const NavegatorComponent = () => {
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#faq' }}>Faq</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#contact' }}>Contacto</HashLink></li>
                             <div>
-                                <Link to="/" className='country-container bolivia'>
+                                <Link to="./" className='country-container bolivia'>
                                     <span className='B'>
                                         B
                                     </span >
@@ -85,7 +85,7 @@ const NavegatorComponent = () => {
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/pa" className='country-container paraguay'>
+                                <Link to="./pa" className='country-container paraguay'>
                                     <span className='P'>
                                         P
                                     </span >
