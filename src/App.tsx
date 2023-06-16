@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter,  Routes, Route, Navigate, HashRouter } from 'react-router-dom'
+import {  Routes, Route, Navigate, HashRouter } from 'react-router-dom'
 import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
