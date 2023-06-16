@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter,  Routes, Route, Navigate, HashRouter } from 'react-router-dom'
 import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -138,7 +138,7 @@ if(isLoading){
     <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage
             products={products}
@@ -155,7 +155,7 @@ if(isLoading){
             <Route path="*" />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
 
 
