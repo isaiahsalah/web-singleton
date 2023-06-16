@@ -140,7 +140,7 @@ if(isLoading){
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<HomePage
+          <Route path="/" element={<HomePage
             products={products}
             services={services}
             dataBussiness={dataBussiness}
@@ -150,7 +150,7 @@ if(isLoading){
           <Route path="/about" element={<AboutPage  team={team}/>} />
           <Route path="/pa" element={<NotFoundPage/>} />
           <Route path="*"
-            element={<Navigate to="/home" replace />} />
+            element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

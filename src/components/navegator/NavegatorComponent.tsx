@@ -65,12 +65,12 @@ const NavegatorComponent = () => {
                     </div>
                     <div className='nav-menu-container'>
                         <ul className='nav-menu' onClick={closeMenuMovil}>
-                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#home' }}>Inicio</HashLink></li>
-                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#product' }}>Productos</HashLink></li>
-                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#service' }}>Servicios</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/', hash: '#home' }}>Inicio</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/', hash: '#product' }}>Productos</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/', hash: '#service' }}>Servicios</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/about', hash: '#about' }}>Nosotros</HashLink></li>
-                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#faq' }}>Faq</HashLink></li>
-                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/home', hash: '#contact' }}>Contacto</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/', hash: '#faq' }}>Faq</HashLink></li>
+                            <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/', hash: '#contact' }}>Contacto</HashLink></li>
                             <div>
                                 <Link to="./" className='country-container bolivia'>
                                     <span className='B'>
