@@ -38,7 +38,7 @@ export const Color = {
 
 //Se edita los datos que apareceran en el banner principal de la la pagina de inicio
 export const PresentationHomeData = {
-  title: 'INNOVACION',
+  title: 'INNOVACIÓN',
   subtitle: 'La clave para mantenerse relevante en un mundo de constante evolución. Únete a la revolución con nuestro software',
   button:
   {
