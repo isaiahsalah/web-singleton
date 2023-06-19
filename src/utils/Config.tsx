@@ -14,7 +14,6 @@ import { IoLogoWhatsapp as IoLogoWhatsapp4 }
 import {
   SiTypescript,
   SiJavascript,
-  SiAngular,
   SiReact,
   SiNetapp,
   SiCsharp,
@@ -23,7 +22,8 @@ import {
   SiMaterialdesign,
   SiKotlin,
   SiAndroid,
-  SiVite
+  SiVite,
+  SiBlazor
 } from "react-icons/si";
 
 //Se seleccionan los colores que representan a la organización
@@ -121,7 +121,7 @@ export const TechnologiesData = [
   },
   {
     name: "",
-    icon: <SiAngular />,
+    icon: <SiBlazor />,
   },
   {
     name: "",

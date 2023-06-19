@@ -45,7 +45,9 @@ export const ServicesBox = styled.div`
   .services-list-item {
     display: flex;
     flex-wrap: wrap;
+    align-content:start;
     gap:10px;
+    
   }
   .services-list-item-icon {
     display: flex;
@@ -61,7 +63,13 @@ export const ServicesBox = styled.div`
   }
 
   .services-list-item-description {
-    width: 100%;
+    display: -webkit-box;
+  -webkit-line-clamp: 4; /* Establece el número máximo de líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.25s
+
   }
 
   @media screen and (max-width: 600px) {

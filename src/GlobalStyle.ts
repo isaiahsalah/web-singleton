@@ -42,12 +42,13 @@ body::-webkit-scrollbar{
   opacity: 0.75;
   transition: 0.15s;
   //color: #8491A0;
+  cursor:pointer;
  
 }
 a:hover {
   opacity: 1;
       filter: drop-shadow(0 0 1.5em ${Color.alternative});
-      transform: scale(1.02);
+      //transform: scale(1.02);
     }
 
 body {

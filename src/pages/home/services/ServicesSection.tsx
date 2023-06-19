@@ -8,6 +8,36 @@ interface ServicesProps {
 
 const ServicesSection = (props: ServicesProps) => {
 
+
+
+  const extenderDescripcion =(index:number)=>{
+    
+    const layers = document.querySelectorAll(".services-list-item-description");
+    const buttons = document.querySelectorAll(".services-list-item-button");
+
+    for (let i = 0; i < layers.length; i++) {
+      const layer = layers[i] as HTMLElement;
+      const button = buttons[i] as HTMLElement;
+
+      if(layers[i].id===(`description-`+index))
+      {
+        if(layer.style.display==="flex"){
+          layer.style.display="-webkit-box"
+          button.textContent="Ver Más"
+
+        }
+        else {
+          layer.style.display="flex"
+          button.textContent="Ver Menos"
+        }
+      }
+      else{
+        layer.style.display="-webkit-box"
+        button.textContent="Ver Más"
+      }
+    }
+  }
+
   return (
     <ServicesBox id='service'>
       <img id='services-back-image' src={servicesImage} alt=''>
@@ -35,9 +65,10 @@ const ServicesSection = (props: ServicesProps) => {
                   </h4>
                 </div>
 
-                <p className='services-list-item-description'>
+                <p id={`description-${index}`} className='services-list-item-description'>
                   {item.description}
                 </p>
+                <a onClick={()=>extenderDescripcion(index)} id={`button-${index}`} className='services-list-item-button'>Ver Más</a>
               </div>
             )
           }
