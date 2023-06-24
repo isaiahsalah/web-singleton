@@ -30,12 +30,12 @@ const HomePage = (props:HomeProps) => {
     MyScrollReveal.reveal(".presentation-title", { origin: 'left', ...DelayAnimationIntro(250) });
     MyScrollReveal.reveal(".presentation-description", { origin: 'left', ...DelayAnimationIntro(500) });
     MyScrollReveal.reveal(".presentation-button-container", { origin: 'left', ...DelayAnimationIntro(750) });
-
+ /*
     MyScrollReveal.reveal(".product-image-container", { origin: 'rigth', ...DelayAnimationIntro(0) });
     MyScrollReveal.reveal(".product-class", { origin: 'left', ...DelayAnimationIntro(0) });
     MyScrollReveal.reveal(".product-title", { origin: 'left', ...DelayAnimationIntro(250) });
     MyScrollReveal.reveal(".product-description", { origin: 'left', ...DelayAnimationIntro(500) });
-    MyScrollReveal.reveal(".product-button-container", { origin: 'left', ...DelayAnimationIntro(750) });
+    MyScrollReveal.reveal(".product-button-container", { origin: 'left', ...DelayAnimationIntro(750) });*/
 
     MyScrollReveal.reveal(".services-list-item", { origin: 'left', ...DelayAnimationIntro(250) });
 
