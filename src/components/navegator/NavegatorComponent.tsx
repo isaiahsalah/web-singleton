@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 
 import { NavegatorBox } from './NavegatorStyle'
 import { GiHamburgerMenu } from "react-icons/gi"
 import LogoComponent from '../logo/LogoComponent'
 import Bolivia from '../../assets/images/bolivia.png'
-import Paraguay from '../../assets/images/paraguay.png'
 import { CotizarButtonData } from '../../utils/Config';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Button from '@mui/material/Button';
 
 const NavegatorComponent = () => {
     const navigate = useNavigate();
