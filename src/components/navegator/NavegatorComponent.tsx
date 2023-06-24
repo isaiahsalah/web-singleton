@@ -1,14 +1,36 @@
-import  { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 
 import { NavegatorBox } from './NavegatorStyle'
 import { GiHamburgerMenu } from "react-icons/gi"
 import LogoComponent from '../logo/LogoComponent'
+import Bolivia from '../../assets/images/bolivia.png'
+import Paraguay from '../../assets/images/paraguay.png'
 import { CotizarButtonData } from '../../utils/Config';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Button from '@mui/material/Button';
 
 const NavegatorComponent = () => {
+    const navigate = useNavigate();
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
+    const navBolivia = ()=>{
+        navigate("/")
+        handleClose()
+    }
+    const navParaguay = ()=>{
+        navigate("/pa")
+        handleClose()
+    }
     useEffect(() => {
         const div = document.querySelector('.nav-menu') as HTMLElement;
 
@@ -36,7 +58,7 @@ const NavegatorComponent = () => {
         if (menu && menu.style.display === "none" || menu.style.display === "") {
             menu.style.display = "grid";
         }
-    }; 
+    };
     const closeMenuMovil = () => {
         const menu = document.querySelector(".nav-menu") as HTMLElement;
         const ancho = window.innerWidth;
@@ -45,11 +67,11 @@ const NavegatorComponent = () => {
         }
     };
 
-  
-        const cotizarClick = () => {
-          const nuevaVentana = window.open(CotizarButtonData.url, '_blank');
-          if(nuevaVentana)nuevaVentana.focus();
-      }
+
+    const cotizarClick = () => {
+        const nuevaVentana = window.open(CotizarButtonData.url, '_blank');
+        if (nuevaVentana) nuevaVentana.focus();
+    }
 
     return (
         <NavegatorBox>
@@ -72,32 +94,15 @@ const NavegatorComponent = () => {
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/', hash: '#faq' }}>Faq</HashLink></li>
                             <li className='nav-item'><HashLink className='nav-link' to={{ pathname: '/', hash: '#contact' }}>Contacto</HashLink></li>
                             <div>
-                                <Link to="./" className='country-container bolivia'>
-                                    <span className='B'>
-                                        B
-                                    </span >
-                                    <span className='O'>
-                                        O
-                                    </span >
-                                    <span className='L'>
-                                        L
-                                    </span>
-                                </Link>
+                                <button 
+                                    id="button-country"
+                                    aria-controls={open ? 'basic-menu' : undefined}
+                                    aria-haspopup="true"
+                                    aria-expanded={open ? 'true' : undefined}
+                                    onClick={handleClick} className='country-container bolivia'>
+                                    <img className='img-country' src={Bolivia}></img>
+                                </button>
                             </div>
-                            <div>
-                                <Link to="./pa" className='country-container paraguay'>
-                                    <span className='P'>
-                                        P
-                                    </span >
-                                    <span className='A'>
-                                        A
-                                    </span >
-                                    <span className='R'>
-                                        R
-                                    </span>
-                                </Link>
-                            </div>
-
                         </ul>
                         <div className='nav-button-cotizar'>
                             <button onClick={cotizarClick} className='nav-item-cotizar'>
@@ -108,6 +113,18 @@ const NavegatorComponent = () => {
                     </div>
                 </nav>
             </header>
+            <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                }}
+            >
+                <MenuItem onClick={navBolivia}>Bolivia</MenuItem>
+                <MenuItem onClick={navParaguay}>Paraguay</MenuItem>
+            </Menu>
 
         </NavegatorBox>
     )

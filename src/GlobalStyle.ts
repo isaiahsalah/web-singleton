@@ -177,6 +177,7 @@ h1, h2, h3, h4, h5,h6 , p{
    }
    p{
     white-space: pre-line;
+    line-height:1.25;
    }
   
   @media screen and (max-width: 600px) {

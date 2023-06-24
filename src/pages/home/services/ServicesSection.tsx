@@ -9,6 +9,20 @@ interface ServicesProps {
 const ServicesSection = (props: ServicesProps) => {
 
 
+  const expandirTexto = (elemento: HTMLElement, numLineas:number) => {
+    let lineasActuales = 4; // Número inicial de líneas
+    const intervalo = setInterval(() => {
+      lineasActuales++;
+  
+      // Actualiza el valor de -webkit-line-clamp
+      elemento.style.webkitLineClamp = lineasActuales.toString();
+  
+      if (lineasActuales >= numLineas) {
+        clearInterval(intervalo);
+      }
+    }, lineasActuales*5); // Intervalo de tiempo entre cada cambio de línea (ajusta según tus necesidades)
+  };
+
 
   const extenderDescripcion =(index:number)=>{
     
@@ -21,18 +35,24 @@ const ServicesSection = (props: ServicesProps) => {
 
       if(layers[i].id===(`description-`+index))
       {
-        if(layer.style.display==="flex"){
-          layer.style.display="-webkit-box"
+        if(layer.style.webkitLineClamp=="60"){
+          
+          layer.style.webkitLineClamp="4"
+          //layer.style.display="-webkit-box"
           button.textContent="Ver Más"
 
         }
         else {
-          layer.style.display="flex"
+          expandirTexto(layer,60)
+          //layer.style.webkitLineClamp="50"
+          //layer.style.display="flex"
           button.textContent="Ver Menos"
         }
       }
       else{
-        layer.style.display="-webkit-box"
+        
+        layer.style.webkitLineClamp="4"
+        //layer.style.display="-webkit-box"
         button.textContent="Ver Más"
       }
     }

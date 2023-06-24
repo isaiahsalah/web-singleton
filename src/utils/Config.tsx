@@ -163,7 +163,7 @@ export const SocialMediaData = [
   },
   {
     title: "Tiktok",
-    link: "https://www.tiktok.com/@singleton.bo",
+    link: "https://www.tiktok.com/@singleton1612",
     icon: IoLogoTiktok
   },
   {

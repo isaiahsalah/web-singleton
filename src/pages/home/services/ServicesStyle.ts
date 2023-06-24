@@ -68,8 +68,8 @@ export const ServicesBox = styled.div`
   -webkit-box-orient: vertical;
   overflow: hidden;
     text-overflow: ellipsis;
-    transition: all 0.25s
-
+    transition: all 0.25s;
+    text-align: justify;
   }
 
   @media screen and (max-width: 600px) {

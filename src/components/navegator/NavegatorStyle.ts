@@ -10,8 +10,8 @@ export const NavegatorBox = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 15%;
+    max-height: 15%;
     left: 0;
     right: 0;
     top: 0px;
@@ -30,10 +30,10 @@ export const NavegatorBox = styled.nav`
     align-items: center;
     background-color: ${Color.secondary};
     border-radius: 100px;
-    padding: 12px 24px;
+    padding: 12px 48px 12px 24px;
     margin: 0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-
+    position: relative;
   }
 
   .nav-menu-container {
@@ -50,7 +50,6 @@ export const NavegatorBox = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
 
   .nav-item {
@@ -59,7 +58,6 @@ export const NavegatorBox = styled.nav`
     align-items: center;
     margin: 0;
     padding: 0;
-    
   }
   .nav-link {
     text-decoration: none;
@@ -118,46 +116,48 @@ export const NavegatorBox = styled.nav`
     cursor: pointer;
     opacity: 0.75;
   }
+
+  .paraguay {
+    &:hover {
+      opacity: 1;
+      filter: drop-shadow(0 0 1em ${Color.alternative});
+    }
+  }
   .country-container {
     font-weight: bold;
     transition: 0.25s;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(-0%, -50%);
   }
-  .paraguay {
-    &:hover{
-      opacity: 1;
-      filter: drop-shadow(0 0 1em ${Color.alternative});
+  .img-country {
+    height: 30px;
+    padding: 0;
+  }
+  #button-country {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+    text-transform: none;
 
-    }
   }
   .bolivia {
+    display: flex;
+    align-items: center;
     opacity: 1;
-    filter: drop-shadow(0 0 1em ${Color.alternative});
-  }
-
-  .B {
-    color: red;
-  }
-  .O {
-    color: yellow;
-  }
-  .L {
-    color: green;
-  }
-
-  .P {
-    color: red;
-  }
-  .A {
-    color: white;
-  }
-  .R {
-    color: blue;
   }
 
   .hamburger {
     display: flex;
     cursor: pointer;
-    
   }
   .icon-movil-container {
     display: grid;
@@ -169,16 +169,15 @@ export const NavegatorBox = styled.nav`
     border-radius: 50%;
     transition: 0.25s;
 
-    &:hover { 
+    &:hover {
       filter: drop-shadow(0 0 1em ${Color.alternative}80);
       background-color: ${Color.alternative};
       color: ${Color.active};
     }
   }
   .icon-movil {
-    
     display: flex;
-    
+
     //height: 100%;
     //width: 1.2em;
   }
