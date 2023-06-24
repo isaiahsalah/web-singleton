@@ -1,5 +1,4 @@
 import { AboutPresentationSectionBox } from './AboutPresentationSectionStyle'
-import aboutImage from "../../../assets/webp/office.webp"
 import { PresentationAboutData } from '../../../utils/Config';
 
 const AboutPresentationSection = () => {
@@ -17,7 +16,7 @@ const AboutPresentationSection = () => {
     }
     return (
         <AboutPresentationSectionBox id='about'>
-            <img id='about-back-image' data-type="parallax" data-depth="0.20" src={aboutImage} alt='' />
+            <img id='about-back-image' data-type="parallax" data-depth="0.20" src="https://i.ibb.co/8cdxLjr/office.webp" alt='' />
 
             <div className='about-contend'>
                 <div className='about-text'>

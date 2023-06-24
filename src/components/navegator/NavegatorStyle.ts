@@ -183,6 +183,9 @@ export const NavegatorBox = styled.nav`
   }
 
   @media screen and (max-width: 600px) {
+    #button-country {
+      display: none;
+    }
     .hamburger {
       display: flex;
       width: 100%;
@@ -218,6 +221,9 @@ export const NavegatorBox = styled.nav`
   }
 
   @media screen and (min-width: 601px) and (max-width: 1200px) {
+    #button-country {
+      display: none;
+    }
     .nav-item-cotizar {
       display: none;
     }
