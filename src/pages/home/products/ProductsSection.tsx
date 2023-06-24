@@ -1,6 +1,7 @@
 import  { useState } from 'react'
 import { ProductBox } from './ProductsStyle';
 import { Product } from '../../../utils/Classes';
+import videoProduct from '../../../assets/webp/work-video.webp'
 
 interface ProductsProps {
   products: Product[],
@@ -38,7 +39,7 @@ const ProductsSection = (props:ProductsProps) => {
   
   return (
     <ProductBox id='product'>
-      <img  className='product-back-video' data-type="parallax" data-depth="0.10" src="https://i.ibb.co/8dTXPbC/work-video.webp">
+      <img  className='product-back-video' data-type="parallax" data-depth="0.10" src={videoProduct}>
       </img>
       <div className='title-section-container'>
         <div className='h6 section-title'>

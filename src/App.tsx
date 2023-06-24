@@ -69,10 +69,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const navBar = document.querySelector("#header-nav") as HTMLElement;
     let prevScrollPos = window.pageYOffset;
-    if (navBar && !isLoading) {
+    if ( !isLoading) {
       window.onscroll = () => {
+        const navBar = document.querySelector("#header-nav") as HTMLElement;
+
         const layers = document.querySelectorAll("[data-type='parallax']");
         const servicesBackImage = document.querySelector("#services-back-image") as HTMLImageElement;
         const FaqBackImage = document.querySelector("#presentation-back-image") as HTMLImageElement;
@@ -102,21 +103,26 @@ function App() {
         }
         if (navBar.style.left === "") {
           navBar.style.top = "0px";
+
         }
 
         const currentScrollPos = window.pageYOffset;
         if (prevScrollPos > currentScrollPos) {
+
           navBar.style.top = "0px";
           navBar.style.opacity = "1";
         } else {
+          
+
           navBar.style.top = "-15%";
           navBar.style.opacity = "0";
+          
         }
+        //console.log(navBar.style.top)
         prevScrollPos = currentScrollPos;
       }
     }
 
-    // Cleanup function to remove the event listener
     return () => {
         window.onscroll = null;
     };

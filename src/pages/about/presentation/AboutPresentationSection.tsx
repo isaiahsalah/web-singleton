@@ -1,5 +1,6 @@
 import { AboutPresentationSectionBox } from './AboutPresentationSectionStyle'
 import { PresentationAboutData } from '../../../utils/Config';
+import videoAbout from '../../../assets/webp/office.webp'
 
 const AboutPresentationSection = () => {
 
@@ -16,7 +17,7 @@ const AboutPresentationSection = () => {
     }
     return (
         <AboutPresentationSectionBox id='about'>
-            <img id='about-back-image' data-type="parallax" data-depth="0.20" src="https://i.ibb.co/8cdxLjr/office.webp" alt='' />
+            <img id='about-back-image' data-type="parallax" data-depth="0.20" src={videoAbout} alt='' />
 
             <div className='about-contend'>
                 <div className='about-text'>
