@@ -19,7 +19,7 @@ export const ProductBox = styled.div`
     min-width: 100vw;
     min-height: 100vh;
     position: fixed;
-    z-index: -2;
+    z-index: -4;
     opacity: 0.2;
     transition: 0.25s;
   }

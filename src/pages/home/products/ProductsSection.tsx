@@ -75,11 +75,11 @@ const ProductsSection = (props:ProductsProps) => {
           {
             props.products.map((item, index) =>
               <button
-                key={item.title}
+                key={index}
                 onClick={() => selectedNewItem(index, props.products)}
                 className={`product-button ${index === selectedIndex ? "active" : ""}`}
                 data-slide={index}
-                
+                about={item.description}
               >
               </button>
             )
