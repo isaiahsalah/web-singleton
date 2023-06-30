@@ -20,8 +20,9 @@ const ServicesSection = (props: ServicesProps) => {
       if (lineasActuales >= numLineas) {
         clearInterval(intervalo);
       }
-    }, lineasActuales*5); // Intervalo de tiempo entre cada cambio de línea (ajusta según tus necesidades)
+    }, 5); // Intervalo de tiempo entre cada cambio de línea (ajusta según tus necesidades)
   };
+
 
 
   const extenderDescripcion =(index:number)=>{
@@ -36,24 +37,20 @@ const ServicesSection = (props: ServicesProps) => {
       if(layers[i].id===(`description-`+index))
       {
         if(layer.style.webkitLineClamp=="60"){
-          
+          //contraerTexto(layer,4)
           layer.style.webkitLineClamp="4"
           //layer.style.display="-webkit-box"
           button.textContent="Ver Más"
 
         }
         else {
-          expandirTexto(layer,60)
+           expandirTexto(layer,60)
+           
           //layer.style.webkitLineClamp="50"
           //layer.style.display="flex"
           button.textContent="Ver Menos"
+          console.log("layer")
         }
-      }
-      else{
-        
-        layer.style.webkitLineClamp="4"
-        //layer.style.display="-webkit-box"
-        button.textContent="Ver Más"
       }
     }
   }

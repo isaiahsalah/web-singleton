@@ -1,7 +1,7 @@
 import  { useState } from 'react'
 import { ProductBox } from './ProductsStyle';
 import { Product } from '../../../utils/Classes';
-import videoProduct from '../../../assets/webp/work-video.webp'
+import videoProduct from '../../../assets/webp/video-work.webp'
 
 interface ProductsProps {
   products: Product[],

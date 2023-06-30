@@ -15,12 +15,18 @@ export const ServicesBox = styled.div`
     ${Color.primary}
   );
   z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
 
   #services-back-image {
-    max-height: 100%;
+    //max-height: 100%;
     opacity: 0.1;
-    position: absolute;
-    z-index: -2;
+    position: fixed;
+    object-fit: cover;
+    width: 120%;
+    z-index: 0;
+    opacity: 0.1;
+    top: 0;
   }
 
   .title-section-back {
@@ -92,6 +98,16 @@ export const ServicesBox = styled.div`
       //width: 100%;
       line-height: 1;
     }
+    #services-back-image {
+      width: auto;
+    height: 100%;
+    opacity: 0.1;
+    position: fixed;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.1;
+    top: 0;
+  }
   }
 
   @media screen and (min-width: 601px) and (max-width: 1200px) {
@@ -107,8 +123,22 @@ export const ServicesBox = styled.div`
     .services-list-item {
       align-items: center;
     }
+    #services-back-image {
+      width: auto;
+    height: 100%;
+    opacity: 0.1;
+    position: fixed;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.1;
+    top: 0;
+  }
+
   }
 
   @media screen and (min-width: 1201px) {
+    #services-back-image {
+
+  }
   }
 `;

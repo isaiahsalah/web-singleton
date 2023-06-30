@@ -78,7 +78,7 @@ function App() {
         const servicesBackImage = document.querySelector("#services-back-image") as HTMLImageElement;
         const FaqBackImage = document.querySelector("#presentation-back-image") as HTMLImageElement;
         const topDistance = window.pageYOffset;
-        const movement = -(topDistance * 0.1);
+        const movement = -(topDistance * 0.05);
         const translate3d = 'translate3d(' + movement + 'px, 0,0)';
         if(servicesBackImage){
           servicesBackImage.style.transform = translate3d;
