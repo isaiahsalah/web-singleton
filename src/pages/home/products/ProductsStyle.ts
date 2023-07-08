@@ -27,14 +27,15 @@ export const ProductBox = styled.div`
   .title-section-back {
     //transition:  0.25s;
   }
-  /*
-   @keyframes moveText {
-  0% {
-    transform: translateX(100%);
+
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-  100% {
-    transform: translateX(-100%);
-  }}*/
 
   .product-list {
     width: 100%;
@@ -53,7 +54,7 @@ export const ProductBox = styled.div`
   .product-image-container {
     display: flex;
     width: 40%;
-    transition: 0.25s opacity ease-in-out;
+
     position: relative;
     opacity: 0;
     translate: 100% 0;
@@ -69,6 +70,11 @@ export const ProductBox = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.5s 0.3s;
+    &.loaded {
+      opacity: 1;
+    }
   }
   .product-info {
     display: flex;
@@ -76,35 +82,54 @@ export const ProductBox = styled.div`
     justify-content: left;
     align-content: center;
     text-align: left;
-    width: 60%;
+    width: 50%;
     padding: 20px;
     box-sizing: border-box;
     gap: 20px;
   }
   .product-class {
     opacity: 0;
-    translate: -100% 0;
     transition: opacity 0.5s, translate 0.5s;
     &.loaded {
-      translate: 0 0;
       opacity: 1;
     }
   }
   .product-title {
     width: 100%;
+    height: 1em;
     opacity: 0;
-    translate: -100% 0;
-    transition: opacity 0.5s 0.1s, translate 0.5s 0.1s;
+    transition: opacity 0.5s 0.1s;
     &.loaded {
-      translate: 0 0;
       opacity: 1;
+    }
+  }
+  .background-color-text {
+    translate: 0 100%;
+
+    transition: translate 0.5s 0.2s;
+    &.loadedBack {
+      translate: 0 0;
+    }
+  }
+  .background-color-button {
+    translate: 100% 0;
+    transition: translate 0.5s 0.1s;
+    &.loadedBack {
+      translate: 0 0;
+    }
+  }
+  .background-color-image {
+    translate: -100% 0;
+    transition: translate 0.5s 0.3s;
+    &.loadedBack {
+      translate: 0 0;
     }
   }
   .product-description {
     width: 100%;
     opacity: 0;
-    translate: -100% 0;
-    transition: opacity 0.5s 0.2s, translate 0.5s 0.2s;
+    transition: opacity 0.5s 0.2s;
+
     &.loaded {
       translate: 0 0;
       opacity: 1;
@@ -114,13 +139,30 @@ export const ProductBox = styled.div`
     display: flex;
     width: 100%;
     opacity: 0;
-    translate: -100% 0;
-    transition: opacity 0.5s 0.2s, translate 0.5s 0.2s;
+    //translate: -100% 0;
+    transition: opacity 0.5s;
     &.loaded {
       translate: 0 0;
       opacity: 1;
     }
   }
+  .button-next {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    :hover {
+      color: #ffffff;
+    }
+    opacity: 0;
+    //translate: -100% 0;
+    transition: opacity 0.5s;
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
+
   .product-module-list {
     display: none;
     //display: grid;
@@ -162,14 +204,20 @@ export const ProductBox = styled.div`
   .product-module:hover {
   }
 
-  #pagination {
-    display: flex;
-    gap:30px;
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 20px;
+  .pagination {
+    width: 10%;
+    display: grid;
+    gap: 10px;
+    transform: translateX(50%, 50%);
+
     z-index: 6;
+  }
+  .pagination-container {
+    width: 10%;
+    height: 100%;
+    background-color: red;
+
+    display: flex;
   }
   #pagination button {
     display: block;
@@ -217,12 +265,6 @@ export const ProductBox = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    .section-title {
-    }
-
-    .product-list {
-    }
-
     .product-item {
       position: relative;
     }
@@ -259,14 +301,12 @@ export const ProductBox = styled.div`
     .product-module {
       width: 10px;
     }
-    .product-button-container{
+    .product-button-container {
       justify-content: center;
     }
   }
 
   @media screen and (min-width: 601px) and (max-width: 1200px) {
-    .section-title {
-    }
   }
 
   @media screen and (min-width: 1201px) {
