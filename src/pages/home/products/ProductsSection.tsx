@@ -3,11 +3,9 @@ import { ProductBox } from './ProductsStyle';
 import { Product } from '../../../utils/Classes';
 import videoProduct from '../../../assets/webp/video-work.webp'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
-import { Box, colors } from '@mui/material';
 import { Color } from '../../../utils/Config';
 import { BsArrowRightShort } from 'react-icons/bs';
 
-import { motion } from "framer-motion"
 interface ProductsProps {
   products: Product[],
 }
