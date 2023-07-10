@@ -65,6 +65,10 @@ body {
 
 }
 
+.text-secon{
+  color: #B2B2B2;
+}
+
 .audiowide{
   font-family:"Audiowide";
 

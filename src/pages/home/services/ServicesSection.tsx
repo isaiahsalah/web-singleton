@@ -9,14 +9,14 @@ interface ServicesProps {
 const ServicesSection = (props: ServicesProps) => {
 
 
-  const expandirTexto = (elemento: HTMLElement, numLineas:number) => {
+  const expandirTexto = (elemento: HTMLElement, numLineas: number) => {
     let lineasActuales = 4; // Número inicial de líneas
     const intervalo = setInterval(() => {
       lineasActuales++;
-  
+
       // Actualiza el valor de -webkit-line-clamp
       elemento.style.webkitLineClamp = lineasActuales.toString();
-  
+
       if (lineasActuales >= numLineas) {
         clearInterval(intervalo);
       }
@@ -25,8 +25,8 @@ const ServicesSection = (props: ServicesProps) => {
 
 
 
-  const extenderDescripcion =(index:number)=>{
-    
+  const extenderDescripcion = (index: number) => {
+
     const layers = document.querySelectorAll(".services-list-item-description");
     const buttons = document.querySelectorAll(".services-list-item-button");
 
@@ -34,21 +34,20 @@ const ServicesSection = (props: ServicesProps) => {
       const layer = layers[i] as HTMLElement;
       const button = buttons[i] as HTMLElement;
 
-      if(layers[i].id===(`description-`+index))
-      {
-        if(layer.style.webkitLineClamp=="60"){
+      if (layers[i].id === (`description-` + index)) {
+        if (layer.style.webkitLineClamp == "60") {
           //contraerTexto(layer,4)
-          layer.style.webkitLineClamp="4"
+          layer.style.webkitLineClamp = "4"
           //layer.style.display="-webkit-box"
-          button.textContent="Ver Más"
+          button.textContent = "Ver Más"
 
         }
         else {
-           expandirTexto(layer,60)
-           
+          expandirTexto(layer, 60)
+
           //layer.style.webkitLineClamp="50"
           //layer.style.display="flex"
-          button.textContent="Ver Menos"
+          button.textContent = "Ver Menos"
           console.log("layer")
         }
       }
@@ -76,16 +75,16 @@ const ServicesSection = (props: ServicesProps) => {
                   alignItems: 'center',
                 }}>
 
-                  <div className='services-list-item-icon'  dangerouslySetInnerHTML={{ __html: item.icon }} />
+                  <div className='services-list-item-icon' dangerouslySetInnerHTML={{ __html: item.icon }} />
                   <h4 className='services-list-item-title bold'>
                     {item.title}
                   </h4>
                 </div>
 
-                <p id={`description-${index}`} className='services-list-item-description'>
+                <p id={`description-${index}`} className='text-secon services-list-item-description'>
                   {item.description}
                 </p>
-                <a onClick={()=>extenderDescripcion(index)} id={`button-${index}`} className='services-list-item-button'>Ver Más</a>
+                <a onClick={() => extenderDescripcion(index)} id={`button-${index}`} className='services-list-item-button'>Ver Más</a>
               </div>
             )
           }

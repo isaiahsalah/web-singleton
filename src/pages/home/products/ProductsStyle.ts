@@ -2,7 +2,7 @@ import { Color } from "../../../utils/Config";
 import styled from "styled-components";
 
 export const ProductBox = styled.div`
-  //min-height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: grid;
   align-content: space-between;
@@ -23,38 +23,46 @@ export const ProductBox = styled.div`
     opacity: 0.2;
     transition: 0.25s;
   }
+  .product-button-pagination {
+    filter: grayscale(100);
+    transition: filter 0.5s;
+    &.active {
+      filter: none;
+    }
+  }
 
   .title-section-back {
     //transition:  0.25s;
   }
-
-  @keyframes moveText {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  /*
+   @keyframes moveText {
+  0% {
+    transform: translateX(100%);
   }
+  100% {
+    transform: translateX(-100%);
+  }}*/
 
   .product-list {
     width: 100%;
     display: grid;
     gap: 20px;
+    justify-content: center;
+    height: 100vh;
 
     max-width: 1200px;
-    padding: 20px;
+    //padding: 20px;
     box-sizing: border-box;
   }
   .product-item {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
   }
   .product-image-container {
     display: flex;
     width: 40%;
-
+    transition: 0.25s opacity ease-in-out;
     position: relative;
     opacity: 0;
     translate: 100% 0;
@@ -70,11 +78,6 @@ export const ProductBox = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 3px;
-    opacity: 0;
-    transition: opacity 0.5s 0.3s;
-    &.loaded {
-      opacity: 1;
-    }
   }
   .product-info {
     display: flex;
@@ -82,66 +85,36 @@ export const ProductBox = styled.div`
     justify-content: left;
     align-content: center;
     text-align: left;
-    width: 50%;
-    padding: 20px;
+    width: 60%;
+    padding-inline: 20px;
     box-sizing: border-box;
     gap: 20px;
   }
   .product-class {
     opacity: 0;
+    translate: -100% 0;
     transition: opacity 0.5s, translate 0.5s;
     &.loaded {
+      translate: 0 0;
       opacity: 1;
     }
   }
   .product-title {
     width: 100%;
-    height: 1em;
     opacity: 0;
-    transition: opacity 0.5s 0.1s;
+    translate: -100% 0;
+    transition: opacity 0.5s 0.1s, translate 0.5s 0.1s;
     &.loaded {
+      translate: 0 0;
       opacity: 1;
     }
   }
-  .background-color-text {
-    translate: 0 100%;
-
-    transition: translate 0.5s 0.2s;
-    &.loadedBack {
-      translate: 0 0;
-    }
-  }
-  .background-color-pagination {
-    translate: 100% 0;
-    transition: translate 0.5s 0.1s;
-    background-color: ${Color.alternative};
-
-    &.loadedBack {
-      translate: 0 0;
-    }
-  }
-  .background-color-button {
-    translate: 100% 0;
-    transition: translate 0.5s 0.1s;
-    background-color: ${Color.alternative};
-
-    &.loadedBack {
-      translate: 0 0;
-    }
-  }
-  .background-color-image {
-    translate: -100% 0;
-    transition: translate 0.5s 0.3s;
-    &.loadedBack {
-      translate: 0 0;
-    }
-  }
   .product-description {
+    text-align: justify;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.5s 0.2s;
-    color: #a7b5bf;
-
+    translate: -100% 0;
+    transition: opacity 0.5s 0.2s, translate 0.5s 0.2s;
     &.loaded {
       translate: 0 0;
       opacity: 1;
@@ -151,50 +124,13 @@ export const ProductBox = styled.div`
     display: flex;
     width: 100%;
     opacity: 0;
-    //translate: -100% 0;
-    transition: opacity 0.5s;
+    translate: -100% 0;
+    transition: opacity 0.5s 0.2s, translate 0.5s 0.2s;
     &.loaded {
       translate: 0 0;
       opacity: 1;
     }
   }
-
-  .product-button-pagination {
-    filter: saturate(0);
-    transition: opacity 0.5s;
-    //translate: -100% 0;
-    opacity: 0;
-    &.active {
-      filter: none;
-    }
-    &.loaded {
-      translate: 0 0;
-      opacity: 1;
-    }
-  }
-
-  .button-next {
-    display: flex;
-    width: 100%;
-    background-color: transparent;
-    color: ${Color.secondary};
-    border: none;
-    cursor: pointer;
-    :hover {
-      transform: scale(1.05);
-    }
-    opacity: 0;
-    //translate: -100% 0;
-    transition: opacity 0.5s;
-    &.loaded {
-      translate: 0 0;
-      opacity: 1;
-    }
-  }
-
-  .pagination {
-  }
-
   .product-module-list {
     display: none;
     //display: grid;
@@ -237,19 +173,20 @@ export const ProductBox = styled.div`
   }
 
   .pagination {
-    width: 10%;
-    display: grid;
-    gap: 10px;
-    transform: translateX(50%, 50%);
-
-    z-index: 6;
-  }
-  .pagination-container {
-    width: 10%;
-    height: 100%;
-    background-color: red;
-
     display: flex;
+    gap: 30px;
+    right: 50%;
+    justify-content: center;
+    bottom: 20px;
+    z-index: 6;
+
+    opacity: 0;
+    translate: 0 100%;
+    transition: opacity 0.5s, translate 0.5s;
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
   }
   #pagination button {
     display: block;
@@ -297,6 +234,12 @@ export const ProductBox = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    .section-title {
+    }
+
+    .product-list {
+    }
+
     .product-item {
       position: relative;
     }
@@ -311,6 +254,8 @@ export const ProductBox = styled.div`
     .product-image {
       width: 100%;
       height: 100%;
+
+      opacity: 0.2;
     }
     .product-info {
       padding: 20px;
@@ -337,6 +282,8 @@ export const ProductBox = styled.div`
   }
 
   @media screen and (min-width: 601px) and (max-width: 1200px) {
+    .section-title {
+    }
   }
 
   @media screen and (min-width: 1201px) {
