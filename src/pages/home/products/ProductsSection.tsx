@@ -91,11 +91,13 @@ const ProductsSection = (props: ProductsProps) => {
       </div>
 
       <Grid2 container
-        maxWidth={'1200px'}
-        padding={'20px'}
+        justifyContent={"center"}
+        padding={{
+          xs: "0px",
+          md: "0px"
+        }}
         boxSizing={'border-box'}
       >
-
         <Grid2
           xs={12}
           lg={6}
@@ -116,7 +118,10 @@ const ProductsSection = (props: ProductsProps) => {
             justifyContent={'space-between'}
           >
             <Grid2
-              padding={"40px"}>
+              padding={{
+                xs: "20px",
+                md: "40px"
+              }}>
               <p className={`product-class ${loaded ? "loaded" : ""} `} >{selectedItem.item}</p>
               <h1 className={`product-title bold ${loaded ? "loaded" : ""}`}>{selectedItem.title}</h1>
             </Grid2>
@@ -125,7 +130,10 @@ const ProductsSection = (props: ProductsProps) => {
                 lg: 'none',
                 xs: 'flex'
               }}
-              padding={"40px"}
+              padding={{
+                xs: "20px",
+                md: "40px"
+              }}
               position={'relative'}
               maxHeight={{
                 sm: "200px",
@@ -144,7 +152,7 @@ const ProductsSection = (props: ProductsProps) => {
                   top: "0",
                   left: "0",
                   zIndex: "-1",
-                  opacity: "0.8"
+                  opacity: "1"
 
                 }}
               />
@@ -160,7 +168,10 @@ const ProductsSection = (props: ProductsProps) => {
           <Grid2 xs={12}
             display={'flex'}
             flexWrap={'wrap'}
-            paddingX={"40px"}
+            paddingX={{
+              xs: "20px",
+              md: "40px"
+            }}
             paddingY={"20px"}
             gap={"20px"}
             position={'relative'}
@@ -176,7 +187,7 @@ const ProductsSection = (props: ProductsProps) => {
                 top: "0",
                 left: "0",
                 zIndex: "0",
-                opacity: "0.8"
+                opacity: "1"
               }}
             />
             <p
@@ -189,10 +200,10 @@ const ProductsSection = (props: ProductsProps) => {
               bottom={"0"}
               right={"0"}
             >
-              <Grid2 xs={6}
+              <Grid2
+
+                xs={6}
                 display={'flex'}
-                paddingX={"40px"}
-                paddingY={"10px"}
                 fontSize={"30px"}
                 position={'relative'}
                 overflow={'hidden'}
@@ -202,29 +213,34 @@ const ProductsSection = (props: ProductsProps) => {
                   className={`background-color-button ${loadedBack ? "loadedBack" : ""}`}
                   style={{
                     position: "absolute",
-                    backgroundColor: Color.active,
                     width: "100%",
                     height: "100%",
                     top: "0",
                     left: "0",
                     zIndex: "0",
-                    opacity: "0.8"
+                    opacity: "1",
+                    cursor: "pointer"
 
                   }}
-                />
-                <div>
-                  <button
-                    className={`button-next ${loaded ? "loaded" : ""}`}
-                    style={{
-                      padding: "0px",
-                      boxShadow: 'none',
-                      zIndex: "1",
-                    }}
-                    onClick={() => selectedNextItem(true, props.products)}
-                  >
-                    <BsArrowRightShort />
 
-                  </button>
+                />
+                <div
+                  className={`button-next ${loaded ? "loaded" : ""}`}
+                  style={{
+                    padding: "0px",
+                    boxShadow: 'none',
+                    zIndex: "1",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "60px",
+                    height: "40px",
+                  }}
+                  onClick={() => selectedNextItem(true, props.products)}
+
+                >
+                  <BsArrowRightShort />
+
                 </div>
 
 
@@ -265,7 +281,7 @@ const ProductsSection = (props: ProductsProps) => {
               top: "0",
               left: "0",
               zIndex: "-1",
-              opacity: "0.8"
+              opacity: "1"
 
             }}
           />
@@ -278,42 +294,70 @@ const ProductsSection = (props: ProductsProps) => {
         </Grid2>
 
         <Grid2
-          xs={0}
-          lg={2}
+          //xs={0}
+          //lg={2}
 
           order={{
             xs: 0,
             lg: 3
           }}
 
+          width={"150px"}
+
           display={{
             lg: 'grid',
             xs: "none"
           }}
+          justifyContent={'end'}
           alignItems={'end'}
           boxSizing={'border-box'}>
-          <Grid2 className="pagination" marginLeft={"40px"}>
+          <Grid2
+            className={`pagination `}
+            marginLeft={"40px"}
+          >
             {
               props.products.map((item, index) =>
                 <Grid2
 
-
                   style={{
+
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     width: '90px',
                     height: '90px',
                     cursor: 'pointer',
-                    opacity: index === selectedIndex ? "0.2" : "1"
+                    opacity: index === selectedIndex ? "1" : "1",
+
+
                   }}
+                  position={"relative"}
+                  overflow={"hidden"}
                 >
+                  <div
+                    className={`background-color-pagination ${loadedBack ? "loadedBack" : ""}`}
+                    style={{
+                      position: "absolute",
+                      backgroundColor: "#7fb8e4",
+                      opacity: index === selectedIndex ? "1" : "0",
+
+                      width: "100%",
+                      height: "100%",
+                      top: "0",
+                      left: "0",
+                      zIndex: "-1",
+
+                    }}
+                  />
                   <img
                     style={{
-                      width: '80px',
+                      width: '90px',
+                      height: '90px',
+                      objectFit: 'contain',
+                      padding: '10px',
                     }}
                     onClick={() => selectedNewItem(index, props.products)}
-                    className={`product-button ${index === selectedIndex ? "active" : ""}`}
+                    className={`product-button-pagination ${index === selectedIndex ? "active" : ""} ${loaded ? "loaded" : ""}`}
                     src={item.image}
                     alt={item.title}
                   />

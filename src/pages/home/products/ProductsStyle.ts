@@ -2,7 +2,7 @@ import { Color } from "../../../utils/Config";
 import styled from "styled-components";
 
 export const ProductBox = styled.div`
-  min-height: 100vh;
+  //min-height: 100vh;
   width: 100vw;
   display: grid;
   align-content: space-between;
@@ -111,9 +111,20 @@ export const ProductBox = styled.div`
       translate: 0 0;
     }
   }
+  .background-color-pagination {
+    translate: 100% 0;
+    transition: translate 0.5s 0.1s;
+    background-color: ${Color.alternative};
+
+    &.loadedBack {
+      translate: 0 0;
+    }
+  }
   .background-color-button {
     translate: 100% 0;
     transition: translate 0.5s 0.1s;
+    background-color: ${Color.alternative};
+
     &.loadedBack {
       translate: 0 0;
     }
@@ -129,6 +140,7 @@ export const ProductBox = styled.div`
     width: 100%;
     opacity: 0;
     transition: opacity 0.5s 0.2s;
+    color: #a7b5bf;
 
     &.loaded {
       translate: 0 0;
@@ -146,13 +158,30 @@ export const ProductBox = styled.div`
       opacity: 1;
     }
   }
+
+  .product-button-pagination {
+    filter: saturate(0);
+    transition: opacity 0.5s;
+    //translate: -100% 0;
+    opacity: 0;
+    &.active {
+      filter: none;
+    }
+    &.loaded {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
+
   .button-next {
     display: flex;
     width: 100%;
     background-color: transparent;
+    color: ${Color.secondary};
     border: none;
+    cursor: pointer;
     :hover {
-      color: #ffffff;
+      transform: scale(1.05);
     }
     opacity: 0;
     //translate: -100% 0;
@@ -161,6 +190,9 @@ export const ProductBox = styled.div`
       translate: 0 0;
       opacity: 1;
     }
+  }
+
+  .pagination {
   }
 
   .product-module-list {
@@ -279,8 +311,6 @@ export const ProductBox = styled.div`
     .product-image {
       width: 100%;
       height: 100%;
-
-      opacity: 0.2;
     }
     .product-info {
       padding: 20px;
